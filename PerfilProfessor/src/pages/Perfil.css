@@ -1,0 +1,784 @@
+.perfil-container {
+  padding: 32px 48px;
+  background-color: #ffffff;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Page Header */
+.perfil-header {
+  margin-bottom: 28px;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #111827;
+  transition: opacity 0.2s ease;
+}
+
+.back-btn:hover {
+  opacity: 0.75;
+}
+
+.back-arrow {
+  stroke-width: 2.8;
+  color: #111827;
+}
+
+.header-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+.header-subtitle {
+  font-size: 13.5px;
+  color: #4b5563;
+  margin-top: 6px;
+  margin-left: 2px;
+}
+
+/* Main Profile Card */
+.profile-main-card {
+  max-width: 900px;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* Profile Card Top Header */
+.profile-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+}
+
+.profile-user-info-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-avatar-large {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.profile-avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: #3f4e60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-placeholder-icon {
+  color: #1e293b;
+  fill: #1e293b;
+}
+
+.profile-uploaded-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
+  font-size: 19px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.profile-role {
+  font-size: 13.5px;
+  color: #4b5563;
+  margin-top: 3px;
+}
+
+/* Edit Photo Button */
+.btn-edit-photo {
+  background-color: #e30613;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-edit-photo:hover {
+  background-color: #c40510;
+}
+
+.btn-edit-photo:active {
+  transform: scale(0.98);
+}
+
+.btn-camera-icon {
+  stroke-width: 2.2;
+}
+
+/* Divider */
+.profile-divider {
+  height: 1px;
+  background-color: #e5e7eb;
+  width: 100%;
+}
+
+/* Grid of Subcards */
+.profile-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 22px 24px;
+}
+
+.info-subcard {
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 18px 20px;
+}
+
+.subcard-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 18px;
+}
+
+.info-rows-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.info-icon-wrapper {
+  color: #e30613;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.info-icon {
+  color: #e30613;
+  stroke: #e30613;
+  stroke-width: 2.2;
+}
+
+.info-texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.info-value {
+  font-size: 12.5px;
+  color: #4b5563;
+  margin-top: 2px;
+  line-height: 1.3;
+}
+
+/* Middle whitespace in card */
+.card-spacer {
+  height: 160px;
+  background-color: #ffffff;
+}
+
+/* Footer of the card */
+.profile-card-footer {
+  border-top: 1px solid #e5e7eb;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+
+.footer-help-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.help-icon-wrapper {
+  color: #e30613;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.help-icon {
+  stroke: #e30613;
+  stroke-width: 2.2;
+}
+
+.help-text-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.help-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.25;
+}
+
+.help-subtitle {
+  font-size: 12.5px;
+  color: #4b5563;
+  margin-top: 2px;
+}
+
+/* Button Ver Contato */
+.btn-ver-contato {
+  background-color: #e30613;
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  white-space: nowrap;
+}
+
+.btn-ver-contato:hover {
+  background-color: #c40510;
+}
+
+.btn-ver-contato:active {
+  transform: scale(0.98);
+}
+
+/* Toast Notification */
+.toast-notification {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  background-color: #10b981;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Modals */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  backdrop-filter: blur(2px);
+}
+
+.modal-content {
+  background-color: #ffffff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 460px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: scaleUp 0.2s ease;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-header {
+  padding: 18px 22px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-header h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.modal-title-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal-title-icon {
+  color: #e30613;
+}
+
+.modal-close-btn {
+  color: #64748b;
+  padding: 4px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+.modal-body {
+  padding: 22px;
+}
+
+.photo-modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.modal-avatar-preview {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #f1f5f9;
+  border: 3px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-modal-instruction {
+  font-size: 13.5px;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.photo-modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.btn-modal-upload {
+  background-color: #e30613;
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-modal-upload:hover {
+  background-color: #c40510;
+}
+
+.btn-modal-remove {
+  background-color: transparent;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  padding: 9px 16px;
+  border-radius: 6px;
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-modal-remove:hover {
+  background-color: #fef2f2;
+}
+
+/* Contact Modal Details */
+.contact-modal-body .contact-info-desc {
+  font-size: 13.5px;
+  color: #4b5563;
+  margin-bottom: 18px;
+  line-height: 1.45;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-card-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background-color: #f8fafc;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #f1f5f9;
+  transition: all 0.2s ease;
+}
+
+.contact-card-item:hover {
+  background-color: #f1f5f9;
+  border-color: #e2e8f0;
+}
+
+.contact-item-icon {
+  color: #e30613;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.whatsapp-icon {
+  color: #25D366;
+}
+
+.contact-item-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.contact-card-item strong {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 3px;
+}
+
+.contact-link {
+  font-size: 13px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.contact-link:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.contact-card-item p {
+  font-size: 12.5px;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* Schedule styling */
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.schedule-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12.5px;
+}
+
+.schedule-day {
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.schedule-time {
+  color: #111827;
+  font-weight: 600;
+}
+
+.modal-footer {
+  padding: 14px 22px;
+  background-color: #f8fafc;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-modal-primary {
+  background-color: #e30613;
+  color: #ffffff;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.btn-modal-primary:hover {
+  background-color: #c40510;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .profile-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .perfil-container {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .profile-card-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .profile-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .btn-ver-contato {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ==============================================================
+   RESPONSIVO EXCLUSIVO PARA TELAS <= 425px
+   ============================================================== */
+@media (max-width: 425px) {
+  .perfil-container {
+    padding: 16px 12px;
+  }
+
+  .perfil-header {
+    margin-bottom: 18px;
+  }
+
+  .header-title {
+    font-size: 18px;
+  }
+
+  .header-subtitle {
+    font-size: 12px;
+    line-height: 1.4;
+    margin-top: 4px;
+  }
+
+  .profile-main-card {
+    border-radius: 8px;
+  }
+
+  .profile-card-top {
+    padding: 14px 12px;
+    gap: 14px;
+  }
+
+  .profile-avatar-large {
+    width: 52px;
+    height: 52px;
+  }
+
+  .profile-name {
+    font-size: 16.5px;
+  }
+
+  .profile-role {
+    font-size: 12.5px;
+  }
+
+  .btn-edit-photo {
+    width: 100%;
+    justify-content: center;
+    padding: 9px 12px;
+  }
+
+  .profile-cards-grid {
+    padding: 14px 12px;
+    gap: 12px;
+  }
+
+  .info-subcard {
+    padding: 14px 12px;
+  }
+
+  .subcard-title {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+
+  .info-rows-list {
+    gap: 14px;
+  }
+
+  .info-item {
+    gap: 10px;
+  }
+
+  .info-label {
+    font-size: 12px;
+  }
+
+  .info-value {
+    font-size: 12px;
+    word-break: break-word;
+  }
+
+  /* Reduz o espaçador vazio em telas pequenas para melhor usabilidade */
+  .card-spacer {
+    height: 20px;
+  }
+
+  .profile-card-footer {
+    padding: 14px 12px;
+    gap: 14px;
+    align-items: stretch;
+  }
+
+  .footer-help-info {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .help-title {
+    font-size: 13px;
+  }
+
+  .help-subtitle {
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .btn-ver-contato {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  /* Ajustes dos modais em 425px e abaixo */
+  .modal-overlay {
+    padding: 12px;
+  }
+
+  .modal-content {
+    max-width: 100%;
+    max-height: 92vh;
+    overflow-y: auto;
+  }
+
+  .modal-header {
+    padding: 14px 16px;
+  }
+
+  .modal-header h3 {
+    font-size: 15px;
+  }
+
+  .modal-body {
+    padding: 16px;
+  }
+
+  .contact-card-item {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .schedule-row {
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 4px;
+  }
+
+  .toast-notification {
+    left: 16px;
+    right: 16px;
+    top: 68px;
+    justify-content: center;
+    font-size: 13px;
+  }
+}
