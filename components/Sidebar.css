@@ -1,0 +1,87 @@
+
+.sidebar {
+  width: 185px;
+  min-width: 185px;
+  min-height: 100%;
+  background: #061c2b;
+  color: white;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.logo-senai {
+  width: fit-content;
+  background: #ed0010;
+  color: white;
+  font-size: 23px;
+  font-weight: 900;
+  font-style: italic;
+  padding: 0 7px;
+  margin: 0 8px 18px;
+}
+
+.usuario {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+
+.usuario p {
+  margin: 0 0 5px;
+}
+
+.usuario small {
+  font-size: 10px;
+}
+
+.avatar {
+  background: #f4f6f9;
+  color: #172838;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-item,
+.sair {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: white;
+  background: transparent;
+  border: 0;
+  padding: 13px 9px;
+  text-align: left;
+  font-size: 11px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.menu-item:hover,
+.menu-item.ativo {
+  background: #17364a;
+}
+
+.menu-item svg,
+.sair svg {
+  flex-shrink: 0;
+}
+
+.sair {
+  margin-top: auto;
+  padding-top: 25px;
+}
