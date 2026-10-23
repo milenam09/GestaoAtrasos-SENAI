@@ -1,0 +1,260 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.login-aluno {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+/* Cartão de login */
+
+.cartao-login {
+  width: 456px;
+  height: 646px;
+  padding: 20px 55px;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Logo SENAI */
+
+.logo-senai {
+  width: 180px;
+  height: 55px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+.icone-aluno {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  margin: 0 auto 5px;
+}
+
+.cartao-login h1 {
+  font-size: 30px;
+  font-weight: 400;
+  color: #111;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.subtitulo {
+  font-size: 17px;
+  font-weight: bold;
+  color: #111;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Formulário */
+
+.cartao-login form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cartao-login label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #222;
+  margin: 0 3px 8px;
+}
+
+/* Campo de CPF */
+
+.cartao-login form > input {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  margin-bottom: 22px;
+  border: 1px solid #777;
+  border-radius: 5px;
+  background-color: transparent;
+  outline: none;
+  font-size: 13px;
+  color: #222;
+}
+
+/* Campo de senha */
+
+.campo-senha {
+  width: 100%;
+  height: 44px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.campo-senha input {
+  width: 100%;
+  height: 44px;
+  padding: 0 45px 0 14px;
+  border: 1px solid #777;
+  border-radius: 5px;
+  background-color: transparent;
+  outline: none;
+  font-size: 13px;
+  color: #222;
+}
+
+.cartao-login input:focus {
+  border-color: #ed0015;
+}
+
+/* Olhinho da senha */
+
+.mostrar-senha {
+  position: absolute;
+  right: 8px;
+  top: 0;
+  width: 32px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: #222;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Esqueceu a senha */
+
+.esqueceu-senha {
+  align-self: center;
+  color: #e00016;
+  font-size: 14px;
+  text-decoration: none;
+  margin-top: 2px;
+  margin-bottom: 32px;
+}
+
+.esqueceu-senha:hover {
+  text-decoration: underline;
+}
+
+/* Botão Entrar */
+
+.botao-login {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ed0015;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botao-login:hover {
+  background-color: #c90013;
+}
+
+/* Separador */
+
+.ou {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #777;
+  font-size: 13px;
+  margin: 16px 0 20px;
+}
+
+.ou::before,
+.ou::after {
+  content: "";
+  display: block;
+  flex: 1;
+  height: 1px;
+  background-color: #bbb;
+}
+
+/* Botão Google */
+
+
+.botao-google {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: transparent;
+  color: #111;
+  border: 1px solid #ff5260;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 0;
+}
+
+.botao-google:hover {
+  background-color: #fff0f1;
+}
+
+
+.icone-google {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  color: #000000;
+}
+
+
+/* Telas menores */
+
+@media (max-width: 500px) {
+  .cartao-login {
+    width: calc(100% - 24px);
+    max-width: 456px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-height: 680px) {
+  .cartao-login {
+    transform: scale(0.85);
+  }
+}
