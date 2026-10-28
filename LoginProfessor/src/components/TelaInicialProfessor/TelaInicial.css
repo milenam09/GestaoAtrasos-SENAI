@@ -65,7 +65,7 @@ body,
 }
 
 .subtitulo {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold;
   color: #111;
   text-align: center;
@@ -81,7 +81,7 @@ body,
 }
 
 .cartao-login label {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   color: #222;
   margin: 0 3px 8px;
@@ -218,7 +218,7 @@ body,
   color: #111;
   border: 1px solid #ff5260;
   border-radius: 5px;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   margin-top: 0;
