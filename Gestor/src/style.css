@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contentor principal do cabeçalho */
+.header-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Ajustes da Logo */
+.logo-senai {
+    width: 140px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+/* Ajustes do ícone de pessoa */
+.icone-usuario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+
+}
+
+/* Título GESTOR */
+.header-login h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #000;
+}
+
+/* Subtítulo */
+.header-login p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #d9d9d9;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+.pagina {
+    min-height: 100vh;
+    padding: 10px 0 30px;
+}
+
+.titulo-pagina {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.fundo-login {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    min-height: 430px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    background:
+        linear-gradient(rgba(3, 16, 30, 0.68), rgba(3, 16, 30, 0.68)),
+        url("/assets/fachada.jpg.jpg") center / cover no-repeat,
+        #102033;
+}
+
+.faixa {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.faixa-superior {
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg,
+            #ed0018 0 25%,
+            #a90013 25% 43%,
+            transparent 43%);
+}
+
+.faixa-inferior {
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            transparent 57%,
+            #a90013 57% 75%,
+            #ed0018 75%);
+}
+
+.cartao-login {
+
+    width: 400px;
+    min-height: 500px;
+    padding: 30px;
+    box-sizing: border-box;
+    background: white;
+    border-radius: 4px;
+}
+
+
+
+.icone-usuario {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 3px;
+    margin-top: 15px;
+
+}
+
+.cartao-login h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.subtitulo {
+    font-size: 7px;
+    margin: 7px 0 12px;
+}
+
+.cartao-login form {
+    text-align: left;
+}
+
+.cartao-login label {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 8px 0 4px;
+}
+
+.cartao-login input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 0 8px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    background: #fafafa;
+    font-size: 15px;
+    outline: none;
+}
+
+.cartao-login input:focus {
+    border-color: #ed0018;
+}
+
+.campo-senha {
+    position: relative;
+}
+
+.campo-senha input {
+    padding-right: 30px;
+}
+
+
+
+.esqueci {
+    display: block;
+    margin: 7px auto 12px;
+    color: #ed0018;
+    font-size: 15px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.botao-entrar {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    color: white;
+    background: #ed0018;
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.botao-entrar span {
+    position: absolute;
+    right: 10px;
+}
+
+.botao-entrar:hover {
+    background: #c90016;
+}
+
+.separador {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 9px 0;
+    color: #777;
+    font-size: 8px;
+}
+
+.separador span {
+    flex: 1;
+    height: 1px;
+    background: #ccc;
+}
+
+.botao-google {
+    width: 100%;
+    height: 30px;
+    background: transparent;
+    border: 1px solid #ed0018;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.botao-google strong {
+    font-size: 15px;
+    margin-right: 4px;
+}
+
+.mensagem {
+    color: #c90016;
+    font-size: 9px;
+    margin-top: 7px;
+}
+
+@media (max-width: 600px) {
+    .titulo-pagina {
+        font-size: 23px;
+        margin-bottom: 30px;
+    }
+
+    .fundo-login {
+        width: 100%;
+        max-width: none;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .cartao-login {
+        width: 280px;
+    }
+}
+
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: #102033;
+}
+
+.fundo-login {
+    width: 100%;
+    max-width: none;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.logo-senai {
+    display: flex;
+    align-items: center;
+    width: 130px;
+    height: auto;
+    margin: 0 auto 10px;
+
+}
