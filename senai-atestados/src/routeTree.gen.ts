@@ -12,6 +12,8 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AtestadosRouteImport } from './routes/atestados'
 import { Route as MeusAtrasosRouteImport } from './routes/meus-atrasos'
+import { Route as RelatoriosRouteImport } from './routes/relatorios'
+import { Route as RelatoriosGestorRouteImport } from './routes/relatorios-gestor'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -28,35 +30,61 @@ const MeusAtrasosRoute = MeusAtrasosRouteImport.update({
   path: '/meus-atrasos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RelatoriosRoute = RelatoriosRouteImport.update({
+  id: '/relatorios',
+  path: '/relatorios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RelatoriosGestorRoute = RelatoriosGestorRouteImport.update({
+  id: '/relatorios-gestor',
+  path: '/relatorios-gestor',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/atestados': typeof AtestadosRoute
   '/meus-atrasos': typeof MeusAtrasosRoute
+  '/relatorios': typeof RelatoriosRoute
+  '/relatorios-gestor': typeof RelatoriosGestorRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/atestados': typeof AtestadosRoute
   '/meus-atrasos': typeof MeusAtrasosRoute
+  '/relatorios': typeof RelatoriosRoute
+  '/relatorios-gestor': typeof RelatoriosGestorRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/atestados': typeof AtestadosRoute
   '/meus-atrasos': typeof MeusAtrasosRoute
+  '/relatorios': typeof RelatoriosRoute
+  '/relatorios-gestor': typeof RelatoriosGestorRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/atestados' | '/meus-atrasos'
+  fullPaths:
+    '/' | '/atestados' | '/meus-atrasos' | '/relatorios' | '/relatorios-gestor'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/atestados' | '/meus-atrasos'
-  id: '__root__' | '/' | '/atestados' | '/meus-atrasos'
+  to:
+    '/' | '/atestados' | '/meus-atrasos' | '/relatorios' | '/relatorios-gestor'
+  id:
+    | '__root__'
+    | '/'
+    | '/atestados'
+    | '/meus-atrasos'
+    | '/relatorios'
+    | '/relatorios-gestor'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AtestadosRoute: typeof AtestadosRoute
   MeusAtrasosRoute: typeof MeusAtrasosRoute
+  RelatoriosRoute: typeof RelatoriosRoute
+  RelatoriosGestorRoute: typeof RelatoriosGestorRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -82,6 +110,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MeusAtrasosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/relatorios': {
+      id: '/relatorios'
+      path: '/relatorios'
+      fullPath: '/relatorios'
+      preLoaderRoute: typeof RelatoriosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/relatorios-gestor': {
+      id: '/relatorios-gestor'
+      path: '/relatorios-gestor'
+      fullPath: '/relatorios-gestor'
+      preLoaderRoute: typeof RelatoriosGestorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -89,6 +131,8 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AtestadosRoute: AtestadosRoute,
   MeusAtrasosRoute: MeusAtrasosRoute,
+  RelatoriosRoute: RelatoriosRoute,
+  RelatoriosGestorRoute: RelatoriosGestorRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
