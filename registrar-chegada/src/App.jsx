@@ -1,6 +1,6 @@
-
 import Menu from "./components/Menu/Menu";
-import RegistrarAtraso from "./components/RegistrarAtraso/RegistrarAtraso";
+import RegistrarAtraso from "./components/RegistrarChegada/RegistrarAtraso";
+
 import "./App.css";
 
 function App() {
@@ -13,3 +13,4 @@ function App() {
 }
 
 export default App;
+

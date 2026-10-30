@@ -16,7 +16,6 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* TELA PRINCIPAL */
 .registrar-atraso {
   flex: 1;
   min-width: 0;
@@ -24,40 +23,64 @@ body {
   height: 100vh;
   min-height: 0;
   padding: 18px 32px 14px;
-  background-color: #f5f7fa;
+  background-color: white;
   color: #102638;
   overflow: hidden;
 }
 
-/* TÍTULO E SETA */
 .titulo-pagina {
   display: flex;
-  align-items: center;
-  gap: 16px;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
 .icone-voltar {
-  flex-shrink: 0;
-  color: #102638;
-  font-size: 32px;
-  font-weight: bold;
-  line-height: 1.1;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 0;
+  margin: 5px 0 0 0;
   cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icone-voltar:hover,
+.icone-voltar:focus,
+.icone-voltar:active {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.icone-voltar img {
+  display: block;
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
 }
 
 .texto-titulo {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 4px;
+  gap: 0;
   min-width: 0;
 }
 
 .texto-titulo h1 {
-  margin: 0;
+  margin: 0 0 5px;
   color: #111;
   font-size: 30px;
-  font-weight: 800;
+  font-weight: bold;
 }
 
 .texto-titulo p {
@@ -68,7 +91,6 @@ body {
   line-height: 1.4;
 }
 
-/* QUADRO PRINCIPAL */
 .conteudo-qrcode {
   width: 100%;
   max-width: 1400px;
@@ -77,14 +99,13 @@ body {
   margin: 0 auto;
   padding: 16px 14px 10px;
   border: 1px solid #c7c7c7;
-  border-radius: 4px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
 }
 
-/* ÍCONE QR CODE */
 .icone-qrcode {
   width: 95px;
   height: 95px;
@@ -98,7 +119,6 @@ body {
   height: 100%;
 }
 
-/* TÍTULO E INSTRUÇÃO */
 .conteudo-qrcode h2 {
   margin: 6px 0 10px;
   color: #102638;
@@ -116,7 +136,6 @@ body {
   text-align: center;
 }
 
-/* ÁREA DA CÂMERA */
 .imagem-camera {
   width: 480px;
   max-width: 100%;
@@ -126,7 +145,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 3px;
+  border-radius: 5px;
   overflow: hidden;
 }
 
@@ -134,7 +153,7 @@ body {
   width: 230px;
   height: 145px;
   border: 3px solid #c2c7ca;
-  border-radius: 17px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -163,7 +182,6 @@ body {
   border-radius: 50%;
 }
 
-/* LEITOR DE QR CODE */
 #leitor-qrcode {
   width: 100%;
   max-width: 480px;
@@ -191,7 +209,6 @@ body {
   cursor: pointer;
 }
 
-/* BOTÃO DA CÂMERA */
 .botao-camera {
   flex-shrink: 0;
   margin-top: 12px;
@@ -217,7 +234,6 @@ body {
   text-align: center;
 }
 
-/* RESULTADO DA LEITURA */
 .resultado-qrcode {
   width: 100%;
   max-width: 400px;
@@ -233,7 +249,6 @@ body {
   margin: 4px 0;
 }
 
-/* AVISO DO QR CODE */
 .aviso-qrcode {
   display: flex;
   align-items: flex-start;
@@ -262,7 +277,6 @@ body {
   font-weight: bold;
 }
 
-/* AVISO IMPORTANTE */
 .aviso-importante {
   width: calc(100% - 28px);
   flex-shrink: 0;
@@ -314,7 +328,6 @@ body {
   line-height: 1.4;
 }
 
-/* RESPONSIVIDADE PARA CELULARES */
 @media (max-width: 700px) {
   .registrar-atraso {
     width: 100%;
@@ -327,7 +340,7 @@ body {
     overflow-y: auto;
   }
 
-  /* CABEÇALHO COM ESPAÇO PARA O MENU HAMBÚRGUER */
+
   .titulo-pagina {
     display: flex;
     align-items: flex-start;
@@ -364,7 +377,6 @@ body {
     overflow-wrap: break-word;
   }
 
-  /* QUADRO DO QR CODE */
   .conteudo-qrcode {
     width: 100%;
     height: auto;
@@ -396,7 +408,7 @@ body {
     line-height: 1.5;
   }
 
-  /* CÂMERA */
+
   .imagem-camera {
     width: 100%;
     height: 160px;
@@ -425,7 +437,6 @@ body {
     overflow-wrap: anywhere;
   }
 
-  /* AVISOS */
   .aviso-qrcode {
     max-width: 100%;
     margin: 12px 0 18px;

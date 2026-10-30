@@ -1,4 +1,4 @@
-
+import seta from "../../assets/seta.png";
 import { useEffect, useState } from "react";
 import { Html5Qrcode } from "html5-qrcode";
 import "./RegistrarAtraso.css";
@@ -25,10 +25,12 @@ function RegistrarAtraso() {
             qrbox: { width: 220, height: 220 },
           },
           (texto) => {
-            if (!cancelado) {
-              setQrLido(texto);
-              setMensagem("QR Code identificado com sucesso!");
-              setCameraAberta(false);
+          if (!cancelado) {
+            setQrLido(texto);
+            setMensagem("QR Code identificado com sucesso!");
+            setCameraAberta(false);
+
+            window.location.href = "http://localhost:5173/";
             }
           },
           () => {}
@@ -62,7 +64,13 @@ function RegistrarAtraso() {
   return (
     <div className="registrar-atraso">
       <header className="titulo-pagina">
-        <span className="icone-voltar">ᐸ</span>
+    <button
+      className="icone-voltar"
+      type="button"
+      onClick={() => window.history.back()}
+    >
+      <img src={seta} alt="Voltar" />
+    </button>
 
         <div className="texto-titulo">
           <h1>Registrar Chegada</h1>
