@@ -1,7 +1,7 @@
-import TelaInicialAluno from "./components/TelaInicialAluno/TelaInicial";
+import Gestor from "../components/Gestor.jsx";
 
 function App() {
-  return <TelaInicialAluno />;
+  return <Gestor />;
 }
 
 export default App;
