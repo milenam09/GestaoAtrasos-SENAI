@@ -21,7 +21,7 @@ function Menu() {
 
   const itensMenu = [
     { nome: "Início", icone: faHouse },
-    { nome: "Registrar atraso", icone: faQrcode },
+    { nome: "Registrar Chegada", icone: faQrcode },
     { nome: "Meus Atrasos", icone: faClock },
     { nome: "Ocorrências", icone: faClipboardList },
     { nome: "Atestados", icone: faFileLines },
