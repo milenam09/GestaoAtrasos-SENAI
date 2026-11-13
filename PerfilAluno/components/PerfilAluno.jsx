@@ -1,100 +1,18 @@
+import { useState } from 'react'
+
 import "./PerfilAluno.css";
 
+import Menu from "../Menu/Menu";
+import Contato from "../pages/Contato";
+import { useNavigate } from "react-router-dom";
+;
 export default function PerfilAluno() {
+    const navigate = useNavigate();
     return (
         <div className="pagina-perfil">
 
-            {/* MENU LATERAL */}
-            <aside className="menu-lateral">
 
-                <img
-                    src="/assets/logo.png"
-                    alt="Início"
-                    className="logo-senai"
-                />
-                <div className="usuario-menu">
-                    <div className="avatar-pequeno">
-                        <img
-                            src="/assets/person2.png"
-                            alt="Início"
-                            className="icone-imagem"
-                        />
-                    </div>
-
-                    <div>
-                        <p>João Silva</p>
-                        <small>Aluno</small>
-                    </div>
-                </div>
-
-                <nav className="navegacao">
-
-                    <a href="#" className="item-menu">
-                        <img
-                            src="/assets/home.jpg.png"
-                            alt="Início"
-                            className="icone-imagem"
-                        />
-                        <span>Início</span>
-                    </a>
-
-                    <a href="#" className="item-menu">
-                        <img
-                            src="/assets/qrcode.png"
-                            alt="Início"
-                            className="icone-imagem"
-                        />
-                        <span>Registrar atraso</span>
-                    </a>
-
-                    <a href="#" className="item-menu">
-                        <img
-                            src="/assets/Frame.png"
-                            alt="Início"
-                            className="icone-imagem"
-                        />
-                        <span>Meus Atrasos</span>
-                    </a>
-
-                    <a href="#" className="item-menu">
-                        <img
-                            src="/assets/clipboard.png"
-                            alt="Início"
-                            className="icone-imagem"
-                        />
-                        <span>Ocorrências</span>
-                    </a>
-
-                    <a href="#" className="item-menu">
-                        <img
-                            src="/assets/file.png"
-                            alt="Início"
-                            className="icone-imagem"
-                        />
-                        <span>Atestados</span>
-                    </a>
-
-                    <a href="#" className="item-menu ativo">
-                        <img
-                            src="/assets/person.png"
-                            alt="Início"
-                            className="icone-imagem"
-                        />
-                        <span>Perfil</span>
-                    </a>
-
-                </nav>
-
-                <a href="#" className="botao-sair">
-                    <img
-                        src="/assets/sair.png"
-                        alt="Início"
-                        className="icone-imagem"
-                    />
-                    <span>Sair</span>
-                </a>
-
-            </aside>
+            <Menu />
 
             {/* CONTEÚDO PRINCIPAL */}
             <main className="conteudo-principal">
@@ -120,11 +38,14 @@ export default function PerfilAluno() {
                     {/* INFORMAÇÕES DO ALUNO */}
                     <div className="identificacao-aluno">
 
-                        <img
-                            src="/assets/person2.png"
-                            alt="Início"
-                            className="icone-imagem"
-                        />
+                        <div className="avatar-circle">
+                            <img
+                                src="/assets/person2.png"
+                                alt="Início"
+                                className="icone-imagem"
+                            />
+                        </div>
+
 
                         <div className="nome-aluno">
                             <h2>João Silva</h2>
@@ -209,11 +130,12 @@ export default function PerfilAluno() {
                                 Entre em contato com a nossa secretaria da unidade.
                             </p>
                         </div>
-
-                        <button className="botao-contato">
+                        <button
+                            className="botao-contato"
+                            onClick={() => navigate("/contato")}
+                        >
                             Ver contato
                         </button>
-
                     </div>
 
                 </section>

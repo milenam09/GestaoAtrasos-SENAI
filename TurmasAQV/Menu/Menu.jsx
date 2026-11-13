@@ -1,14 +1,15 @@
-
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHouse,
-  faQrcode,
-  faClock,
-  faClipboardList,
   faFileLines,
+  faChalkboardUser,
+  faUserGroup,
+  faClipboardList,
   faUser,
   faRightFromBracket,
+  faBars,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 
 import "./Menu.css";
@@ -16,73 +17,93 @@ import logo from "../assets/logo.png";
 
 function Menu() {
   const [paginaAtiva, setPaginaAtiva] = useState("");
+  const [menuAberto, setMenuAberto] = useState(false);
 
   const itensMenu = [
     { nome: "Início", icone: faHouse },
-    { nome: "Registrar atraso", icone: faQrcode },
-    { nome: "Meus Atrasos", icone: faClock },
-    { nome: "Ocorrências", icone: faClipboardList },
-    { nome: "Atestados", icone: faFileLines },
+    { nome: "Acolhimentos", icone: faFileLines },
+    { nome: "Turmas", icone: faChalkboardUser },
+    { nome: "Alunos", icone: faUserGroup },
+    { nome: "Relatórios", icone: faClipboardList },
     { nome: "Perfil", icone: faUser },
   ];
 
   return (
-    <aside className="menu">
-      <div className="menu-logo">
-        <img src={logo} alt="Logo SENAI" />
-      </div>
+    <>
+      <button
+        className="botao-hamburguer"
+        onClick={() => setMenuAberto(!menuAberto)}
+        aria-label={menuAberto ? "Fechar menu" : "Abrir menu"}
+        aria-expanded={menuAberto}
+      >
+        <FontAwesomeIcon icon={menuAberto ? faXmark : faBars} />
+      </button>
 
-      <div className="menu-usuario">
-        <div className="usuario-icone">
-          <FontAwesomeIcon icon={faUser} />
+      {menuAberto && (
+        <div
+          className="fundo-menu"
+          onClick={() => setMenuAberto(false)}
+        />
+      )}
+
+      <aside className={`menu ${menuAberto ? "menu-aberto" : ""}`}>
+        <div className="menu-logo">
+          <img src={logo} alt="Logo SENAI" />
         </div>
 
-        <div className="usuario-info">
-          <p>Joao Silva</p>
-          <span>Aluno</span>
-        </div>
-      </div>
+        <div className="menu-usuario">
+          <div className="usuario-icone">
+            <FontAwesomeIcon icon={faUser} />
+          </div>
 
-      <nav className="menu-links">
-        {itensMenu.map((item) => (
+          <div className="usuario-info">
+            <p>Cris Costa</p>
+            <span>Gestor</span>
+          </div>
+        </div>
+
+        <nav className="menu-links">
+          {itensMenu.map((item) => (
+            <a
+              href="#"
+              key={item.nome}
+              className={`link-menu ${
+                paginaAtiva === item.nome ? "ativo" : ""
+              }`}
+              onClick={(e) => {
+                e.preventDefault();
+                setPaginaAtiva(item.nome);
+                setMenuAberto(false);
+              }}
+            >
+              <span className="icone">
+                <FontAwesomeIcon icon={item.icone} />
+              </span>
+              <span>{item.nome}</span>
+            </a>
+          ))}
+        </nav>
+
+        <div className="menu-rodape">
           <a
             href="#"
-            key={item.nome}
             className={`link-menu ${
-              paginaAtiva === item.nome ? "ativo" : ""
+              paginaAtiva === "Sair" ? "ativo" : ""
             }`}
             onClick={(e) => {
               e.preventDefault();
-              setPaginaAtiva(item.nome);
+              setPaginaAtiva("Sair");
+              setMenuAberto(false);
             }}
           >
             <span className="icone">
-              <FontAwesomeIcon icon={item.icone} />
+              <FontAwesomeIcon icon={faRightFromBracket} />
             </span>
-
-            <span>{item.nome}</span>
+            <span>Sair</span>
           </a>
-        ))}
-      </nav>
-
-    <div className="menu-rodape">
-        <a
-            href="#"
-            className={`link-menu ${paginaAtiva === "Sair" ? "ativo" : ""}`}
-            onClick={(e) => {
-            e.preventDefault();
-            setPaginaAtiva("Sair");
-            }}
-          >
-            
-          <span className="icone">
-            <FontAwesomeIcon icon={faRightFromBracket} />
-          </span>
-
-          <span>Sair</span>
-        </a>
-      </div>
-    </aside>
+        </div>
+      </aside>
+    </>
   );
 }
 

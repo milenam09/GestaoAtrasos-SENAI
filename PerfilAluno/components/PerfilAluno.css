@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 .pagina-perfil {
   display: flex;
   min-height: 100vh;
@@ -15,22 +16,8 @@
 
 /* MENU LATERAL */
 
-.menu-lateral {
-  width: 180px;
-  min-width: 180px;
-  background-color: #071b2c;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 8px 16px;
-  min-height: 100vh;
-}
 
-.logo-senai {
-  width: 100px;
-  padding:  3px;
-  margin-bottom: 24px;
-}
+
 
 .usuario-menu {
   display: flex;
@@ -66,10 +53,25 @@
   font-size: 15px;
   margin: 0 0 4px;
 }
+.info-perfil {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 20px;
+}
 
-.usuario-menu small {
-  font-size: 10px;
-  color: #d1d9e0;
+
+.dados-perfil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  margin: 0;
+}
+
+.dados-perfil strong,
+.dados-perfil span {
+  margin: 0;
 }
 
 /* NAVEGAÇÃO */
@@ -146,6 +148,11 @@
 
 .cabecalho {
   margin-bottom: 14px;
+margin-left: 270px;
+  width: calc(100% - 270px);
+  padding: 20px;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .cabecalho h1 {
@@ -176,6 +183,12 @@
   min-height: 570px;
   display: flex;
   flex-direction: column;
+  background-color: #F5F5F5;
+  margin-left: 270px;
+  width: calc(100% - 270px);
+  padding: 20px;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 /* IDENTIFICAÇÃO DO ALUNO */
@@ -183,34 +196,28 @@
 .identificacao-aluno {
   display: flex;
   align-items: center;
+  gap: 30px !important;
   border: 1px solid #aab8c8;
-  background-color: #f7f7f7;
+  background-color: #F5F5F5;
   border-radius: 4px;
   padding: 7px 25px;
   min-height: 82px;
   margin-bottom: 32px;
 }
 
-.avatar-grande {
-  width: 65px;
-  height: 65px;
-  min-width: 65px;
-  border-radius: 50%;
-  background-color: #607589;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 35px;
-  margin-right: 12px;
-}
 
+.avatar-icon {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
 .nome-aluno h2 {
-  font-size: 16px;
+  font-size: 20px;
   margin: 0 0 5px;
 }
 
 .nome-aluno p {
-  font-size: 12px;
+  font-size: 13px;
   margin: 0;
 }
 
@@ -218,15 +225,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 8px;
 
   background-color: #f00018;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
 
-  padding: 9px 12px;
-  font-size: 20px;
+  padding: 10px 22px;
+  font-size: 14px;
   cursor: pointer;
   margin-left: auto;
 }
@@ -247,16 +254,18 @@
 }
 
 .quadro-informacao {
-  border: 1px solid #aab8c8;
-  border-radius: 4px;
-  background-color: #f7f7f7;
-  padding: 13px 25px;
-  min-height: 205px;
+  min-width: 0;
+  background-color: #f9fbfd;
+  border: 1px solid #e0e7ee;
+  border-radius: 8px;
+  padding: 20px;
 }
 
 .quadro-informacao h3 {
-  font-size: 13px;
-  margin: 0 0 10px;
+margin: 0 0 18px 0;
+  font-size: 17px;
+  font-weight: bold;
+  color: #000000;
 }
 
 .campo {
@@ -265,12 +274,12 @@
 
 .campo strong {
   display: block;
-  font-size: 10px;
+  font-size: 17px;
   margin-bottom: 3px;
 }
 
 .campo p {
-  font-size: 10px;
+  font-size: 15px;
   margin: 0;
   overflow-wrap: anywhere;
 }
@@ -328,6 +337,91 @@
   cursor: pointer;
 }
 
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* MENU LATERAL */
+.sidebar {
+  background-color: #061c2b;
+  color: white;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.sidebar.aberto {
+  width: 211px;
+}
+
+.sidebar.fechado {
+  width: 75px;
+}
+
+/* LOGO */
+.logo {
+  width: 110px;
+  margin: 20px;
+}
+
+/* OPÇÕES DO MENU */
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.sidebar nav a,
+.sair {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 23px;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.sidebar nav a span:first-child,
+.sair span:first-child {
+  font-size: 25px;
+}
+
+.sidebar nav a:hover,
+.sidebar nav .ativo {
+  color: #ff0015;
+}
+
+/* BOTÃO HAMBÚRGUER */
+.botao-menu {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+/* CONTEÚDO */
+.conteudo {
+  flex: 1;
+  margin-left: 211px;
+  padding: 20px 30px;
+  transition: margin-left 0.3s ease;
+}
+.conteudo.menu-aberto {
+  margin-left: 211px;
+}
+
+.conteudo.menu-fechado {
+  margin-left: 75px;
+}
 /* TELAS MENORES */
 
 @media (max-width: 700px) {

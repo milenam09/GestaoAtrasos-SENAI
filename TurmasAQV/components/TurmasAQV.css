@@ -2,7 +2,10 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 100%;
+  box-sizing: border-box;
+  margin-left: 335px;   /* largura do menu */
+  padding: 30px;
+  width: calc(100% - 335px);
 }
 
 .turmas-header h1 {
