@@ -1,0 +1,73 @@
+SENAI — Atestados e Justificativas
+==================================
+
+Como abrir e rodar este projeto no seu computador
+-------------------------------------------------
+
+1. Tenha o Node.js instalado (versão 20 ou mais nova).
+   Se ainda não tem, instale em https://nodejs.org
+
+2. Descompacte este arquivo ZIP (clique com o botão direito > "Extrair aqui").
+
+3. Abra a pasta no VS Code: menu Arquivo > Abrir pasta... e escolha a
+   pasta "senai-atestados".
+
+4. No VS Code, abra o terminal: menu Terminal > Novo terminal.
+
+5. Digite os dois comandos abaixo, um de cada vez:
+
+   npm install
+   npm run dev
+
+6. O terminal vai mostrar um endereço (normalmente http://localhost:8080).
+   Abra esse endereço no navegador para ver a tela.
+
+Para parar de rodar, pressione Ctrl+C no terminal.
+
+
+O que é cada arquivo
+--------------------
+
+src/pages/AtestadosPage.jsx
+   A tela inteira: menu lateral, os três quadros de contagem, a tabela e
+   a janela de "Enviar novo documento".
+
+src/services/atestadosService.js
+   As funções que conversam com o sistema externo (buscar métricas, listar
+   documentos, enviar, ver detalhes e cancelar).
+   Na linha 1 está o endereço da API. Troque quando o sistema real existir.
+
+src/routes/index.tsx
+   Liga o endereço "/" à tela.
+
+src/routes/__root.tsx
+   Estrutura da página (cabeçalho, fonte Poppins, metadados).
+
+src/styles.css
+   As cores usadas na tela (azul-marinho da lateral, vermelho, fundo claro,
+   azul/amarelo/verde dos quadros).
+
+src/components/ui/dialog.tsx
+   O componente da janela pop-up.
+
+src/lib/utils.ts
+   Função auxiliar usada pelo pop-up.
+
+
+Antes de usar com o sistema de verdade
+--------------------------------------
+
+- No arquivo src/services/atestadosService.js, linha 1, troque
+  https://sua-api-futura.com/api pelo endereço real da API.
+- O aluno está fixado no número 1 (constante ALUNO_ID no topo da tela).
+- O login usa o "token" guardado no navegador do aluno.
+- A tela mostra alguns valores de exemplo enquanto a API não responde.
+  Quando a API responder, os valores reais substituem os de exemplo.
+
+
+Dependências
+------------
+
+React 19, TanStack Start (rotas), Tailwind CSS 4 (estilos) e
+Lucide React (ícones). Tudo listado no arquivo package.json —
+o comando "npm install" baixa tudo sozinho.

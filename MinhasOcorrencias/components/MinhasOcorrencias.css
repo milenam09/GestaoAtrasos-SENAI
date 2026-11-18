@@ -1,0 +1,276 @@
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f4f7fc;
+}
+  font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+* {
+  box-sizing: border-box;
+}
+.pagina-ocorrencias {
+flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+  margin-left: 250px; /* Mesma largura do menu lateral */
+  padding: 22px 28px;
+  background: #ffffff;
+  box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+  
+}
+
+
+/* Área principal */
+
+.conteudo {
+  min-width: 0;
+  background: #f5f8fc;
+  padding: 15px 23px 30px;
+  
+}
+
+.painel {
+  width: 100%;
+  max-width: 1250px;
+  min-height: 650px;
+  margin: 0 auto;
+  border: 1px solid #a7b6c7;
+  border-radius: 3px;
+  padding: 16px 12px;
+}
+
+
+.cabecalho {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.voltar {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 25px;
+}
+
+.cabecalho h1 {
+  font-size: 30px;
+  font-weight: 750;
+  margin: 0 0 5px;
+}
+
+.cabecalho p {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Filtros */
+.filtros {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 21px;
+}
+
+
+.botao-filtro {
+  flex: 1;
+  min-width: 0;
+  height: 45px;
+  padding: 0 18px;
+  border: 1px solid #b9bec5;
+  border-radius: 4px;
+  background: #f7f7f7;
+  color: #111;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.botao-filtro.selecionado {
+  background: #ed0017;
+  border-color: #ed0017;
+  color: white;
+}
+
+
+/* Tabela */
+.tabela-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tabela-container table {
+  width: 100%;
+  min-width: 900px;
+  text-align: center;
+  border: 1px solid #aab9ca;
+  border-radius: 3px;
+
+}
+
+
+.tabela-container th {
+  height: 48px;
+  padding: 12px 10px;
+  font-size: 13px;
+  font-weight: 750;
+   border-bottom: 1px solid #aab2bd;
+}
+
+
+
+.tabela-container td {
+  height: 58px;
+  padding: 20px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+
+  border-bottom: 1px solid #b8c1cb;
+}
+
+
+.tabela-container tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+
+
+.status {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 78px;
+  min-height: 25px;
+  padding: 0 8px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.em-andamento {
+  background: #fff0b8;
+  color: #985000;
+   width: 125px;
+  min-height: 34px;
+
+}
+
+.pendente {
+  background: #d9e9ff;
+  color: #1556a3;
+  width: 125px;
+  min-height: 34px;
+}
+
+.concluido {
+  background: #cef9e6;
+  color: #176b49;
+  width: 125px;
+  min-height: 34px;
+}
+
+.encerrada {
+  background: #ffe0e0;
+  color: #a52a2a;
+  width: 125px;
+  min-height: 34px;
+}
+
+.botao-detalhes {
+  width: 125px;
+  min-height: 34px;
+  border: none;
+  border-radius: 7px;
+  background: #ed0017;
+  color: white;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.tabela-container th,
+.tabela-container td {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.botao-detalhes:hover,
+.botao-filtro.selecionado:hover {
+  background: #c90014;
+}
+
+.sem-resultados {
+  padding: 20px !important;
+  color: #666;
+}
+
+.historico {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin: 14px 16px;
+  color: #e60016;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.historico span {
+  font-size: 16px;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+  .pagina-ocorrencias {
+margin-left: 0;
+    width: 100%;
+    padding: 75px 15px 15px;  }
+
+  .sidebar {
+    width: 105px;
+    min-width: 105px;
+    padding: 8px;
+  }
+
+  .menu a {
+    gap: 5px;
+    font-size: 7px;
+  }
+
+  .menu-icone {
+    width: 25px;
+  }
+
+  .conteudo {
+    padding: 12px 8px;
+  }
+
+  .painel {
+    padding: 10px 7px;
+  }
+
+  .filtros {
+    flex-wrap: wrap;
+  }
+
+  .botao-filtro {
+    flex: 1 1 28%;
+    white-space: normal;
+  }
+}

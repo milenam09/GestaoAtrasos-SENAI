@@ -1,0 +1,255 @@
+
+.contato-container {
+  width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+  padding: 24px 32px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: #333333;
+  overflow-x: hidden;
+}
+
+/* Cabeçalho */
+.contato-header {
+  margin-bottom: 20px;
+}
+
+.contato-titulo-linha {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.btn-voltar-topo {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contato-titulo-linha h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0c2232;
+  margin: 0;
+}
+
+.contato-subtitulo {
+  font-size: 14px;
+  color: #666666;
+  margin: 0;
+  padding-left: 30px;
+  font-weight: normal;
+  overflow-wrap: anywhere;
+}
+
+/* Cartão principal */
+.contato-card {
+  width: 100%;
+  max-width: 900px;
+  min-width: 0;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e1e8ed;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+/* Banner superior */
+.contato-banner {
+  background-color: #0c2232;
+  color: #ffffff;
+  padding: 18px 24px;
+  border-bottom: 3px solid #e50914;
+}
+
+.contato-banner h3 {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: bold;
+  overflow-wrap: anywhere;
+}
+
+.contato-banner span {
+  font-size: 13px;
+  color: #d1d9e0;
+  font-weight: normal;
+  overflow-wrap: anywhere;
+}
+
+/* Grelha de conteúdos */
+.contato-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  padding: 20px 24px;
+}
+
+.info-box {
+  min-width: 0;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 14px 16px;
+}
+
+.info-box.largura-total {
+  grid-column: 1 / -1;
+}
+
+.info-box.central-atendimento {
+  background-color: #f1f5f9;
+  border-left: 4px solid #0c2232;
+}
+
+.info-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  min-width: 0;
+}
+
+.info-header svg {
+  flex-shrink: 0;
+}
+
+.info-header h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #0c2232;
+  overflow-wrap: anywhere;
+}
+
+.info-box p {
+  margin: 0;
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.4;
+  font-weight: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.destaque-contato {
+  font-size: 14px !important;
+  color: #0f172a !important;
+  font-weight: 500 !important;
+}
+
+/* Rodapé do cartão */
+.contato-rodape {
+  padding: 14px 24px;
+  background-color: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-voltar-perfil {
+  background-color: #e50914;
+  color: #ffffff;
+  border: none;
+  padding: 9px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-voltar-perfil:hover {
+  background-color: #c70711;
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .contato-container {
+    padding: 24px;
+  }
+
+  .contato-grid {
+    padding: 18px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  .contato-container {
+    min-height: 100vh;
+    padding: 18px 16px 24px;
+    overflow: visible;
+  }
+
+  .contato-header {
+    margin-bottom: 18px;
+  }
+
+  .contato-titulo-linha h2 {
+    font-size: 21px;
+  }
+
+  .contato-subtitulo {
+    font-size: 13px;
+    padding-left: 30px;
+  }
+
+  .contato-banner {
+    padding: 16px;
+  }
+
+  .contato-banner h3 {
+    font-size: 17px;
+  }
+
+  .contato-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .info-box.largura-total {
+    grid-column: auto;
+  }
+
+  .info-box {
+    padding: 14px;
+  }
+
+  .contato-rodape {
+    padding: 14px;
+  }
+
+  .btn-voltar-perfil {
+    width: 100%;
+    min-height: 42px;
+  }
+}
+
+/* Celulares estreitos */
+@media (max-width: 360px) {
+  .contato-container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .contato-grid {
+    padding: 10px;
+  }
+
+  .contato-banner {
+    padding: 14px;
+  }
+
+  .contato-titulo-linha h2 {
+    font-size: 19px;
+  }
+}
