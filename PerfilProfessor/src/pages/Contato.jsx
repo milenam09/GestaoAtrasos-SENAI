@@ -2,9 +2,13 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Contato.css";
 
-// Seta exatamente igual à da página de Perfil (estilo linha reta de voltar)
+// Seta com barra vertical na esquerda (|←) exatamente igual à imagem
 const IconeSetaVoltar = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="4" y1="4" x2="4" y2="20" />
+    <polyline points="14 6 8 12 14 18" />
+    <line x1="8" y1="12" x2="20" y2="12" />
+  </svg>
 );
 
 const IconeEndereco = () => (
@@ -31,7 +35,7 @@ export default function Contato() {
 
   return (
     <div className="contato-container">
-      {/* Cabeçalho Reestruturado */}
+      {/* Cabeçalho */}
       <div className="contato-header">
         <div className="contato-titulo-linha">
           <button className="btn-voltar-topo" onClick={() => navigate(-1)}>
