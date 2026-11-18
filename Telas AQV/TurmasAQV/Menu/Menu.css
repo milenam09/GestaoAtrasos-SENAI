@@ -1,8 +1,16 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> 92c8051d9b036c39f4bb830f9a8340fc64c2adc0
 .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
   width: 270px;
   min-width: 270px;
   height: 100vh;
+  height: 100dvh;
   background-color: #0c2232;
   color: #ffffff;
   display: flex;
@@ -10,11 +18,16 @@
   padding: 18px 28px;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
+  overflow-y: auto;
   flex-shrink: 0;
+  z-index: 1000;
 }
 
-
+<<<<<<< HEAD
+=======
 /* LOGO */
+>>>>>>> 92c8051d9b036c39f4bb830f9a8340fc64c2adc0
+
 .menu-logo {
   width: 100%;
   margin-bottom: 32px;
@@ -28,7 +41,11 @@
   object-fit: contain;
 }
 
+<<<<<<< HEAD
+=======
 /* USUÁRIO */
+>>>>>>> 92c8051d9b036c39f4bb830f9a8340fc64c2adc0
+
 .menu-usuario {
   display: flex;
   align-items: center;
@@ -55,7 +72,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+<<<<<<< HEAD
   gap: 4px;
+=======
+  gap: 6px;
+>>>>>>> 92c8051d9b036c39f4bb830f9a8340fc64c2adc0
   margin: 0;
   padding: 0;
 }
@@ -67,6 +88,10 @@
   font-weight: bold;
   white-space: nowrap;
   text-align: left;
+<<<<<<< HEAD
+=======
+  line-height: 1.2;
+>>>>>>> 92c8051d9b036c39f4bb830f9a8340fc64c2adc0
 }
 
 .usuario-info span {
@@ -74,11 +99,21 @@
   margin: 0;
   padding: 0;
   font-size: 14px;
+<<<<<<< HEAD
   color: #e0e7ed;
   text-align: left;
 }
 
+=======
+  color: #ffffff;
+  font-weight: normal;
+  text-align: left;
+  line-height: 1.2;
+}
+
 /* LINKS DO MENU */
+
+>>>>>>> 92c8051d9b036c39f4bb830f9a8340fc64c2adc0
 .menu-links {
   display: flex;
   flex-direction: column;
@@ -98,14 +133,17 @@
   border-radius: 5px;
   color: #ffffff;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
   white-space: nowrap;
   cursor: pointer;
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-/* ÍCONES */
+<<<<<<< HEAD
+
+=======
+>>>>>>> 92c8051d9b036c39f4bb830f9a8340fc64c2adc0
 .link-menu .icone {
   width: 20px;
   min-width: 20px;
@@ -115,18 +153,29 @@
   font-size: 18px;
 }
 
-/* ITEM SELECIONADO */
+<<<<<<< HEAD
+=======
+/* ITEM ATIVO */
+>>>>>>> 92c8051d9b036c39f4bb830f9a8340fc64c2adc0
+
 .menu-links .link-menu.ativo {
   color: #ff0000;
   font-weight: bold;
 }
 
-/* EFEITO AO PASSAR O MOUSE */
+<<<<<<< HEAD
+
+=======
+>>>>>>> 92c8051d9b036c39f4bb830f9a8340fc64c2adc0
 .menu-links .link-menu:hover {
   background-color: #173448;
 }
 
-/* BOTÃO SAIR */
+<<<<<<< HEAD
+=======
+/* RODAPÉ */
+>>>>>>> 92c8051d9b036c39f4bb830f9a8340fc64c2adc0
+
 .menu-rodape {
   width: 100%;
   margin-top: auto;
@@ -145,12 +194,73 @@
   background-color: #173448;
 }
 
-/* RESPONSIVIDADE */
+<<<<<<< HEAD
+=======
+/* BOTÃO MOBILE */
+>>>>>>> 92c8051d9b036c39f4bb830f9a8340fc64c2adc0
+
+.botao-hamburguer {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1002;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0c2232;
+  color: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 92c8051d9b036c39f4bb830f9a8340fc64c2adc0
+.fundo-menu {
+  display: none;
+}
+
+<<<<<<< HEAD
+
 @media (max-width: 700px) {
+=======
+/* RESPONSIVIDADE */
+
+@media (max-width: 700px) {
+
+>>>>>>> 92c8051d9b036c39f4bb830f9a8340fc64c2adc0
+  .botao-hamburguer {
+    display: flex;
+  }
+
   .menu {
-    width: 225px;
-    min-width: 225px;
-    padding: 16px 18px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    width: 250px;
+    min-width: 250px;
+    height: 100vh;
+    height: 100dvh;
+    padding: 70px 18px 18px;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition: transform 0.3s ease, visibility 0.3s ease;
+  }
+
+  .menu.menu-aberto {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  .menu-logo {
+    margin-bottom: 25px;
   }
 
   .menu-logo img {
@@ -159,6 +269,7 @@
 
   .menu-usuario {
     gap: 8px;
+    margin-bottom: 25px;
   }
 
   .usuario-icone {
@@ -180,4 +291,17 @@
     font-size: 14px;
     gap: 8px;
   }
+
+  .fundo-menu {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+<<<<<<< HEAD
 }
+=======
+
+}
+>>>>>>> 92c8051d9b036c39f4bb830f9a8340fc64c2adc0

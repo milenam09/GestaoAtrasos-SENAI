@@ -1,0 +1,360 @@
+/* CONFIGURAÇÃO GERAL */
+.aluno-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  color: #080808;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.aluno-main,
+.aluno-main * {
+  box-sizing: border-box;
+}
+
+.aluno-container .aluno-main {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: auto;
+  max-width: none;
+  margin-left: var(--sidebar-offset, 270px);
+  margin-right: 100px;
+  padding: 25px 28px;
+}
+
+/* BOAS-VINDAS */
+.aluno-container .boas-vindas {
+  margin-bottom: 27px;
+}
+
+.aluno-container .boas-vindas h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.aluno-container .boas-vindas p {
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 3px;
+}
+
+/* BANNER E OCORRÊNCIAS */
+.aluno-container .topo-dashboard {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 175px;
+  gap: 30px;
+  align-items: start;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.aluno-container .banner {
+  position: relative;
+  width: 100%;
+  height: 207px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #ddd;
+}
+
+.aluno-container .banner .icone-imagem {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% center;
+}
+
+.aluno-container .banner h1 {
+  position: absolute;
+  top: 25px;
+  left: 24px;
+  z-index: 1;
+  width: 175px;
+  font-size: 23px;
+  line-height: 1.08;
+  font-weight: bold;
+  color: #080808;
+}
+
+.aluno-container .linha-vermelha {
+  position: absolute;
+  z-index: 2;
+  left: 24px;
+  bottom: 30px;
+  width: 40px;
+  height: 4px;
+}
+
+/* ÚLTIMAS OCORRÊNCIAS */
+.aluno-container .ocorrencias {
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  padding: 13px 5px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+.aluno-container .ocorrencias h4 {
+  font-size: 11px;
+  margin-bottom: 25px;
+}
+
+.aluno-container .ocorrencias svg {
+  margin-bottom: 17px;
+}
+
+.aluno-container .ocorrencias p {
+  font-size: 9px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.aluno-container .ocorrencias strong {
+  font-size: 19px;
+}
+
+/* CARDS DE INFORMAÇÕES */
+.aluno-container .informacoes {
+  display: grid;
+  grid-template-columns: 1.2fr 1.1fr 0.7fr;
+  gap: 18px;
+  width: 100%;
+}
+
+.aluno-container .card-info {
+  min-width: 0;
+  height: 190px;
+  padding: 24px 17px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+.aluno-container .card-info h3 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.aluno-container .card-info h3 svg {
+  color: #ff1717;
+  stroke-width: 2.5;
+}
+
+.aluno-container .card-info p {
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 13px;
+}
+
+.aluno-container .card-info.presenca {
+  padding: 20px;
+}
+
+.aluno-container .presenca h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  font-size: 23px;
+}
+
+.aluno-container .presenca h2 svg {
+  color: #ff1717;
+  stroke-width: 2.5;
+}
+
+.aluno-container .presenca-dados {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 33px;
+}
+
+.aluno-container .circulo {
+  width: 56px;
+  height: 56px;
+  border: 3px solid #00c879;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.aluno-container .presenca-dados strong {
+  font-size: 17px;
+  white-space: nowrap;
+}
+
+/* AVISO */
+.aluno-container .card-info.aviso {
+  text-align: center;
+  padding: 15px 8px;
+}
+
+.aluno-container .aviso > svg {
+  display: block;
+  margin: 0 auto 7px;
+}
+
+.aluno-container .aviso strong {
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.aluno-container .aviso p {
+  font-size: 9px;
+  line-height: 1.5;
+  margin-top: 11px;
+}
+
+/* ACESSO RÁPIDO */
+.aluno-container .titulo-rapido {
+  font-size: 18px;
+  margin: 19px 0 12px;
+  font-weight: bold;
+}
+
+.aluno-container .acessos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+}
+
+.aluno-container .card-acesso {
+  width: 100%;
+  min-width: 0;
+  min-height: 177px;
+  padding: 15px 7px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.aluno-container .card-acesso svg {
+  width: 27px;
+  height: 27px;
+  color: #ff1717;
+  stroke-width: 2.3;
+  flex-shrink: 0;
+}
+
+.aluno-container .card-acesso strong {
+  font-size: 11px;
+  white-space: normal;
+}
+
+.aluno-container .card-acesso small {
+  font-size: 9px;
+  white-space: normal;
+}
+
+/* EFEITO DA BORDA VERMELHA */
+.aluno-container .card-info,
+.aluno-container .card-acesso,
+.aluno-container .ocorrencias {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.aluno-container .card-info:hover,
+.aluno-container .card-acesso:hover,
+.aluno-container .ocorrencias:hover {
+  border: 1px solid #ff1717;
+  box-shadow: 0 0 5px rgba(255, 23, 23, 0.2);
+  cursor: pointer;
+}
+
+/* TELAS MÉDIAS */
+@media (max-width: 1100px) {
+  .aluno-container .aluno-main {
+    margin-right: 25px;
+    padding: 20px;
+  }
+
+  .aluno-container .topo-dashboard {
+    grid-template-columns: minmax(0, 1fr) 160px;
+    gap: 15px;
+  }
+
+  .aluno-container .informacoes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .aluno-container .card-info.aviso {
+    grid-column: span 2;
+  }
+
+  .aluno-container .acessos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .aluno-container .aluno-main {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+/* CELULAR */
+@media (max-width: 700px) {
+  .aluno-container .aluno-main {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 70px 15px 20px;
+    width: 100%;
+  }
+
+  .aluno-container .topo-dashboard {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .aluno-container .banner {
+    height: clamp(160px, 48vw, 207px);
+  }
+
+  .aluno-container .ocorrencias {
+    height: auto;
+    min-height: 170px;
+  }
+
+  .aluno-container .informacoes {
+    grid-template-columns: 1fr;
+  }
+
+  .aluno-container .card-info.aviso {
+    grid-column: auto;
+  }
+
+  .aluno-container .acessos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .aluno-container .acessos {
+    grid-template-columns: 1fr;
+  }
+
+  .aluno-container .presenca-dados {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,151 @@
+.app-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 270px;
+  min-width: 270px;
+  height: 100vh;
+  background: #071b2b;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 28px 14px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 1000;
+}
+
+.app-menu.menu-professor {
+  background: #071b2b;
+}
+
+.menu-logo {
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.menu-logo img {
+  width: 168px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.menu-perfil {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.perfil-foto {
+  width: 58px;
+  height: 58px;
+  min-width: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f3f6;
+  color: #0c2232;
+}
+
+.perfil-texto {
+  min-width: 0;
+}
+
+.perfil-texto p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.perfil-texto span {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  color: #dbe5ee;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.menu-link {
+  width: 100%;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 0 12px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.menu-link:hover,
+.menu-link:focus-visible,
+.menu-link.active {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.menu-link:hover,
+.menu-link:focus-visible,
+.menu-link.active {
+  color: #ff2d2d;
+}
+
+.menu-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  min-width: 20px;
+}
+
+.menu-footer {
+  margin-top: auto;
+  width: 100%;
+}
+
+.menu-sair {
+  margin-top: 12px;
+}
+
+@media (max-width: 700px) {
+  .app-menu {
+    position: fixed;
+    width: 250px;
+    min-width: 250px;
+    padding: 70px 18px 18px;
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition: transform 0.3s ease, visibility 0.3s ease;
+  }
+
+  .app-menu.menu-open {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  .menu-logo img {
+    width: 150px;
+  }
+
+  .perfil-foto {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+  }
+}

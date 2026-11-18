@@ -30,17 +30,7 @@
   pointer-events: none;
 }
 
-.faixa-superior {
-  top: 15px;
-  left: -100px;
-  box-shadow: 0 0 0 18px rgba(237, 16, 27, 0.45);
-}
 
-.faixa-inferior {
-  bottom: 15px;
-  right: -100px;
-  box-shadow: 0 0 0 18px rgba(237, 16, 27, 0.45);
-}
 
 /* Cartão branco */
 

@@ -1,7 +1,23 @@
 import React from 'react';
 import './TurmasAQV.css'; // Vamos criar este CSS a seguir para estilizar
-
+import { useState } from "react";
 function TurmasAQV() {
+    const [paginaAtual, setPaginaAtual] = useState(1);
+
+const turmasPorPagina = 5;
+
+const turmas = [
+  // Coloque todas as suas turmas aqui
+];
+
+const totalPaginas = Math.ceil(turmas.length / turmasPorPagina);
+
+const inicio = (paginaAtual - 1) * turmasPorPagina;
+
+const turmasExibidas = turmas.slice(
+  inicio,
+  inicio + turmasPorPagina
+);
     return (
         <div className="turmas-container">
             {/* Cabeçalho */}

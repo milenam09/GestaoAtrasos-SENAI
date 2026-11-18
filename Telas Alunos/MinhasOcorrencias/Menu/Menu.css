@@ -1,8 +1,12 @@
-
 .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
   width: 270px;
   min-width: 270px;
   height: 100vh;
+  height: 100dvh;
   background-color: #0c2232;
   color: #ffffff;
   display: flex;
@@ -10,11 +14,12 @@
   padding: 18px 28px;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
+  overflow-y: auto;
   flex-shrink: 0;
+  z-index: 1000;
 }
 
 
-/* LOGO */
 .menu-logo {
   width: 100%;
   margin-bottom: 32px;
@@ -28,7 +33,7 @@
   object-fit: contain;
 }
 
-/* USUÁRIO */
+
 .menu-usuario {
   display: flex;
   align-items: center;
@@ -78,7 +83,6 @@
   text-align: left;
 }
 
-/* LINKS DO MENU */
 .menu-links {
   display: flex;
   flex-direction: column;
@@ -98,14 +102,14 @@
   border-radius: 5px;
   color: #ffffff;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
   white-space: nowrap;
   cursor: pointer;
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-/* ÍCONES */
+
 .link-menu .icone {
   width: 20px;
   min-width: 20px;
@@ -115,18 +119,18 @@
   font-size: 18px;
 }
 
-/* ITEM SELECIONADO */
+
 .menu-links .link-menu.ativo {
   color: #ff0000;
   font-weight: bold;
 }
 
-/* EFEITO AO PASSAR O MOUSE */
+
 .menu-links .link-menu:hover {
   background-color: #173448;
 }
 
-/* BOTÃO SAIR */
+
 .menu-rodape {
   width: 100%;
   margin-top: auto;
@@ -145,12 +149,59 @@
   background-color: #173448;
 }
 
-/* RESPONSIVIDADE */
+
+.botao-hamburguer {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1002;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0c2232;
+  color: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.fundo-menu {
+  display: none;
+}
+
+
 @media (max-width: 700px) {
+  .botao-hamburguer {
+    display: flex;
+  }
+
   .menu {
-    width: 225px;
-    min-width: 225px;
-    padding: 16px 18px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    width: 250px;
+    min-width: 250px;
+    height: 100vh;
+    height: 100dvh;
+    padding: 70px 18px 18px;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition: transform 0.3s ease, visibility 0.3s ease;
+  }
+
+  .menu.menu-aberto {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  .menu-logo {
+    margin-bottom: 25px;
   }
 
   .menu-logo img {
@@ -159,6 +210,7 @@
 
   .menu-usuario {
     gap: 8px;
+    margin-bottom: 25px;
   }
 
   .usuario-icone {
@@ -179,5 +231,13 @@
   .link-menu {
     font-size: 14px;
     gap: 8px;
+  }
+
+  .fundo-menu {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.4);
   }
 }

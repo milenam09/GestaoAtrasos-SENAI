@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+}
+
+.login-pagina {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background-image:
+    linear-gradient(rgba(5, 20, 38, 0.48), rgba(5, 20, 38, 0.62)),
+    var(--imagem-fundo);
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 25px;
+}
+
+/* Faixas vermelhas dos cantos */
+
+.faixa {
+  position: absolute;
+  width: 280px;
+  height: 100px;
+  background: #ed101b;
+  transform: rotate(-45deg);
+  pointer-events: none;
+}
+
+
+
+/* Cartão branco */
+
+.login-cartao {
+  width: 315px;
+  min-height: 475px;
+  background: #fff;
+  border-radius: 3px;
+  padding: 18px 34px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18);
+}
+
+.login-logo {
+  width: 120px;
+  height: 32px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.login-icone {
+  width: 55px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 2px;
+}
+
+.login-cartao h1 {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0;
+  color: #111;
+}
+
+.login-subtitulo {
+  font-size: 13px;
+  margin: 6px 0 18px;
+  color: #111;
+  text-align: center;
+}
+
+/* Formulário */
+
+.login-cartao form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-cartao label {
+  font-size: 9px;
+  font-weight: bold;
+  margin: 0 0 6px 2px;
+  color: #111;
+}
+
+.login-cartao input {
+  width: 100%;
+  height: 27px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  padding: 0 10px;
+  font-size: 9px;
+  outline: none;
+}
+
+.login-cartao input:focus {
+  border-color: #ed101b;
+}
+
+.login-cartao form > input {
+  margin-bottom: 14px;
+}
+
+.campo-senha {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.campo-senha input {
+  padding-right: 30px;
+}
+
+.mostrar-senha {
+  position: absolute;
+  right: 7px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 0;
+}
+
+.esqueci-senha {
+  font-size: 7px;
+  color: #ed101b;
+  text-decoration: none;
+  text-align: center;
+  margin: 8px 0 20px;
+}
+
+/* Botão entrar */
+
+.botao-entrar {
+  height: 25px;
+  border: none;
+  border-radius: 4px;
+  background: #ed101b;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+.botao-entrar span {
+  position: absolute;
+  right: 35px;
+  font-size: 16px;
+  top: 3px;
+}
+
+/* Separador */
+
+.separador {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 8px 0 12px;
+}
+
+.separador span {
+  flex: 1;
+  height: 1px;
+  background: #ccc;
+}
+
+.separador p {
+  font-size: 9px;
+  color: #888;
+  margin: 0;
+}
+
+/* Botão Google */
+
+.botao-google {
+  height: 25px;
+  width: 100%;
+  border: 1px solid #ff6570;
+  background: #fff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-size: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botao-google strong {
+  font-size: 15px;
+  color: #4285f4;
+}
+
+/* Adaptação para telas menores */
+
+@media (max-width: 480px) {
+  .login-pagina {
+    padding: 15px;
+  }
+
+  .login-cartao {
+    width: 100%;
+    max-width: 315px;
+  }
+
+  .faixa {
+    width: 200px;
+  }
+}

@@ -37,7 +37,7 @@ function Gestor() {
           alt="Ícone de professor"
         />
 
-        <h1>PROFESSOR</h1>
+        <h1>GESTOR</h1>
         <p className="login-subtitulo">
           Faça login para acessar o seu painel
         </p>
