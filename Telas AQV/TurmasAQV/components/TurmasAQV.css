@@ -1,0 +1,312 @@
+.turmas-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  margin-left: 335px;   /* largura do menu */
+  padding: 30px;
+  width: calc(100% - 335px);
+}
+
+.turmas-header h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #111;
+}
+
+.title-area {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 4px;
+}
+
+.back-arrow {
+  font-size: 22px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.turmas-header p {
+  color: #555;
+  font-size: 14px;
+}
+
+/* Filtros */
+.turmas-filters {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 12px;
+  width: 280px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  margin-left: 8px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.filter-select {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-nova-turma {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.btn-nova-turma:hover {
+  background-color: #d90000;
+}
+
+/* Tabela */
+.table-wrapper {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.turmas-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+}
+
+.turmas-table th {
+  background-color: #eef2f7;
+  color: #333;
+  padding: 14px 16px;
+  font-weight: 600;
+}
+
+.turmas-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.badge-atraso {
+  background-color: #fde8e8;
+  color: #c53030;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.btn-ver-alunos {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.btn-ver-alunos:hover {
+  background-color: #d90000;
+}
+
+/* Rodapé / Paginação */
+.turmas-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #666;
+  font-size: 14px;
+}
+
+.pagination {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.page-btn {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #333;
+}
+
+.page-btn.active {
+  background-color: #ff0000;
+  color: white;
+  border-color: #ff0000;
+  font-weight: bold;
+}
+/* ===== RESPONSIVIDADE TURMAS ===== */
+
+@media (max-width: 768px) {
+
+    /* Área principal */
+    .turmas-container {
+        margin-left: 0;
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 15px;
+        box-sizing: border-box;
+        gap: 20px;
+    }
+
+    /* Título */
+    .turmas-header h1 {
+        font-size: 24px;
+    }
+
+    .title-area {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .back-arrow {
+        font-size: 22px;
+    }
+
+    .turmas-header p {
+        font-size: 13px;
+    }
+
+    /* Filtros */
+    .turmas-filtros {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+        align-items: stretch;
+    }
+
+    .search-box {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .search-box input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .filter-select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Botão nova turma */
+    .btn-nova-turma {
+        width: 100%;
+        margin-left: 0;
+        box-sizing: border-box;
+    }
+
+    /* Tabela */
+    .table-wrapper {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .turmas-table {
+        min-width: 750px;
+        width: 750px;
+    }
+
+    /* Rodapé */
+    .turmas-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Paginação */
+    .paginacao {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+        width: 100%;
+    }
+
+    .page-btn {
+        min-width: 35px;
+        height: 35px;
+        padding: 5px;
+    }
+}
+
+
+/* ===== CELULARES PEQUENOS ===== */
+
+@media (max-width: 480px) {
+
+    .turmas-container {
+        padding: 15px 10px;
+    }
+
+    .turmas-header h1 {
+        font-size: 22px;
+    }
+
+    .turmas-header p {
+        font-size: 12px;
+    }
+
+    .search-box {
+        padding: 8px;
+    }
+
+    .filter-select {
+        font-size: 13px;
+    }
+
+    .btn-nova-turma {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .turmas-footer {
+        font-size: 12px;
+    }
+
+    .paginacao {
+        gap: 4px;
+    }
+
+    .page-btn {
+        min-width: 30px;
+        padding: 5px;
+        font-size: 13px;
+    }
+}
