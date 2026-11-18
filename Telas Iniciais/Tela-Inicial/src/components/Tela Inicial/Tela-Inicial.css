@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+}
+
+.tela-inicial {
+  position: relative;
+  display: flex;
+  align-items: flex-start; /* Permite começar do topo e rolar para baixo perfeitamente */
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  overflow-y: auto; /* Ativa o scroll view nativo */
+  overflow-x: hidden;
+  isolation: isolate;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+
+  background-image: url("../../assets/image.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.tela-inicial .fundo-escuro {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(3, 15, 27, 0.45);
+}
+
+.tela-inicial .conteudo-inicial {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1060px;
+  padding: 50px 24px; /* Folga em cima e embaixo */
+  text-align: center;
+  margin: auto; /* Centraliza se a tela for grande o suficiente */
+}
+
+.tela-inicial .cabecalho-inicial h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.tela-inicial .subtitulo {
+  margin: 8px 0 0;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 400;
+}
+
+.tela-inicial .linha-vermelha {
+  display: block;
+  width: 150px;
+  height: 5px;
+  margin: 14px auto 38px;
+  background: #ed0015;
+}
+
+.tela-inicial .instrucao {
+  margin: 0 0 25px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tela-inicial .perfis-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap; /* Faz os cartões caírem para baixo no celular */
+  gap: 28px;
+}
+
+.tela-inicial .cartao-perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 315px;
+  min-height: 330px;
+  padding: 28px 26px 24px;
+  background: #061523;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.tela-inicial .cartao-perfil:hover {
+  border-color: #ed0015;
+  box-shadow: 0 0 14px rgba(237, 0, 21, 0.2);
+  transform: translateY(-3px);
+}
+
+.tela-inicial .icone-perfil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 78px;
+  height: 78px;
+  margin-bottom: 14px;
+}
+
+.tela-inicial .icone-perfil img {
+  width: 74px;
+  height: 74px;
+  object-fit: contain;
+}
+
+/* Ajuste específico para o ícone do Professor */
+.tela-inicial .cartao-perfil:nth-child(2) .icone-perfil img {
+  width: 96px;
+  height: 96px;
+}
+
+.tela-inicial .cartao-perfil h2 {
+  margin: 0 0 16px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.tela-inicial .descricao-perfil {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 60px;
+  margin: 0 0 18px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+.tela-inicial .botao-entrar {
+  width: 100%;
+  min-height: 46px;
+  margin-top: auto;
+  padding: 10px 16px;
+  color: #fff;
+  background: #ed0015;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.tela-inicial .botao-entrar:hover {
+  background: #c90012;
+}
+
+.tela-inicial .botao-entrar:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+/* Responsivo para celulares */
+@media (max-width: 768px) {
+  .tela-inicial {
+    align-items: flex-start;
+  }
+
+  .tela-inicial .conteudo-inicial {
+    padding: 40px 16px;
+  }
+
+  .tela-inicial .cabecalho-inicial h1,
+  .tela-inicial .subtitulo {
+    font-size: 32px; /* Diminui os títulos no mobile para não estourarem a tela */
+  }
+
+  .tela-inicial .perfis-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .tela-inicial .cartao-perfil {
+    width: min(100%, 315px);
+    min-height: 310px;
+  }
+}

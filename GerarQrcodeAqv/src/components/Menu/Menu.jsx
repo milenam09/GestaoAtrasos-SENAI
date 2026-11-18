@@ -18,9 +18,8 @@ import {
 import "./Menu.css";
 import logo from "../../assets/senai-logo.png";
 
-function Menu() {
+function Menu({ paginaAtiva, setPaginaAtiva }) {
 
-  const [paginaAtiva, setPaginaAtiva] = useState("");
   const [menuAberto, setMenuAberto] = useState(false);
 
   const itensMenu = [
@@ -32,6 +31,11 @@ function Menu() {
     { nome: "Gerar QR Code", icone: faQrcode },
     { nome: "Perfil", icone: faUser },
   ];
+
+  function trocarPagina(nome) {
+    setPaginaAtiva(nome);
+    setMenuAberto(false);
+  }
 
   return (
     <>
@@ -58,7 +62,6 @@ function Menu() {
         </div>
 
         <div className="menu-usuario">
-
           <div className="usuario-icone">
             <FontAwesomeIcon icon={faUser} />
           </div>
@@ -67,7 +70,6 @@ function Menu() {
             <p>Cris Costa</p>
             <span>Gestor</span>
           </div>
-
         </div>
 
         <nav className="menu-links">
@@ -81,24 +83,20 @@ function Menu() {
               }`}
               onClick={(e) => {
                 e.preventDefault();
-                setPaginaAtiva(item.nome);
-                setMenuAberto(false);
+                trocarPagina(item.nome);
               }}
             >
-
               <span className="icone">
                 <FontAwesomeIcon icon={item.icone} />
               </span>
 
               <span>{item.nome}</span>
-
             </a>
           ))}
 
         </nav>
 
         <div className="menu-rodape">
-
           <a
             href="#"
             className={`link-menu ${
@@ -106,19 +104,15 @@ function Menu() {
             }`}
             onClick={(e) => {
               e.preventDefault();
-              setPaginaAtiva("Sair");
-              setMenuAberto(false);
+              trocarPagina("Sair");
             }}
           >
-
             <span className="icone">
               <FontAwesomeIcon icon={faRightFromBracket} />
             </span>
 
             <span>Sair</span>
-
           </a>
-
         </div>
 
       </aside>
