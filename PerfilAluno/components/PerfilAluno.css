@@ -422,65 +422,230 @@ margin: 0 0 18px 0;
 .conteudo.menu-fechado {
   margin-left: 75px;
 }
-/* TELAS MENORES */
+/* ==========================================
+   RESPONSIVIDADE - PÁGINA PERFIL
+========================================== */
 
-@media (max-width: 700px) {
-  .menu-lateral {
-    width: 65px;
-    min-width: 65px;
+@media (max-width: 768px) {
+
+  /* Página de perfil */
+  .pagina-perfil {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+
+  /* Conteúdo principal */
+  .conteudo-principal {
+    width: 100%;
+    min-width: 0;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  /* Cabeçalho */
+  .cabecalho {
+    margin-left: 0;
+    width: 100%;
+    padding: 10px 0;
+    box-sizing: border-box;
+  }
+
+  .cabecalho h1 {
+    font-size: 22px;
+    flex-wrap: wrap;
+  }
+
+  .cabecalho p {
+    margin-left: 0;
+    font-size: 13px;
+  }
+
+  .seta-voltar {
+    font-size: 25px;
+  }
+
+  /* Cartão principal */
+  .cartao-perfil {
+    width: 100%;
+    margin-left: 0;
+    min-height: auto;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  /* Identificação do aluno */
+  .identificacao-aluno {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px !important;
+    padding: 15px;
+    margin-bottom: 20px;
+    min-height: auto;
+  }
+
+  .avatar-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .nome-aluno h2 {
+    font-size: 17px;
+  }
+
+  .nome-aluno p {
+    font-size: 12px;
+  }
+
+  /* Botão editar */
+  .botao-editar {
+    margin-left: auto;
+    padding: 9px 15px;
+    font-size: 13px;
+  }
+
+  /* Quadros de informações */
+  .informacoes {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .quadro-informacao {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .quadro-informacao h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  /* Campos do perfil */
+  .campo {
+    margin: 0 0 15px 0;
+  }
+
+  .campo strong {
+    font-size: 15px;
+  }
+
+  .campo p {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+  }
+
+  /* Aviso de dados */
+  .aviso-dados {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px;
+    margin-top: 20px;
+  }
+
+  .texto-aviso {
+    flex: 1;
+    min-width: 180px;
+  }
+
+  .texto-aviso strong {
+    font-size: 12px;
+  }
+
+  .texto-aviso p {
+    font-size: 11px;
+  }
+
+  .botao-contato {
+    padding: 10px 15px;
+  }
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE - CELULARES PEQUENOS
+========================================== */
+
+@media (max-width: 480px) {
+
+  .conteudo-principal {
     padding: 10px;
   }
 
-  .logo-senai {
+  .cabecalho {
+    padding: 8px 0;
+    margin-bottom: 10px;
+  }
+
+  .cabecalho h1 {
+    font-size: 20px;
+    gap: 6px;
+  }
+
+  .cabecalho p {
     font-size: 12px;
-    margin-bottom: 25px;
-  }
-
-  .usuario-menu {
-    justify-content: center;
-  }
-
-  .usuario-menu>div:last-child,
-  .item-menu>span:last-child,
-  .botao-sair>span:last-child {
-    display: none;
-  }
-
-  .navegacao {
-    align-items: center;
-  }
-
-  .item-menu {
-    justify-content: center;
-  }
-
-  .conteudo-principal {
-    padding: 15px;
   }
 
   .cartao-perfil {
     padding: 12px;
+    border-radius: 8px;
   }
 
+  /* Identificação */
+  .identificacao-aluno {
+    gap: 10px !important;
+    padding: 12px;
+  }
+
+  .nome-aluno h2 {
+    font-size: 15px;
+  }
+
+  .nome-aluno p {
+    font-size: 11px;
+  }
+
+  .botao-editar {
+    width: 100%;
+    margin-left: 0;
+    padding: 11px;
+  }
+
+  /* Informações */
   .informacoes {
     grid-template-columns: 1fr;
   }
 
-  .identificacao-aluno {
-    padding: 10px;
-    flex-wrap: wrap;
-    gap: 8px;
+  .quadro-informacao {
+    padding: 12px;
   }
 
-  .botao-editar {
-    padding: 20px;
+  .quadro-informacao h3 {
+    font-size: 15px;
   }
 
+  .campo strong {
+    font-size: 14px;
+  }
+
+  .campo p {
+    font-size: 13px;
+  }
+
+  /* Aviso */
   .aviso-dados {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .texto-aviso {
+    width: 100%;
   }
 
   .botao-contato {
-    margin-left: auto;
+    width: 100%;
+    padding: 12px;
   }
 }

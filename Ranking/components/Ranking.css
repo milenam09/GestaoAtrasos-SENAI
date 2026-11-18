@@ -9,10 +9,12 @@
   flex: 1;
   min-width: 0;
   min-height: 100vh;
+  margin-left: 250px; /* Ajuste para a largura exata do seu menu */
   padding: 22px 28px;
   background: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
   color: #14243b;
+  box-sizing: border-box;
 }
 
 .ranking-cabecalho {
@@ -283,4 +285,237 @@
   .ranking-tabela {
     min-width: 650px;
   }
+}
+/* ==========================================
+   RESPONSIVIDADE - TELA RANKING
+========================================== */
+
+/* 2. Ajuste para Tablets e Celulares (deve ficar ABAIXO da regra acima) */
+@media (max-width: 768px) {
+  .ranking-conteudo {
+    margin-left: 0; /* Remove o espaço vazio da esquerda */
+    width: 100%;
+    min-width: 0;
+    padding: 75px 15px 15px; /* 75px no topo evita que o título fique atrás do botão ☰ */
+    box-sizing: border-box;
+  }
+
+    /* Cabeçalho */
+    .ranking-cabecalho {
+        margin-bottom: 25px;
+    }
+
+    .ranking-titulo {
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .ranking-titulo h1 {
+        font-size: 25px;
+    }
+
+    .ranking-voltar {
+        font-size: 25px;
+    }
+
+    .ranking-titulo p {
+        font-size: 12px;
+    }
+
+    /* Filtros */
+    .ranking-filtros {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .ranking-filtro {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .ranking-filtro label {
+        font-size: 13px;
+    }
+
+    .ranking-filtro select {
+        width: 100%;
+        font-size: 14px;
+        height: 40px;
+    }
+
+    /* Botão filtrar */
+    .ranking-botao-filtro {
+        width: 100%;
+        grid-column: 1 / -1;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    /* Container da tabela */
+    .ranking-tabela-container {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        box-sizing: border-box;
+    }
+
+    /* Tabela */
+    .ranking-tabela {
+        min-width: 750px;
+        width: 750px;
+        table-layout: auto;
+    }
+
+    .ranking-tabela th {
+        font-size: 13px;
+        padding: 10px 8px;
+        white-space: nowrap;
+    }
+
+    .ranking-tabela td {
+        padding: 8px;
+        font-size: 13px;
+        height: auto;
+        white-space: nowrap;
+    }
+
+    /* Aluno */
+    .ranking-aluno {
+        gap: 8px;
+    }
+
+    .ranking-aluno img,
+    .ranking-aluno .icone-perfil {
+        width: 32px;
+        height: 32px;
+    }
+
+    .ranking-aluno strong {
+        font-size: 13px;
+    }
+
+    .ranking-aluno small {
+        font-size: 10px;
+    }
+
+    /* Posição */
+    .ranking-posicao {
+        width: 20px;
+        height: 20px;
+        font-size: 11px;
+    }
+
+    /* Estrelas */
+    .ranking-estrelas {
+        font-size: 13px;
+    }
+
+    /* Status */
+    .ranking-status {
+        font-size: 9px;
+        padding: 4px 6px;
+    }
+
+    /* Ações */
+    .ranking-botao-acoes {
+        font-size: 15px;
+    }
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE - CELULARES PEQUENOS
+========================================== */
+
+@media (max-width: 480px) {
+
+    .ranking-conteudo {
+        padding: 10px;
+    }
+
+    /* Cabeçalho */
+    .ranking-cabecalho {
+        margin-bottom: 20px;
+    }
+
+    .ranking-titulo h1 {
+        font-size: 22px;
+    }
+
+    .ranking-voltar {
+        font-size: 22px;
+    }
+
+    .ranking-titulo p {
+        font-size: 11px;
+    }
+
+    /* Filtros */
+    .ranking-filtros {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .ranking-filtro label {
+        font-size: 12px;
+    }
+
+    .ranking-filtro select {
+        height: 38px;
+        font-size: 13px;
+    }
+
+    .ranking-botao-filtro {
+        grid-column: auto;
+        height: 38px;
+        font-size: 13px;
+    }
+
+    /* Tabela */
+    .ranking-tabela-container {
+        border-radius: 5px;
+    }
+
+    .ranking-tabela {
+        min-width: 700px;
+        width: 700px;
+    }
+
+    .ranking-tabela th {
+        font-size: 12px;
+        padding: 9px 6px;
+    }
+
+    .ranking-tabela td {
+        font-size: 12px;
+        padding: 7px 6px;
+    }
+
+    /* Aluno */
+    .ranking-aluno img,
+    .ranking-aluno .icone-perfil {
+        width: 30px;
+        height: 30px;
+    }
+
+    .ranking-aluno strong {
+        font-size: 12px;
+    }
+
+    .ranking-aluno small {
+        font-size: 9px;
+    }
+
+    /* Status */
+    .ranking-status {
+        font-size: 9px;
+        width: 48px;
+    }
 }

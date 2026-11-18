@@ -11,19 +11,22 @@ body,
 body {
   background-color: #f4f7fc;
 }
-
+  font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
 * {
   box-sizing: border-box;
 }
 .pagina-ocorrencias {
-    display: flex;
-    width: 100%;
-    min-height: 100vh;
-    background: #f4f7fc;
-    color: #080b10;
+flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+  margin-left: 250px; /* Mesma largura do menu lateral */
+  padding: 22px 28px;
+  background: #ffffff;
+  box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 11px;
-    flex: 1;
+  
 }
 
 
@@ -233,10 +236,11 @@ body {
 }
 
 /* Ajuste para telas menores */
-@media (max-width: 650px) {
+@media (max-width: 768px) {
   .pagina-ocorrencias {
-    padding: 0;
-  }
+margin-left: 0;
+    width: 100%;
+    padding: 75px 15px 15px;  }
 
   .sidebar {
     width: 105px;
