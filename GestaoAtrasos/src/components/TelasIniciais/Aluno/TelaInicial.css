@@ -1,0 +1,270 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Tela de login */
+.login-pagina {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 25px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Remover filtro escuro */
+.login-pagina::before {
+  content: none;
+}
+
+/* Faixas vermelhas */
+.faixa {
+  position: absolute;
+  width: 250px;
+  height: 55px;
+  background: #ed0010;
+  transform: rotate(-45deg);
+  z-index: 1;
+}
+
+.faixa1 {
+  top: 35px;
+  left: -100px;
+}
+
+.faixa2 {
+  bottom: 35px;
+  right: -100px;
+}
+
+/* Card de login */
+.cartao-login {
+  position: relative;
+  z-index: 2;
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  min-height: 0;
+  background: #f8f8f8;
+  border-radius: 5px;
+  padding: 22px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo SENAI */
+.logo-senai {
+  width: 135px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Ícone do perfil */
+.icone-login {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  margin-bottom: 6px;
+}
+
+/* Nome do perfil */
+.cartao-login h1 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+/* Subtítulo */
+.cartao-login .subtitulo {
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+/* Formulário */
+.cartao-login form {
+  width: 100%;
+}
+
+/* Labels */
+.cartao-login label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 7px;
+  text-align: left;
+}
+
+/* Campos */
+.cartao-login form > input,
+.campo-senha input {
+  width: 100%;
+  height: 42px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  padding: 0 12px;
+  font-size: 13px;
+  margin-bottom: 17px;
+  background: transparent;
+}
+
+/* Campo senha */
+.campo-senha {
+  position: relative;
+  width: 100%;
+}
+
+.campo-senha input {
+  padding-right: 40px;
+}
+
+/* Mostrar senha */
+.mostrar-senha {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  height: 42px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Esqueceu senha */
+.esqueceu-senha {
+  display: block;
+  text-align: center;
+  color: #ed0010;
+  text-decoration: none;
+  font-size: 12px;
+  margin: 0 0 20px;
+}
+
+/* Botão entrar */
+.botao-login {
+  width: 100%;
+  height: 42px;
+  background: #ed0010;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botao-login:hover {
+  background: #bd0010;
+}
+
+/* Separador */
+.ou {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #777;
+  font-size: 12px;
+  margin: 17px 0;
+}
+
+.ou::before,
+.ou::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #bbb;
+}
+
+/* Botão Google */
+.botao-google {
+  width: 100%;
+  height: 42px;
+  border: 1px solid red;
+  border-radius: 5px;
+  background: transparent;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botao-google:hover {
+  background: #fff0f0;
+}
+
+.icone-google {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .cartao-login {
+    width: 100%;
+    min-height: auto;
+    padding: 25px 22px;
+  }
+}
+
+@media (max-height: 700px) {
+  .login-pagina {
+    overflow-y: auto;
+    align-items: flex-start;
+  }
+
+  .cartao-login {
+    min-height: auto;
+  }
+}
+
+/* AJUSTE FINAL DO CARD DE LOGIN */
+.login-pagina .cartao-login {
+  width: 450px !important;
+  max-width: 100% !important;
+  height: auto !important;
+  min-height: unset !important;
+  padding: 18px 28px !important;
+  margin: auto !important;
+  transform: none !important;
+}
+
+/* Logo */
+.login-pagina .cartao-login .logo-senai {
+  width: 225px !important;
+  height: 45px !important;
+  margin-bottom: 5px !important;
+}
+
+/* Ícone */
+.login-pagina .cartao-login .icone-login {
+  width: 80px !important;
+  height: 80px !important;
+  margin-bottom: 4px !important;
+}
+
+/* Fundo sem filtro adicional */
+.login-pagina::before {
+  display: none !important;
+  content: none !important;
+}
