@@ -51,7 +51,7 @@ export default function AtestadosPage() {
       setAtestados(Array.isArray(l) ? l : []);
       setErro('');
     } catch (e) {
-      // Mantém os valores exibidos até a API responder
+
       console.warn(e.message);
     }
   }

@@ -7,16 +7,7 @@
 // =====================================================================
 
 import { useState, useEffect } from 'react';
-// Link = componente do TanStack Router que troca de tela com um clique
-import { Link } from '@tanstack/react-router';
 import {
-  Home,
-  QrCode,
-  Clock,
-  ClipboardList,
-  FileText,
-  User,
-  LogOut,
   ArrowLeft,
   ArrowRight,
   Calendar,
@@ -25,8 +16,9 @@ import {
   BarChart2,
   AlertTriangle,
   Menu,
-  X,
 } from 'lucide-react';
+import LogoSenai from '../services/LogoSenai';
+import MenuLateral from '../services/MenuLateral';
 import { obterMetricasAtrasos, listarHistoricoAtrasos } from '../services/atrasosService';
 
 // ---------------------------------------------------------------------
@@ -59,123 +51,6 @@ const HISTORICO_INICIAL = [
   { id: 8, data: '26/03', horarioPrevisto: '08:00', horarioChegada: '08:31', status: 'Atrasado' },
   { id: 9, data: '11/02', horarioPrevisto: '08:00', horarioChegada: '09:00', status: 'Atrasado' },
 ];
-
-// ---------------------------------------------------------------------
-// Lista do menu lateral. "ativo: true" deixa o item em destaque.
-// "para" = endereço da tela. Itens SEM "para" ainda não têm rota criada;
-// quando criar a rota de cada um, é só acrescentar o "para" (ex.: para: '/atestados').
-// ---------------------------------------------------------------------
-const ITENS_MENU = [
-  { texto: 'Inicio', Icone: Home, para: '/' },
-  { texto: 'Registrar atraso', Icone: QrCode },
-  { texto: 'Meus Atrasos', Icone: Clock, ativo: true, para: '/meus-atrasos' },
-  { texto: 'Ocorrencias', Icone: ClipboardList },
-  { texto: 'Atestados', Icone: FileText, para: '/atestados' },
-  { texto: 'Perfil', Icone: User },
-];
-
-// =====================================================================
-// COMPONENTE: logo do SENAI (caixa vermelha com letras brancas)
-// =====================================================================
-function LogoSenai({ tamanho = 'px-2 py-0.5 text-lg' }) {
-  return (
-    <span className={`inline-block bg-[#E50914] font-black italic leading-none tracking-tight text-white ${tamanho}`}>
-      SENAI
-    </span>
-  );
-}
-
-// =====================================================================
-// COMPONENTE: menu lateral
-// No desktop fica fixo. No celular vira uma "gaveta" (drawer) que abre
-// pelo botão hambúrguer e fecha pelo X ou clicando no fundo escuro.
-// =====================================================================
-function Sidebar({ aberto, aoFechar, nomeAluno, aoSair }) {
-  return (
-    <>
-      {/* Fundo escuro atrás da gaveta (só existe no celular, com o menu aberto) */}
-      {aberto && <div className="fixed inset-0 z-30 bg-black/50 md:hidden" onClick={aoFechar} />}
-
-      <aside
-        className={
-          // fixed = preso na tela | md:static = no desktop faz parte do layout
-          'fixed inset-y-0 left-0 z-40 flex w-56 shrink-0 flex-col bg-[#0B192C] ' +
-          'transition-transform duration-200 md:static md:w-52 md:translate-x-0 ' +
-          (aberto ? 'translate-x-0' : '-translate-x-full')
-        }
-      >
-        {/* Topo: logo + botão X (o X só aparece no celular) */}
-        <div className="flex items-center justify-between px-5 pb-4 pt-5">
-          <LogoSenai />
-          <button
-            type="button"
-            onClick={aoFechar}
-            aria-label="Fechar menu"
-            className="rounded p-1 text-white hover:bg-white/10 md:hidden"
-          >
-            <X size={22} />
-          </button>
-        </div>
-
-        {/* Bloco do usuário: avatar branco + nome + "Aluno" */}
-        <div className="flex items-center gap-3 px-5 pb-6 pt-2">
-          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-[#0B192C]">
-            <User size={24} />
-          </div>
-          <div className="min-w-0">
-            <p className="truncate text-sm text-white">{nomeAluno}</p>
-            <p className="text-xs text-gray-400">Aluno</p>
-          </div>
-        </div>
-
-        {/* Links do menu (o .map cria um link para cada item da lista ITENS_MENU) */}
-        <nav className="flex flex-col">
-          {ITENS_MENU.map(({ texto, Icone, ativo, para }) => {
-            // Visual do item (igual para todos)
-            const classe =
-              'flex items-center gap-3 px-5 py-3 text-sm hover:bg-white/10 ' +
-              (ativo ? 'bg-white/5 text-white' : 'text-gray-200');
-
-            // Ícone + texto. O item ativo tem o ícone vermelho
-            const conteudo = (
-              <>
-                <Icone size={24} color={ativo ? '#E50914' : 'currentColor'} />
-                <span>{texto}</span>
-              </>
-            );
-
-            // Se o item tem "para", vira um Link que troca de tela com um clique.
-            // O onClick fecha o menu no celular depois de clicar.
-            if (para) {
-              return (
-                <Link key={texto} to={para} onClick={aoFechar} className={classe}>
-                  {conteudo}
-                </Link>
-              );
-            }
-
-            // Itens sem rota ainda ficam como link vazio
-            return (
-              <a key={texto} href="#" className={classe}>
-                {conteudo}
-              </a>
-            );
-          })}
-        </nav>
-
-        {/* Rodapé: botão Sair (mt-auto empurra para o final da barra) */}
-        <button
-          type="button"
-          onClick={aoSair}
-          className="mt-auto flex items-center gap-3 px-5 py-5 text-sm text-gray-200 hover:bg-white/10"
-        >
-          <LogOut size={24} />
-          <span>Sair</span>
-        </button>
-      </aside>
-    </>
-  );
-}
 
 // =====================================================================
 // PÁGINA PRINCIPAL
@@ -214,21 +89,9 @@ export default function MeusAtrasosPage() {
     carregarDados();
   }, [limite]);
 
-  // ---- Sair: apaga o login guardado e vai para a tela de login ----
-  function sair() {
-    localStorage.removeItem('token');
-    localStorage.removeItem('alunoId');
-    window.location.href = '/login';
-  }
-
   return (
     <div className="flex min-h-screen bg-[#F8F9FA] text-gray-900">
-      <Sidebar
-        aberto={menuAberto}
-        aoFechar={() => setMenuAberto(false)}
-        nomeAluno={metricas.nomeAluno}
-        aoSair={sair}
-      />
+      <MenuLateral aberto={menuAberto} aoFechar={() => setMenuAberto(false)} />
 
       {/* min-w-0 evita que a tabela estique a página para os lados */}
       <div className="min-w-0 flex-1">

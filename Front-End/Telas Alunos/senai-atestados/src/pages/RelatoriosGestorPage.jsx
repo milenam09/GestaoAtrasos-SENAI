@@ -8,21 +8,15 @@
 // =====================================================================
 
 import { useState, useEffect } from 'react';
-import { Link } from '@tanstack/react-router';
 import {
-  Home,
-  FileText,
-  Monitor,
-  Users,
-  ClipboardList,
-  User,
-  LogOut,
   ArrowLeftToLine,
   Calendar,
   ChevronRight,
   Menu,
   X,
 } from 'lucide-react';
+import LogoSenai from '../services/LogoSenai';
+import MenuLateral from '../services/MenuLateral';
 import {
   fetchDashboardData,
   gerarRelatorio,
@@ -83,17 +77,6 @@ const DADOS_INICIAIS = {
 // Período inicial (formato AAAA-MM-DD, o mesmo do campo de data do navegador)
 const PERIODO_INICIAL = { inicio: '2025-03-01', fim: '2025-03-10' };
 
-// Itens do menu lateral. "para" = endereço da tela (só quem já tem rota).
-// "ativo: true" deixa o item em destaque (ícone vermelho + texto em negrito).
-const ITENS_MENU = [
-  { texto: 'Início', Icone: Home, para: '/', ativo: true },
-  { texto: 'Acolhimentos', Icone: FileText },
-  { texto: 'Turmas', Icone: Monitor },
-  { texto: 'Alunos', Icone: Users },
-  { texto: 'Relatórios', Icone: ClipboardList, para: '/relatorios-gestor' },
-  { texto: 'Perfil', Icone: User },
-];
-
 // ---------------------------------------------------------------------
 // Funções auxiliares pequenas
 // ---------------------------------------------------------------------
@@ -107,110 +90,6 @@ function formatarData(dataIso) {
 // Transforma 2.4 em '2,4' (jeito brasileiro)
 function formatarNumero(numero) {
   return Number(numero).toLocaleString('pt-BR');
-}
-
-// =====================================================================
-// COMPONENTE: logo do SENAI (caixa vermelha com letras brancas)
-// =====================================================================
-function LogoSenai({ tamanho = 'px-2 py-0.5 text-lg' }) {
-  return (
-    <span
-      className={`inline-block bg-[#E30613] font-black italic leading-none tracking-tight text-white ${tamanho}`}
-    >
-      SENAI
-    </span>
-  );
-}
-
-// =====================================================================
-// COMPONENTE: menu lateral
-// No desktop fica fixo. No celular vira uma gaveta (drawer) aberta
-// pelo botão hambúrguer.
-// =====================================================================
-function Sidebar({ aberto, aoFechar, nome, cargo, aoSair }) {
-  return (
-    <>
-      {/* Fundo escuro atrás da gaveta (só no celular, com o menu aberto) */}
-      {aberto && <div className="fixed inset-0 z-30 bg-black/50 md:hidden" onClick={aoFechar} />}
-
-      <aside
-        className={
-          'fixed inset-y-0 left-0 z-40 flex w-56 shrink-0 flex-col bg-[#0B192C] ' +
-          'transition-transform duration-200 md:static md:w-52 md:translate-x-0 ' +
-          (aberto ? 'translate-x-0' : '-translate-x-full')
-        }
-      >
-        {/* Topo: logo + botão X (o X só aparece no celular) */}
-        <div className="flex items-center justify-between px-5 pb-4 pt-5">
-          <LogoSenai />
-          <button
-            type="button"
-            onClick={aoFechar}
-            aria-label="Fechar menu"
-            className="rounded p-1 text-white hover:bg-white/10 md:hidden"
-          >
-            <X size={22} />
-          </button>
-        </div>
-
-        {/* Usuário: avatar + nome + cargo */}
-        <div className="flex items-center gap-3 px-5 pb-6 pt-2">
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-[#0B192C]">
-            <User size={26} />
-          </div>
-          <div className="min-w-0">
-            <p className="truncate text-sm font-semibold text-white">{nome}</p>
-            <p className="text-xs text-gray-400">{cargo}</p>
-          </div>
-        </div>
-
-        {/* Links do menu */}
-        <nav className="flex flex-col">
-          {ITENS_MENU.map(({ texto, Icone, para, ativo }) => {
-            const classe = 'flex items-center gap-3 px-5 py-3 text-sm text-white hover:bg-white/10';
-
-            // Ícone + texto. No item ativo o ícone fica vermelho e o texto em negrito
-            const conteudo = (
-              <>
-                <span className="p-1">
-                  <Icone size={24} color={ativo ? '#E30613' : 'currentColor'} />
-                </span>
-                <span className={ativo ? 'font-bold' : ''}>{texto}</span>
-              </>
-            );
-
-            // Se o item tem rota, vira um Link que troca de tela com um clique
-            if (para) {
-              return (
-                <Link key={texto} to={para} onClick={aoFechar} className={classe}>
-                  {conteudo}
-                </Link>
-              );
-            }
-
-            // Sem rota ainda: link vazio
-            return (
-              <a key={texto} href="#" className={classe}>
-                {conteudo}
-              </a>
-            );
-          })}
-        </nav>
-
-        {/* Rodapé: botão Sair */}
-        <button
-          type="button"
-          onClick={aoSair}
-          className="mt-auto flex items-center gap-3 px-5 py-5 text-sm text-white hover:bg-white/10"
-        >
-          <span className="p-1">
-            <LogOut size={24} />
-          </span>
-          <span>Sair</span>
-        </button>
-      </aside>
-    </>
-  );
 }
 
 // =====================================================================
@@ -448,23 +327,11 @@ export default function RelatoriosGestorPage() {
     }
   }
 
-  // ---- Sair: apaga o login guardado e vai para a tela de login ----
-  function sair() {
-    localStorage.removeItem('token');
-    window.location.href = '/login';
-  }
-
   const { cards } = dados;
 
   return (
     <div className="flex min-h-screen bg-[#F8F9FA] text-gray-900">
-      <Sidebar
-        aberto={menuAberto}
-        aoFechar={() => setMenuAberto(false)}
-        nome={dados.nomeUsuario}
-        cargo={dados.cargo}
-        aoSair={sair}
-      />
+      <MenuLateral aberto={menuAberto} aoFechar={() => setMenuAberto(false)} />
 
       {/* min-w-0 evita que o conteúdo estique a página para os lados */}
       <div className="min-w-0 flex-1">

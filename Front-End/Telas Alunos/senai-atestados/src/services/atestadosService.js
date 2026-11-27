@@ -6,7 +6,7 @@ function authHeaders(json = true) {
   return h;
 }
 
-// 1. GET - Métricas dos cards superiores
+
 export async function obterMetricasAtestados(alunoId) {
   const response = await fetch(`${API_BASE_URL}/aluno/${alunoId}/atestados/metricas`, {
     method: 'GET',
@@ -16,7 +16,7 @@ export async function obterMetricasAtestados(alunoId) {
   return await response.json();
 }
 
-// 2. GET - Lista de atestados
+
 export async function listarAtestados(alunoId) {
   const response = await fetch(`${API_BASE_URL}/aluno/${alunoId}/atestados`, {
     method: 'GET',
@@ -26,7 +26,7 @@ export async function listarAtestados(alunoId) {
   return await response.json();
 }
 
-// 3. POST - Enviar novo documento/atestado
+
 export async function enviarNovoAtestado(alunoId, formData) {
   const response = await fetch(`${API_BASE_URL}/aluno/${alunoId}/atestados`, {
     method: 'POST',
@@ -37,7 +37,7 @@ export async function enviarNovoAtestado(alunoId, formData) {
   return await response.json();
 }
 
-// 4. GET - Detalhes de um atestado
+
 export async function obterDetalhesAtestado(atestadoId) {
   const response = await fetch(`${API_BASE_URL}/atestados/${atestadoId}`, {
     method: 'GET',
@@ -47,7 +47,7 @@ export async function obterDetalhesAtestado(atestadoId) {
   return await response.json();
 }
 
-// 5. DELETE - Cancelar envio de atestado
+
 export async function cancelarAtestado(atestadoId) {
   const response = await fetch(`${API_BASE_URL}/atestados/${atestadoId}`, {
     method: 'DELETE',
