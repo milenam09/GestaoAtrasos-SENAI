@@ -1,15 +1,14 @@
-
+// =====================================================================
+// src/pages/RelatoriosPage.jsx
+// Tela "Relatórios" do SENAI (visão do professor).
+// - Só JavaScript (sem TypeScript) + Tailwind CSS
+// - Ícones da biblioteca lucide-react (já instalada)
+// - Gráficos feitos com SVG e divs: NÃO precisa instalar nada novo
+// - Só useState e useEffect (os dois hooks mais simples do React)
+// =====================================================================
 
 import { useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
 import {
-  Home,
-  FileText,
-  Monitor,
-  Users,
-  ClipboardList,
-  User,
-  LogOut,
   ArrowLeftToLine,
   Calendar,
   ClipboardPlus,
@@ -17,6 +16,8 @@ import {
   Menu,
   X,
 } from 'lucide-react';
+import LogoSenai from "../../components/layout/LogoSenai.jsx";
+import MenuLateral from "../../components/navigation/gestor/MenuLateralRelatorios.jsx";
 import {
   obterRelatorios,
   gerarRelatorio,
@@ -25,14 +26,27 @@ import {
   contatarSecretaria,
 } from '../../services/relatoriosService.js';
 
-
+// Vermelho oficial usado nos botões, no logo e nos destaques
 const VERMELHO = '#E30613';
 
-
+// Cores dos gráficos (na ordem em que os dados chegam)
 const CORES_BARRAS = ['#B76E6E', '#9B0A0A', '#FF0000', '#FF5F5F'];
 const CORES_MOTIVOS = ['#F9475A', '#FF9933', '#7BA7FF', '#7ED67E', '#A67C2E'];
 
-
+// ---------------------------------------------------------------------
+// VALORES INICIAIS DA TELA (iguais ao print)
+// Servem para a tela já aparecer completa. Quando a API real responder,
+// estes valores são trocados pelos que vierem do servidor.
+//
+// A API deve devolver exatamente estes nomes de campos:
+// {
+//   nomeUsuario, cargo, status, total,
+//   cards: { tempoAtendimento: {valor, variacao}, atrasosRecorrentes: {...},
+//            casosConcluidos: {...}, tempoMedio: {...} },
+//   ocorrenciasPorTurma: [ { turma, total } ],
+//   motivos: [ { nome, percentual } ]
+// }
+// ---------------------------------------------------------------------
 const DADOS_INICIAIS = {
   nomeUsuario: 'Mariana',
   cargo: 'Professor',
@@ -59,133 +73,29 @@ const DADOS_INICIAIS = {
   ],
 };
 
-
+// Período inicial (formato AAAA-MM-DD, o mesmo do campo de data do navegador)
 const PERIODO_INICIAL = { inicio: '2026-03-01', fim: '2026-03-10' };
 
+// ---------------------------------------------------------------------
+// Funções auxiliares pequenas
+// ---------------------------------------------------------------------
 
-const ITENS_MENU = [
-  { texto: 'Início', Icone: Home, para: '/' },
-  { texto: 'Acolhimentos', Icone: FileText },
-  { texto: 'Minhas Turmas', Icone: Monitor },
-  { texto: 'Alunos', Icone: Users },
-  { texto: 'Relatórios', Icone: ClipboardList, para: '/relatorios', ativo: true },
-  { texto: 'Perfil', Icone: User },
-];
-
-
-
-
+// Transforma '2026-03-01' em '01/03/2026'
 function formatarData(dataIso) {
   const [ano, mes, dia] = dataIso.split('-');
   return `${dia}/${mes}/${ano}`;
 }
 
-
+// Transforma 2.5 em '2,5' (jeito brasileiro)
 function formatarNumero(numero) {
   return Number(numero).toLocaleString('pt-BR');
 }
 
-
-function LogoSenai({ tamanho = 'px-2 py-0.5 text-lg' }) {
-  return (
-    <span
-      className={`inline-block bg-[#E30613] font-black italic leading-none tracking-tight text-white ${tamanho}`}
-    >
-      SENAI
-    </span>
-  );
-}
-
-
-function Sidebar({ aberto, aoFechar, nome, cargo, aoSair }) {
-  return (
-    <>
-      
-      {aberto && <div className="fixed inset-0 z-30 bg-black/50 md:hidden" onClick={aoFechar} />}
-
-      <aside
-        className={
-          'fixed inset-y-0 left-0 z-40 flex w-56 shrink-0 flex-col bg-[#0B192C] ' +
-          'transition-transform duration-200 md:static md:w-52 md:translate-x-0 ' +
-          (aberto ? 'translate-x-0' : '-translate-x-full')
-        }
-      >
-       
-        <div className="flex items-center justify-between px-5 pb-4 pt-5">
-          <LogoSenai />
-          <button
-            type="button"
-            onClick={aoFechar}
-            aria-label="Fechar menu"
-            className="rounded p-1 text-white hover:bg-white/10 md:hidden"
-          >
-            <X size={22} />
-          </button>
-        </div>
-
-        
-        <div className="flex items-center gap-3 px-5 pb-6 pt-2">
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-[#0B192C]">
-            <User size={26} />
-          </div>
-          <div className="min-w-0">
-            <p className="truncate text-sm text-white">{nome}</p>
-            <p className="text-xs text-gray-400">{cargo}</p>
-          </div>
-        </div>
-
-     
-        <nav className="flex flex-col">
-          {ITENS_MENU.map(({ texto, Icone, para, ativo }) => {
-            const classe = 'flex items-center gap-3 px-5 py-3 text-sm text-white hover:bg-white/10';
-
-           
-            const conteudo = (
-              <>
-                <span className={ativo ? 'rounded-md bg-white p-1' : 'p-1'}>
-                  <Icone size={24} color={ativo ? VERMELHO : 'currentColor'} />
-                </span>
-                <span className={ativo ? 'font-bold' : ''}>{texto}</span>
-              </>
-            );
-
-            
-            if (para) {
-              return (
-                <Link key={texto} to={para} onClick={aoFechar} className={classe}>
-                  {conteudo}
-                </Link>
-              );
-            }
-
-            
-            return (
-              <a key={texto} href="#" className={classe}>
-                {conteudo}
-              </a>
-            );
-          })}
-        </nav>
-
-       
-        <button
-          type="button"
-          onClick={aoSair}
-          className="mt-auto flex items-center gap-3 px-5 py-5 text-sm text-white hover:bg-white/10"
-        >
-          <span className="p-1">
-            <LogOut size={24} />
-          </span>
-          <span>Sair</span>
-        </button>
-      </aside>
-    </>
-  );
-}
-
-
+// =====================================================================
+// COMPONENTE: card de indicador (número grande + variação)
+// =====================================================================
 function CardIndicador({ titulo, valor, variacao }) {
-  const subiu = variacao >= 0; 
+  const subiu = variacao >= 0; // seta para cima (verde) ou para baixo (vermelho)
 
   return (
     <div className="flex min-h-[112px] flex-col items-center justify-between rounded-sm border border-gray-300 bg-white px-2 py-3 text-center">
@@ -203,18 +113,21 @@ function CardIndicador({ titulo, valor, variacao }) {
   );
 }
 
-
+// =====================================================================
+// COMPONENTE: gráfico de barras ("Ocorrências por turmas")
+// Cada barra é uma div. A altura é proporcional ao valor.
+// =====================================================================
 function GraficoBarras({ turmas }) {
- 
+  // A maior barra ocupa a altura máxima; as outras ficam proporcionais
   const maior = Math.max(...turmas.map((t) => t.total), 1);
 
   return (
     <div className="mt-4 flex h-56 items-end justify-around gap-2 border-b border-gray-500 px-2">
       {turmas.map((item, indice) => (
         <div key={item.turma} className="flex h-full w-14 flex-col items-center justify-end">
-          
+          {/* Valor em cima da barra */}
           <span className="mb-1 text-base font-bold text-gray-500">{item.total}</span>
-          
+          {/* A barra: altura em % do espaço disponível */}
           <div
             className="w-full rounded-md"
             style={{
@@ -228,7 +141,7 @@ function GraficoBarras({ turmas }) {
   );
 }
 
-
+// Nomes das turmas embaixo do gráfico (separado para alinhar com as barras)
 function LegendaTurmas({ turmas }) {
   return (
     <div className="flex justify-around gap-2 px-2 pt-2">
@@ -241,12 +154,15 @@ function LegendaTurmas({ turmas }) {
   );
 }
 
-
+// =====================================================================
+// COMPONENTE: gráfico de rosca ("Motivos das ocorrências")
+// Cada fatia é um círculo SVG com "traço" (stroke) parcial.
+// =====================================================================
 const RAIO = 40;
-const CIRCUNFERENCIA = 2 * Math.PI * RAIO; 
+const CIRCUNFERENCIA = 2 * Math.PI * RAIO; // tamanho da volta completa
 
 function GraficoRosca({ motivos, total }) {
- 
+  // Calcula onde cada fatia começa e o tamanho dela
   const fatias = [];
   let acumulado = 0;
   for (const motivo of motivos) {
@@ -257,7 +173,7 @@ function GraficoRosca({ motivos, total }) {
 
   return (
     <div className="relative h-40 w-40 shrink-0">
-     
+      {/* -rotate-90 faz a primeira fatia começar no topo do círculo */}
       <svg viewBox="0 0 120 120" className="h-full w-full -rotate-90" role="img" aria-label="Motivos das ocorrências">
         {fatias.map((fatia, indice) => (
           <circle
@@ -274,7 +190,7 @@ function GraficoRosca({ motivos, total }) {
         ))}
       </svg>
 
-      
+      {/* Círculo branco no centro com o total */}
       <div className="absolute left-1/2 top-1/2 flex h-[72px] w-[72px] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full bg-white shadow">
         <span className="text-3xl font-black leading-none">{total}</span>
         <span className="text-[10px] font-bold leading-tight">total</span>
@@ -283,7 +199,9 @@ function GraficoRosca({ motivos, total }) {
   );
 }
 
-
+// =====================================================================
+// COMPONENTE: aviso (toast) que aparece no canto da tela
+// =====================================================================
 function Aviso({ aviso, aoFechar }) {
   if (!aviso) return null;
 
@@ -302,29 +220,32 @@ function Aviso({ aviso, aoFechar }) {
   );
 }
 
+// =====================================================================
+// PÁGINA PRINCIPAL
+// =====================================================================
 export default function RelatoriosPage() {
-  
-  const [menuAberto, setMenuAberto] = useState(false); 
-  const [dados, setDados] = useState(DADOS_INICIAIS); 
-  const [periodo, setPeriodo] = useState(PERIODO_INICIAL); 
-  const [rascunho, setRascunho] = useState(PERIODO_INICIAL); 
-  const [seletorAberto, setSeletorAberto] = useState(false); 
-  const [carregando, setCarregando] = useState(false); 
-  const [gerando, setGerando] = useState(false); 
-  const [enviandoContato, setEnviandoContato] = useState(false); 
-  const [aviso, setAviso] = useState(null); 
+  // ---- Estados (a "memória" da tela) ----
+  const [menuAberto, setMenuAberto] = useState(false); // menu do celular
+  const [dados, setDados] = useState(DADOS_INICIAIS); // cards, gráficos, usuário
+  const [periodo, setPeriodo] = useState(PERIODO_INICIAL); // datas aplicadas
+  const [rascunho, setRascunho] = useState(PERIODO_INICIAL); // datas sendo escolhidas
+  const [seletorAberto, setSeletorAberto] = useState(false); // janelinha das datas
+  const [carregando, setCarregando] = useState(false); // buscando dados (GET)
+  const [gerando, setGerando] = useState(false); // gerando relatório (POST)
+  const [enviandoContato, setEnviandoContato] = useState(false); // contato (POST)
+  const [aviso, setAviso] = useState(null); // mensagem de sucesso/erro
 
- 
+  // ---- Mostra um aviso por 4 segundos ----
   function mostrarAviso(tipo, texto) {
     setAviso({ tipo, texto });
     setTimeout(() => setAviso(null), 4000);
   }
 
-  
+  // ---- 1) GET: buscar os dados quando a tela abre e quando o período muda ----
   useEffect(() => {
     async function carregarDados() {
       try {
-       
+        // Sem token = ainda não há login/API. Mantemos os valores iniciais.
         if (!localStorage.getItem('token')) return;
 
         setCarregando(true);
@@ -340,7 +261,7 @@ export default function RelatoriosPage() {
     carregarDados();
   }, [periodo]);
 
- 
+  // ---- 2) POST: botão "Gerar relatório" ----
   async function handleGerarRelatorio() {
     try {
       setGerando(true);
@@ -353,18 +274,18 @@ export default function RelatoriosPage() {
     }
   }
 
- 
+  // ---- 3) PUT: aplicar as datas escolhidas ----
   async function handleUpdatePeriodo() {
-   
+    // Data inicial não pode ser depois da final
     if (rascunho.inicio > rascunho.fim) {
       mostrarAviso('erro', 'A data inicial não pode ser maior que a data final.');
       return;
     }
 
-    setPeriodo(rascunho); 
+    setPeriodo(rascunho); // isso também faz o useEffect buscar os dados novos
     setSeletorAberto(false);
 
-   
+    // Sem token = ainda não há API. Só atualiza na tela.
     if (!localStorage.getItem('token')) return;
 
     try {
@@ -375,7 +296,9 @@ export default function RelatoriosPage() {
     }
   }
 
-  
+  // ---- 4) DELETE: excluir um relatório salvo ----
+  // Esta tela ainda não tem uma lista de relatórios salvos. Quando tiver,
+  // ligue esta função a um botão: onClick={() => handleDeleteRelatorio(relatorio.id)}
   async function handleDeleteRelatorio(id) {
     try {
       await excluirRelatorio(id);
@@ -385,7 +308,7 @@ export default function RelatoriosPage() {
     }
   }
 
-  
+  // ---- 5) POST: botão "Ver contato" ----
   async function handleContactSecretaria() {
     try {
       setEnviandoContato(true);
@@ -398,26 +321,15 @@ export default function RelatoriosPage() {
     }
   }
 
- 
-  function sair() {
-    localStorage.removeItem('token');
-    window.location.href = '/login';
-  }
-
   const { cards } = dados;
 
   return (
     <div className="flex min-h-screen bg-[#F8F9FA] text-gray-900">
-      <Sidebar
-        aberto={menuAberto}
-        aoFechar={() => setMenuAberto(false)}
-        nome={dados.nomeUsuario}
-        cargo={dados.cargo}
-        aoSair={sair}
-      />
+      <MenuLateral aberto={menuAberto} aoFechar={() => setMenuAberto(false)} />
 
+      {/* min-w-0 evita que o conteúdo estique a página para os lados */}
       <div className="min-w-0 flex-1">
-       
+        {/* Barra do topo no celular: logo à esquerda e hambúrguer à direita */}
         <div className="flex items-center justify-between bg-[#0B192C] px-4 py-3 md:hidden">
           <LogoSenai tamanho="px-2.5 py-1 text-2xl" />
           <button
@@ -431,7 +343,7 @@ export default function RelatoriosPage() {
         </div>
 
         <main className={`mx-auto w-full max-w-5xl px-4 py-6 md:px-8 md:py-8 ${carregando ? 'opacity-60' : ''}`}>
-          
+          {/* ---------- Cabeçalho da página ---------- */}
           <header>
             <div className="flex items-center gap-3">
               <ArrowLeftToLine size={26} strokeWidth={2.5} />
@@ -441,9 +353,9 @@ export default function RelatoriosPage() {
               Acompanhe os indicadores e gere relatório das suas salas.
             </p>
 
-          
+            {/* Período + botão Gerar relatório (à direita no desktop) */}
             <div className="mt-4 flex flex-wrap items-center gap-3 md:justify-end">
-             
+              {/* Seletor de período */}
               <div className="relative">
                 <button
                   type="button"
@@ -459,7 +371,7 @@ export default function RelatoriosPage() {
                   <Calendar size={18} />
                 </button>
 
-                
+                {/* Janelinha com os dois campos de data */}
                 {seletorAberto && (
                   <div className="absolute left-0 z-20 mt-2 w-64 rounded-md border border-gray-300 bg-white p-4 shadow-lg md:left-auto md:right-0">
                     <label className="block text-xs font-semibold">
@@ -491,7 +403,7 @@ export default function RelatoriosPage() {
                 )}
               </div>
 
-             
+              {/* Botão Gerar relatório */}
               <button
                 type="button"
                 onClick={handleGerarRelatorio}
@@ -504,7 +416,8 @@ export default function RelatoriosPage() {
             </div>
           </header>
 
-         
+          {/* ---------- Os 4 cards de indicadores ---------- */}
+          {/* 2 colunas no celular, 4 no desktop */}
           <section className="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
             <CardIndicador
               titulo="tempo médio de atendimento"
@@ -528,19 +441,19 @@ export default function RelatoriosPage() {
             />
           </section>
 
-        
+          {/* Status "Em Análise" (vermelho, à direita) */}
           <p className="mt-8 text-right text-sm font-semibold text-[#E30613]">{dados.status}</p>
 
-         
+          {/* ---------- Gráficos ---------- */}
           <section className="mt-2 grid grid-cols-1 gap-4 lg:grid-cols-2">
-            
+            {/* Gráfico de barras */}
             <div className="rounded-sm border border-gray-300 bg-white p-4">
               <h2 className="text-base font-bold">Ocorrências por turmas</h2>
               <GraficoBarras turmas={dados.ocorrenciasPorTurma} />
               <LegendaTurmas turmas={dados.ocorrenciasPorTurma} />
             </div>
 
-           
+            {/* Gráfico de rosca + legenda */}
             <div className="rounded-sm border border-gray-300 bg-white p-4">
               <h2 className="text-base font-bold">Motivos das ocorrências</h2>
               <div className="mt-4 flex flex-wrap items-center justify-center gap-6">
@@ -562,7 +475,7 @@ export default function RelatoriosPage() {
             </div>
           </section>
 
-         
+          {/* ---------- Banner de suporte ---------- */}
           <section className="mt-6 flex flex-col items-center gap-4 rounded-sm border border-gray-300 bg-white p-4 sm:flex-row sm:justify-between">
             <div className="flex items-center gap-5">
               <Headset size={44} strokeWidth={1.5} color={VERMELHO} className="shrink-0" />
@@ -585,7 +498,7 @@ export default function RelatoriosPage() {
         </main>
       </div>
 
-      
+      {/* Aviso de sucesso ou erro */}
       <Aviso aviso={aviso} aoFechar={() => setAviso(null)} />
     </div>
   );

@@ -1429,5 +1429,23 @@
   "backupDescription": "Fontes versionadas no commit 932af138, antes da consolidação; não inclui node_modules ou builds.",
   "additionalBackups": [
     "docs/alunos-professor-fontes-originais.json.gz"
-  ]
+  ],
+  "remoteIntegration": {
+    "commit": "ec3e7141",
+    "mappedFiles": [
+      {
+        "from": "Front-End/Telas Alunos/senai-atestados/src/services/LogoSenai.jsx",
+        "to": "src/components/layout/LogoSenai.jsx"
+      },
+      {
+        "from": "Front-End/Telas Alunos/senai-atestados/src/services/MenuLateral.jsx",
+        "to": "src/components/navigation/gestor/MenuLateralRelatorios.jsx"
+      },
+      {
+        "from": "Front-End/Telas Alunos/senai-atestados/public/logo-senai.png",
+        "to": "src/assets/logo-senai-relatorios.png"
+      }
+    ],
+    "removedRouterShells": "Os wrappers TanStack foram substituídos pelo roteamento React Router do projeto principal."
+  }
 }
