@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import TelaInicial from "./pages/TelaInicial.jsx";
-import LoginAluno from "./pages/LoginAluno.jsx";
-import LoginGestor from "./pages/LoginGestor.jsx";
-import LoginProfessor from "./pages/LoginProfessor.jsx";
-import Dashboard from "./pages/DashboardProfessor.jsx";
-import RegistrarChegada from "./pages/RegistroAtraso.jsx";
-import { InicioAlunoMock, MeusAtrasos, OcorrenciasAluno, DetalheOcorrencia, FormularioAtrasoMock, AtestadosAluno, PerfilAlunoMock, ContatoAlunoMock } from "./pages/TelasAluno.jsx";
+import TelaInicial from "./pages/acesso/SelecaoPerfil.jsx";
+import LoginAluno from "./pages/acesso/LoginAluno.jsx";
+import LoginGestor from "./pages/acesso/LoginGestor.jsx";
+import LoginProfessor from "./pages/acesso/LoginProfessor.jsx";
+import Dashboard from "./pages/professor/DashboardProfessor.jsx";
+import RegistrarChegada from "./pages/aluno/RegistroAtraso.jsx";
+import { InicioAlunoMock, MeusAtrasos, OcorrenciasAluno, DetalheOcorrencia, FormularioAtrasoMock, AtestadosAluno, PerfilAlunoMock, ContatoAlunoMock } from "./pages/aluno/TelasAluno.jsx";
 export default function App() {
   return <BrowserRouter><Routes>
     <Route path="/" element={<TelaInicial />} />

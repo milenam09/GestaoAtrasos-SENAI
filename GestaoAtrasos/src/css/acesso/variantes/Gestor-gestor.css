@@ -1,0 +1,273 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.login-pagina {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background-image:
+    linear-gradient(rgba(5, 20, 38, 0.48), rgba(5, 20, 38, 0.62)),
+    var(--imagem-fundo);
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 25px;
+}
+
+/* Faixas vermelhas */
+
+.faixa {
+  position: absolute;
+  width: 450px;
+  height: 130px;
+  background: #ed101b;
+  transform: rotate(-45deg);
+  pointer-events: none;
+}
+
+.faixa-superior {
+  top: -100px;
+  left: -160px;
+}
+
+.faixa-inferior {
+  bottom: -100px;
+  right: -160px;
+}
+
+/* Cartão de login */
+
+.login-cartao {
+  width: 456px;
+  height: 646px;
+  padding: 10px 70px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.login-logo {
+  width: 180px;
+  height: 55px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.login-icone {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  margin: 0 auto 5px;
+}
+
+.login-cartao h1 {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0;
+  color: #111;
+}
+
+/* Subtítulo */
+
+.login-cartao .login-subtitulo {
+  font-size: 16px;
+  font-weight: bold;
+  color: #111;
+  text-align: center;
+  margin: 16px 0 30px;
+}
+
+/* Campos */
+
+.login-cartao form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-cartao label {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 8px 2px;
+  color: #111;
+}
+
+.login-cartao input {
+  width: 100%;
+  height: 46px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  padding: 0 14px;
+  font-size: 14px;
+  outline: none;
+}
+
+.login-cartao input:focus {
+  border-color: #ed101b;
+}
+
+.login-cartao form > input {
+  margin-bottom: 24px;
+}
+
+.campo-senha {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.campo-senha input {
+  padding-right: 40px;
+}
+
+.mostrar-senha {
+  position: absolute;
+  right: 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+}
+
+/* Esqueci minha senha */
+
+.login-cartao form .esqueci-senha {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  color: #ed101b;
+  text-decoration: none;
+  text-align: center;
+  margin: 12px 0 12px;
+  align-self: center;
+}
+
+/* Botão entrar */
+
+.botao-entrar {
+  height: 47px;
+  border: none;
+  border-radius: 5px;
+  background: #ed101b;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+.botao-entrar span {
+  position: absolute;
+  right: 35px;
+  font-size: 22px;
+  top: 10px;
+}
+
+/* Separador */
+
+.separador {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0 20px;
+}
+
+.separador span {
+  flex: 1;
+  height: 1px;
+  background: #ccc;
+}
+
+.separador p {
+  font-size: 17px;
+  color: #888;
+  margin: 0;
+}
+
+/* Botão Google */
+
+.botao-google {
+  height: 47px;
+  width: 100%;
+  border: 1px solid #ff6570;
+  background: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botao-google strong {
+  font-size: 25px;
+  color: #4285f4;
+}
+
+/* Celular */
+
+@media (max-width: 480px) {
+  .login-pagina {
+    padding: 15px;
+    min-height: 100dvh;
+  }
+
+  .login-cartao {
+    width: 100%;
+    max-width: 485px;
+    min-height: auto;
+    padding: 25px 25px 30px;
+  }
+
+  .login-logo {
+    width: 160px;
+    height: 45px;
+  }
+
+  .login-icone {
+    width: 75px;
+    height: 85px;
+  }
+
+  .login-cartao h1 {
+    font-size: 28px;
+  }
+
+  .login-cartao .login-subtitulo {
+    font-size: 13px;
+    margin: 16px 0 25px;
+  }
+
+  .login-cartao label {
+    font-size: 14px;
+  }
+
+  .login-cartao input {
+    height: 43px;
+  }
+
+  .botao-entrar,
+  .botao-google {
+    height: 45px;
+  }
+
+  .faixa {
+    width: 250px;
+  }
+}

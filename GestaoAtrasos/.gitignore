@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Backups locais da consolidacao
+docs/fontes-originais-git.zip
+docs/*-fontes-originais.json.gz

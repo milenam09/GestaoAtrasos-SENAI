@@ -1,0 +1,106 @@
+{
+  "source": "AlunosDoProfessor",
+  "backup": "docs/alunos-professor-fontes-originais.json.gz",
+  "filesAnalyzed": 29,
+  "filesAdded": [
+    "src/pages/professor/AlunosDoProfessor.jsx",
+    "src/css/professor/AlunosDoProfessor.css",
+    "src/css/professor/AlunosDoProfessorBase.css",
+    "src/pages/professor/Alunos.jsx",
+    "src/css/professor/Alunos.css",
+    "src/pages/professor/variantes/PerfilSimplificado.jsx",
+    "src/css/professor/variantes/PerfilSimplificado.css",
+    "src/pages/professor/variantes/ContatoSuporte.jsx",
+    "src/css/professor/variantes/ContatoSuporte.css",
+    "src/components/layout/PaginaEmConstrucao.jsx",
+    "src/css/professor/PaginaEmConstrucao.css",
+    "src/components/navigation/professor/MenuAlunos.jsx",
+    "src/components/navigation/professor/IconsAlunos.jsx",
+    "src/assets/senai-logo-alunos-professor.svg"
+  ],
+  "reused": [
+    "src/components/Menu.css",
+    "public/favicon.ico"
+  ],
+  "mapping": [
+    {
+      "from": "AlunosDoProfessor/src/App.jsx",
+      "to": "src/pages/professor/AlunosDoProfessor.jsx"
+    },
+    {
+      "from": "AlunosDoProfessor/src/App.css",
+      "to": "src/css/professor/AlunosDoProfessor.css"
+    },
+    {
+      "from": "AlunosDoProfessor/src/index.css",
+      "to": "src/css/professor/AlunosDoProfessorBase.css"
+    },
+    {
+      "from": "AlunosDoProfessor/src/pages/Alunos.jsx",
+      "to": "src/pages/professor/Alunos.jsx"
+    },
+    {
+      "from": "AlunosDoProfessor/src/pages/Alunos.css",
+      "to": "src/css/professor/Alunos.css"
+    },
+    {
+      "from": "AlunosDoProfessor/src/pages/Perfil.jsx",
+      "to": "src/pages/professor/variantes/PerfilSimplificado.jsx"
+    },
+    {
+      "from": "AlunosDoProfessor/src/pages/Perfil.css",
+      "to": "src/css/professor/variantes/PerfilSimplificado.css"
+    },
+    {
+      "from": "AlunosDoProfessor/src/pages/Contato.jsx",
+      "to": "src/pages/professor/variantes/ContatoSuporte.jsx"
+    },
+    {
+      "from": "AlunosDoProfessor/src/pages/Contato.css",
+      "to": "src/css/professor/variantes/ContatoSuporte.css"
+    },
+    {
+      "from": "AlunosDoProfessor/src/pages/PlaceholderPage.jsx",
+      "to": "src/components/layout/PaginaEmConstrucao.jsx"
+    },
+    {
+      "from": "AlunosDoProfessor/src/pages/PlaceholderPage.css",
+      "to": "src/css/professor/PaginaEmConstrucao.css"
+    },
+    {
+      "from": "AlunosDoProfessor/src/components/Menu.jsx",
+      "to": "src/components/navigation/professor/MenuAlunos.jsx"
+    },
+    {
+      "from": "AlunosDoProfessor/src/components/Menu.css",
+      "to": "src/css/professor/MenuProfessor.css"
+    },
+    {
+      "from": "AlunosDoProfessor/src/components/Icons.jsx",
+      "to": "src/components/navigation/professor/IconsAlunos.jsx"
+    },
+    {
+      "from": "AlunosDoProfessor/public/senai-logo.svg",
+      "to": "src/assets/senai-logo-alunos-professor.svg"
+    },
+    {
+      "from": "AlunosDoProfessor/public/favicon.ico",
+      "to": "src/assets/favicon.ico"
+    }
+  ],
+  "removedScaffolding": [
+    ".gitignore",
+    "distribuicao/assets/index-Bf_4l2h7.css",
+    "distribuicao/assets/index-CeaEyu95.js",
+    "distribuicao/favicon.ico",
+    "distribuicao/index.html",
+    "distribuicao/senai-logo.png",
+    "index.html",
+    "package-lock.json",
+    "package.json",
+    "public/senai-logo.png",
+    "README.md",
+    "src/main.jsx",
+    "vite.config.js"
+  ]
+}

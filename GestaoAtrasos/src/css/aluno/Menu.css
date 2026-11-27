@@ -1,0 +1,238 @@
+
+.menu {
+  width: 270px;
+  min-width: 270px;
+  height: 100vh;
+  background-color: #0c2232;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 28px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  flex-shrink: 0;
+}
+
+/* LOGO */
+.menu-logo {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.menu-logo img {
+  width: 168px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* USUÁRIO */
+.menu-usuario {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.usuario-icone {
+  width: 58px;
+  height: 58px;
+  min-width: 58px;
+  border-radius: 50%;
+  background-color: #f1f3f6;
+  color: #0c2232;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+}
+
+.usuario-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+}
+
+.usuario-info p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.usuario-info span {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #e0e7ed;
+  text-align: left;
+}
+
+/* LINKS DO MENU */
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.link-menu {
+  width: 100%;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 0 12px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+/* ÍCONES */
+.link-menu .icone {
+  width: 20px;
+  min-width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+/* ITEM SELECIONADO */
+.menu-links .link-menu.ativo {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.menu-links .link-menu:hover {
+  background-color: #173448;
+}
+
+/* BOTÃO SAIR */
+.menu-rodape {
+  width: 100%;
+  margin-top: auto;
+}
+
+.menu-rodape .link-menu {
+  color: #ffffff;
+}
+
+.menu-rodape .link-menu.ativo {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.menu-rodape .link-menu:hover {
+  background-color: #173448;
+}
+
+/* BOTÃO HAMBÚRGUER */
+.botao-hamburguer {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1002;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0c2232;
+  color: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FUNDO ESCURO DO MENU */
+.fundo-menu {
+  display: none;
+}
+
+/* RESPONSIVIDADE PARA CELULARES */
+@media (max-width: 700px) {
+  .botao-hamburguer {
+    display: flex;
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    width: 250px;
+    min-width: 250px;
+    height: 100vh;
+    height: 100dvh;
+    padding: 70px 18px 18px;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition: transform 0.3s ease, visibility 0.3s ease;
+  }
+
+  .menu.menu-aberto {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  .menu-logo {
+    margin-bottom: 25px;
+  }
+
+  .menu-logo img {
+    width: 150px;
+  }
+
+  .menu-usuario {
+    gap: 8px;
+    margin-bottom: 25px;
+  }
+
+  .usuario-icone {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    font-size: 19px;
+  }
+
+  .usuario-info p {
+    font-size: 14px;
+  }
+
+  .usuario-info span {
+    font-size: 13px;
+  }
+
+  .link-menu {
+    font-size: 14px;
+    gap: 8px;
+  }
+
+  .fundo-menu {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}

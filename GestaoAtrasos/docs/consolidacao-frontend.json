@@ -1,0 +1,1433 @@
+{
+  "sources": [
+    "Front-End",
+    "PerfilGestor",
+    "Telas Alunos",
+    "Telas AQV",
+    "Telas Iniciais",
+    "Telas Professor",
+    "AlunosDoProfessor"
+  ],
+  "filesAnalyzed": 762,
+  "uniqueFiles": 177,
+  "duplicateCopies": 82,
+  "removedScaffolding": [
+    "Front-End/GerarQrcodeAqv/src/assets/react.svg",
+    "Front-End/GerarQrcodeAqv/src/assets/vite.svg",
+    "Front-End/GerarQrcodeAqv/src/main.jsx",
+    "Front-End/GerarQrcodeAqv/vite.config.js",
+    "Front-End/Qr-code/src/assets/react.svg",
+    "Front-End/Qr-code/src/assets/vite.svg",
+    "Front-End/Qr-code/src/main.jsx",
+    "Front-End/Qr-code/vite.config.js",
+    "Front-End/src/assets/react-hero.svg",
+    "Front-End/src/assets/react.svg",
+    "Front-End/src/assets/vite-hero.svg",
+    "Front-End/src/assets/vite.svg",
+    "Front-End/src/main.jsx",
+    "Front-End/src/standalone/acolhimento/main.jsx",
+    "Front-End/src/standalone/aluno/main.jsx",
+    "Front-End/src/standalone/inicial/main.jsx",
+    "Front-End/src/standalone/minhas-turmas/main.jsx",
+    "Front-End/Telas/alunos-aqv/src/assets/react.svg",
+    "Front-End/Telas/alunos-aqv/src/assets/vite.svg",
+    "Front-End/Telas/alunos-aqv/src/main.jsx",
+    "Front-End/Telas/alunos-aqv/vite.config.js",
+    "Front-End/Telas/AtlasTech/src/assets/react.svg",
+    "Front-End/Telas/AtlasTech/src/assets/vite.svg",
+    "Front-End/Telas/AtlasTech/src/main.tsx",
+    "Front-End/Telas/AtlasTech/vite.config.ts",
+    "Front-End/Telas/InicioAQV/src/main.jsx",
+    "Front-End/Telas/InicioAQV/vite.config.js",
+    "Front-End/Telas/Os/src/main.jsx",
+    "Front-End/Telas/Os/vite.config.js",
+    "Front-End/Telas Alunos/Aluno-tela-inicial/src/main.jsx",
+    "Front-End/Telas Alunos/atraso-registro/eslint.config.js",
+    "Front-End/Telas Alunos/atraso-registro/src/assets/react.svg",
+    "Front-End/Telas Alunos/atraso-registro/src/assets/vite.svg",
+    "Front-End/Telas Alunos/atraso-registro/src/main.jsx",
+    "Front-End/Telas Alunos/atraso-registro/vite.config.js",
+    "Front-End/Telas Alunos/MinhasOcorrencias/src/main.jsx",
+    "Front-End/Telas Alunos/PerfilAluno/src/main.jsx",
+    "Front-End/Telas Alunos/registrar-chegada/eslint.config.js",
+    "Front-End/Telas Alunos/registrar-chegada/src/assets/react.svg",
+    "Front-End/Telas Alunos/registrar-chegada/src/assets/vite.svg",
+    "Front-End/Telas Alunos/registrar-chegada/src/main.jsx",
+    "Front-End/Telas Alunos/registrar-chegada/vite.config.js",
+    "Front-End/Telas Alunos/senai-atestados/eslint.config.js",
+    "Front-End/Telas Alunos/senai-atestados/src/lib/error-capture.ts",
+    "Front-End/Telas Alunos/senai-atestados/src/lib/error-page.ts",
+    "Front-End/Telas Alunos/senai-atestados/src/lib/lovable-error-reporting.ts",
+    "Front-End/Telas Alunos/senai-atestados/src/router.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/routes/atestados.jsx",
+    "Front-End/Telas Alunos/senai-atestados/src/routes/index.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/routes/meus-atrasos.jsx",
+    "Front-End/Telas Alunos/senai-atestados/src/routes/relatorios-gestor.jsx",
+    "Front-End/Telas Alunos/senai-atestados/src/routes/relatorios.jsx",
+    "Front-End/Telas Alunos/senai-atestados/src/routes/__root.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/routeTree.gen.ts",
+    "Front-End/Telas Alunos/senai-atestados/src/server.ts",
+    "Front-End/Telas Alunos/senai-atestados/src/start.ts",
+    "Front-End/Telas Alunos/senai-atestados/src/test/app-routing.test.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/test/setup.ts",
+    "Front-End/Telas Alunos/senai-atestados/vite.config.ts",
+    "Front-End/Telas Alunos/senai-atestados/vitest.config.ts",
+    "Front-End/Telas AQV/AcolhimentoGestor/src/assets/react.svg",
+    "Front-End/Telas AQV/AcolhimentoGestor/src/assets/vite.svg",
+    "Front-End/Telas AQV/AcolhimentoGestor/src/main.jsx",
+    "Front-End/Telas AQV/AcolhimentoGestor/vite.config.js",
+    "Front-End/Telas AQV/NovaTurmaAQV/src/assets/react.svg",
+    "Front-End/Telas AQV/NovaTurmaAQV/src/assets/vite.svg",
+    "Front-End/Telas AQV/NovaTurmaAQV/src/main.jsx",
+    "Front-End/Telas AQV/NovaTurmaAQV/vite.config.js",
+    "Front-End/Telas AQV/TurmasAQV/src/main.jsx",
+    "Front-End/Telas Iniciais/Gestor/src/main.jsx",
+    "Front-End/Telas Iniciais/LoginProfessor/src/main.jsx",
+    "Front-End/Telas Iniciais/LoginProfessor/vite.config.js",
+    "Front-End/Telas Iniciais/Tela-Inicial/src/main.jsx",
+    "Front-End/Telas Iniciais/tela-Inicial-Al/eslint.config.js",
+    "Front-End/Telas Iniciais/tela-Inicial-Al/src/assets/react.svg",
+    "Front-End/Telas Iniciais/tela-Inicial-Al/src/assets/vite.svg",
+    "Front-End/Telas Iniciais/tela-Inicial-Al/src/main.jsx",
+    "Front-End/Telas Iniciais/tela-Inicial-Al/vite.config.js",
+    "Front-End/Telas Professor/Acolhimentos/src/main.jsx",
+    "Front-End/Telas Professor/PerfilProfessor/Minha-turma-professor/src/main.jsx",
+    "Front-End/Telas Professor/PerfilProfessor/src/main.jsx",
+    "Front-End/Telas Professor/PerfilProfessor/src/pages/PlaceholderPage.css",
+    "Front-End/Telas Professor/PerfilProfessor/src/pages/PlaceholderPage.jsx",
+    "Front-End/Telas Professor/PerfilProfessor/vite.config.js",
+    "Front-End/Telas Professor/Ranking/src/main.jsx",
+    "Front-End/vite.config.js",
+    "PerfilGestor/src/main.jsx",
+    "PerfilGestor/src/pages/PlaceholderPage.css",
+    "PerfilGestor/src/pages/PlaceholderPage.jsx",
+    "PerfilGestor/vite.config.js",
+    "Telas Alunos/telas-alunos/src/App.jsx",
+    "Telas Alunos/telas-alunos/src/assets/react.svg",
+    "Telas Alunos/telas-alunos/src/assets/vite.svg",
+    "Telas Alunos/telas-alunos/src/main.jsx",
+    "Telas Alunos/telas-alunos/vite.config.js",
+    "Telas AQV/alunos-aqv/src/assets/react.svg",
+    "Telas AQV/alunos-aqv/src/assets/vite.svg",
+    "Telas AQV/alunos-aqv/src/main.jsx",
+    "Telas AQV/alunos-aqv/vite.config.js",
+    "Telas AQV/InicioAQV/src/main.jsx",
+    "Telas AQV/InicioAQV/vite.config.js",
+    "Telas AQV/Os/src/main.jsx",
+    "Telas AQV/Os/vite.config.js",
+    "Telas Professor/AtlasTech/src/assets/react.svg",
+    "Telas Professor/AtlasTech/src/assets/vite.svg",
+    "Telas Professor/AtlasTech/src/main.tsx",
+    "Telas Professor/AtlasTech/vite.config.ts",
+    "Front-End/GerarQrcodeAqv/public/favicon.svg",
+    "Front-End/GerarQrcodeAqv/public/icons.svg",
+    "Front-End/GerarQrcodeAqv/public/senai.logo.svg",
+    "Front-End/GerarQrcodeAqv/src/App.css",
+    "Front-End/GerarQrcodeAqv/src/App.jsx",
+    "Front-End/GerarQrcodeAqv/src/assets/favicon.ico",
+    "Front-End/GerarQrcodeAqv/src/assets/fundo.senai.png",
+    "Front-End/GerarQrcodeAqv/src/assets/hero.png",
+    "Front-End/GerarQrcodeAqv/src/assets/senai-logo.png",
+    "Front-End/GerarQrcodeAqv/src/components/Menu/Menu.css",
+    "Front-End/GerarQrcodeAqv/src/components/Menu/Menu.jsx",
+    "Front-End/GerarQrcodeAqv/src/index.css",
+    "Front-End/public/favicon.svg",
+    "Front-End/public/icons.svg",
+    "Front-End/Qr-code/public/favicon.svg",
+    "Front-End/Qr-code/public/icons.svg",
+    "Front-End/Qr-code/src/App.css",
+    "Front-End/Qr-code/src/App.jsx",
+    "Front-End/Qr-code/src/assets/favicon.ico",
+    "Front-End/Qr-code/src/assets/hero.png",
+    "Front-End/Qr-code/src/components/Icons.jsx",
+    "Front-End/Qr-code/src/components/Menu.css",
+    "Front-End/Qr-code/src/components/Menu.jsx",
+    "Front-End/Qr-code/src/icons.jsx",
+    "Front-End/Qr-code/src/index.css",
+    "Front-End/src/App.css",
+    "Front-End/src/App.jsx",
+    "Front-End/src/assets/hero-hero.png",
+    "Front-End/src/assets/senai-logo-acolhimento.png",
+    "Front-End/src/assets/senai-logo-minhasTurmas.png",
+    "Front-End/src/components/Menu/Menu.css",
+    "Front-End/src/components/Menu/Menu.jsx",
+    "Front-End/src/index.css",
+    "Front-End/Telas/alunos-aqv/public/favicon.svg",
+    "Front-End/Telas/alunos-aqv/public/faviconnnn.ico",
+    "Front-End/Telas/alunos-aqv/public/icons.svg",
+    "Front-End/Telas/alunos-aqv/src/assets/hero.png",
+    "Front-End/Telas/alunos-aqv/src/assets/senai-logo.png",
+    "Front-End/Telas/alunos-aqv/src/index.css",
+    "Front-End/Telas/AtlasTech/public/favicon (1).ico",
+    "Front-End/Telas/AtlasTech/src/App.css",
+    "Front-End/Telas/AtlasTech/src/App.tsx",
+    "Front-End/Telas/AtlasTech/src/assets/hero.png",
+    "Front-End/Telas/AtlasTech/src/index.css",
+    "Front-End/Telas/InicioAQV/public/favicon.ico",
+    "Front-End/Telas/InicioAQV/public/icons.svg",
+    "Front-End/Telas/InicioAQV/src/icon/Vector.svg",
+    "Front-End/Telas/InicioAQV/src/index.css",
+    "Front-End/Telas/Os/public/favicon.ico",
+    "Front-End/Telas/Os/public/icons.svg",
+    "Front-End/Telas/Os/src/assets/images/cris-costa.png",
+    "Front-End/Telas/Os/src/index.css",
+    "Front-End/Telas Alunos/Aluno-tela-inicial/components/Aluno-tela_inicial.css",
+    "Front-End/Telas Alunos/Aluno-tela-inicial/src/App.jsx",
+    "Front-End/Telas Alunos/Aluno-tela-inicial/src/style.css",
+    "Front-End/Telas Alunos/atraso-registro/public/favicon.svg",
+    "Front-End/Telas Alunos/atraso-registro/public/icons.svg",
+    "Front-End/Telas Alunos/atraso-registro/src/App.css",
+    "Front-End/Telas Alunos/atraso-registro/src/App.jsx",
+    "Front-End/Telas Alunos/atraso-registro/src/assets/favicon.ico",
+    "Front-End/Telas Alunos/atraso-registro/src/assets/hero.png",
+    "Front-End/Telas Alunos/atraso-registro/src/assets/senai-logo.png",
+    "Front-End/Telas Alunos/atraso-registro/src/components/Menu/Menu.css",
+    "Front-End/Telas Alunos/atraso-registro/src/components/Menu/Menu.jsx",
+    "Front-End/Telas Alunos/atraso-registro/src/index.css",
+    "Front-End/Telas Alunos/MinhasOcorrencias/assets/camera.png",
+    "Front-End/Telas Alunos/MinhasOcorrencias/assets/person2.png",
+    "Front-End/Telas Alunos/MinhasOcorrencias/src/App.jsx",
+    "Front-End/Telas Alunos/MinhasOcorrencias/src/style.css",
+    "Front-End/Telas Alunos/PerfilAluno/assets/clipboard.png",
+    "Front-End/Telas Alunos/PerfilAluno/assets/file.png",
+    "Front-End/Telas Alunos/PerfilAluno/assets/Frame.png",
+    "Front-End/Telas Alunos/PerfilAluno/assets/home.jpg.png",
+    "Front-End/Telas Alunos/PerfilAluno/assets/person.png",
+    "Front-End/Telas Alunos/PerfilAluno/assets/person3.png",
+    "Front-End/Telas Alunos/PerfilAluno/assets/qrcode.png",
+    "Front-End/Telas Alunos/PerfilAluno/assets/sair.png",
+    "Front-End/Telas Alunos/PerfilAluno/src/App.jsx",
+    "Front-End/Telas Alunos/PerfilAluno/src/style.css",
+    "Front-End/Telas Alunos/registrar-chegada/public/favicon.svg",
+    "Front-End/Telas Alunos/registrar-chegada/public/icons.svg",
+    "Front-End/Telas Alunos/registrar-chegada/src/App.css",
+    "Front-End/Telas Alunos/registrar-chegada/src/App.jsx",
+    "Front-End/Telas Alunos/registrar-chegada/src/assets/favicon.ico",
+    "Front-End/Telas Alunos/registrar-chegada/src/assets/hero.png",
+    "Front-End/Telas Alunos/registrar-chegada/src/assets/senai-logo.png",
+    "Front-End/Telas Alunos/registrar-chegada/src/components/Menu/Menu.css",
+    "Front-End/Telas Alunos/registrar-chegada/src/components/Menu/Menu.jsx",
+    "Front-End/Telas Alunos/registrar-chegada/src/index.css",
+    "Front-End/Telas Alunos/senai-atestados/public/favicon.png",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/accordion.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/alert-dialog.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/alert.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/aspect-ratio.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/avatar.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/badge.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/breadcrumb.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/button.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/calendar.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/card.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/carousel.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/chart.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/checkbox.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/collapsible.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/command.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/context-menu.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/drawer.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/dropdown-menu.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/form.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/hover-card.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/input-otp.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/input.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/label.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/menubar.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/navigation-menu.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/pagination.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/popover.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/progress.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/radio-group.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/resizable.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/scroll-area.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/select.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/separator.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/sheet.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/sidebar.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/skeleton.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/slider.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/sonner.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/switch.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/table.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/tabs.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/textarea.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/toggle-group.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/toggle.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/components/ui/tooltip.tsx",
+    "Front-End/Telas Alunos/senai-atestados/src/styles.css",
+    "Front-End/Telas AQV/AcolhimentoGestor/public/favicon.svg",
+    "Front-End/Telas AQV/AcolhimentoGestor/public/icons.svg",
+    "Front-End/Telas AQV/AcolhimentoGestor/src/App.css",
+    "Front-End/Telas AQV/AcolhimentoGestor/src/App.jsx",
+    "Front-End/Telas AQV/AcolhimentoGestor/src/assets/favicon.ico",
+    "Front-End/Telas AQV/AcolhimentoGestor/src/assets/hero.png",
+    "Front-End/Telas AQV/AcolhimentoGestor/src/index.css",
+    "Front-End/Telas AQV/NovaTurmaAQV/public/favicon.svg",
+    "Front-End/Telas AQV/NovaTurmaAQV/public/icons.svg",
+    "Front-End/Telas AQV/NovaTurmaAQV/src/assets/hero.png",
+    "Front-End/Telas AQV/NovaTurmaAQV/src/index.css",
+    "Front-End/Telas AQV/TurmasAQV/assets/camera.png",
+    "Front-End/Telas AQV/TurmasAQV/assets/clipboard.png",
+    "Front-End/Telas AQV/TurmasAQV/assets/file.png",
+    "Front-End/Telas AQV/TurmasAQV/assets/Frame.png",
+    "Front-End/Telas AQV/TurmasAQV/assets/home.jpg.png",
+    "Front-End/Telas AQV/TurmasAQV/assets/logo.png",
+    "Front-End/Telas AQV/TurmasAQV/assets/mais.png",
+    "Front-End/Telas AQV/TurmasAQV/assets/person.png",
+    "Front-End/Telas AQV/TurmasAQV/assets/person2.png",
+    "Front-End/Telas AQV/TurmasAQV/assets/qrcode.png",
+    "Front-End/Telas AQV/TurmasAQV/assets/sair.png",
+    "Front-End/Telas AQV/TurmasAQV/Menu/Menu.css",
+    "Front-End/Telas AQV/TurmasAQV/Menu/Menu.jsx",
+    "Front-End/Telas AQV/TurmasAQV/src/App.jsx",
+    "Front-End/Telas AQV/TurmasAQV/src/style.css",
+    "Front-End/Telas Iniciais/Gestor/assets/fachada.jpg.jpg",
+    "Front-End/Telas Iniciais/Gestor/assets/logosenai.jpg",
+    "Front-End/Telas Iniciais/Gestor/assets/person.jpg",
+    "Front-End/Telas Iniciais/Gestor/src/App.jsx",
+    "Front-End/Telas Iniciais/Gestor/src/style.css",
+    "Front-End/Telas Iniciais/LoginProfessor/public/favicon.ico",
+    "Front-End/Telas Iniciais/LoginProfessor/public/senai-logo.png",
+    "Front-End/Telas Iniciais/LoginProfessor/public/senai-logo.svg",
+    "Front-End/Telas Iniciais/LoginProfessor/src/App.css",
+    "Front-End/Telas Iniciais/LoginProfessor/src/App.jsx",
+    "Front-End/Telas Iniciais/LoginProfessor/src/assets/fundo.png",
+    "Front-End/Telas Iniciais/LoginProfessor/src/assets/icone-professor.png",
+    "Front-End/Telas Iniciais/LoginProfessor/src/assets/senai-logo.png",
+    "Front-End/Telas Iniciais/LoginProfessor/src/index.css",
+    "Front-End/Telas Iniciais/Tela-Inicial/assets/aluno.png",
+    "Front-End/Telas Iniciais/Tela-Inicial/assets/fachada.jpg.jpg",
+    "Front-End/Telas Iniciais/Tela-Inicial/assets/favicon.ico",
+    "Front-End/Telas Iniciais/Tela-Inicial/assets/frof.png",
+    "Front-End/Telas Iniciais/Tela-Inicial/assets/gestor.png",
+    "Front-End/Telas Iniciais/Tela-Inicial/assets/icone-aluno.png",
+    "Front-End/Telas Iniciais/Tela-Inicial/assets/icone-gestor.png",
+    "Front-End/Telas Iniciais/Tela-Inicial/assets/icone-professor.png",
+    "Front-End/Telas Iniciais/Tela-Inicial/assets/senai-logo.jpg",
+    "Front-End/Telas Iniciais/Tela-Inicial/assets/senai.jpg",
+    "Front-End/Telas Iniciais/Tela-Inicial/src/App.jsx",
+    "Front-End/Telas Iniciais/Tela-Inicial/src/style.css",
+    "Front-End/Telas Iniciais/tela-Inicial-Al/public/favicon.svg",
+    "Front-End/Telas Iniciais/tela-Inicial-Al/public/icons.svg",
+    "Front-End/Telas Iniciais/tela-Inicial-Al/src/App.css",
+    "Front-End/Telas Iniciais/tela-Inicial-Al/src/App.jsx",
+    "Front-End/Telas Iniciais/tela-Inicial-Al/src/assets/favicon.ico",
+    "Front-End/Telas Iniciais/tela-Inicial-Al/src/assets/hero.png",
+    "Front-End/Telas Iniciais/tela-Inicial-Al/src/components/TelaInicialAluno/icone-aluno.jpg",
+    "Front-End/Telas Iniciais/tela-Inicial-Al/src/components/TelaInicialAluno/senai.jpg",
+    "Front-End/Telas Iniciais/tela-Inicial-Al/src/index.css",
+    "Front-End/Telas Professor/Acolhimentos/components/Acolhimento.css",
+    "Front-End/Telas Professor/Acolhimentos/src/App.css",
+    "Front-End/Telas Professor/Acolhimentos/src/style.css",
+    "Front-End/Telas Professor/PerfilProfessor/Minha-turma-professor/components/Minha-turma-professor.css",
+    "Front-End/Telas Professor/PerfilProfessor/Minha-turma-professor/src/App.jsx",
+    "Front-End/Telas Professor/PerfilProfessor/Minha-turma-professor/src/style.css",
+    "Front-End/Telas Professor/PerfilProfessor/public/favicon.ico",
+    "Front-End/Telas Professor/PerfilProfessor/public/senai-logo.png",
+    "Front-End/Telas Professor/PerfilProfessor/public/senai-logo.svg",
+    "Front-End/Telas Professor/PerfilProfessor/public/senai-square.svg",
+    "Front-End/Telas Professor/PerfilProfessor/src/App.css",
+    "Front-End/Telas Professor/PerfilProfessor/src/App.jsx",
+    "Front-End/Telas Professor/PerfilProfessor/src/components/Icons.jsx",
+    "Front-End/Telas Professor/PerfilProfessor/src/components/Menu.css",
+    "Front-End/Telas Professor/PerfilProfessor/src/components/Menu.jsx",
+    "Front-End/Telas Professor/PerfilProfessor/src/index.css",
+    "Front-End/Telas Professor/Ranking/src/App.jsx",
+    "Front-End/Telas Professor/Ranking/src/style.css",
+    "PerfilGestor/public/favicon.ico",
+    "PerfilGestor/public/senai-logo.svg",
+    "PerfilGestor/public/senai-square.svg",
+    "PerfilGestor/src/App.css",
+    "PerfilGestor/src/App.jsx",
+    "PerfilGestor/src/components/Icons.jsx",
+    "PerfilGestor/src/components/Menu.css",
+    "PerfilGestor/src/components/Menu.jsx",
+    "PerfilGestor/src/index.css",
+    "Telas Alunos/telas-alunos/public/favicon.svg",
+    "Telas Alunos/telas-alunos/public/icons.svg",
+    "Telas Alunos/telas-alunos/src/App.css",
+    "Telas Alunos/telas-alunos/src/assets/favicon.ico",
+    "Telas Alunos/telas-alunos/src/assets/hero.png",
+    "Telas Alunos/telas-alunos/src/index.css",
+    "Telas AQV/alunos-aqv/public/favicon.svg",
+    "Telas AQV/alunos-aqv/public/faviconnnn.ico",
+    "Telas AQV/alunos-aqv/public/icons.svg",
+    "Telas AQV/alunos-aqv/src/assets/hero.png",
+    "Telas AQV/alunos-aqv/src/assets/senai-logo.png",
+    "Telas AQV/alunos-aqv/src/index.css",
+    "Telas AQV/InicioAQV/public/favicon.ico",
+    "Telas AQV/InicioAQV/public/icons.svg",
+    "Telas AQV/InicioAQV/src/icon/Vector.svg",
+    "Telas AQV/InicioAQV/src/index.css",
+    "Telas AQV/Os/public/favicon.ico",
+    "Telas AQV/Os/public/icons.svg",
+    "Telas AQV/Os/src/assets/images/cris-costa.png",
+    "Telas AQV/Os/src/index.css",
+    "Telas Professor/AtlasTech/public/favicon (1).ico",
+    "Telas Professor/AtlasTech/src/App.css",
+    "Telas Professor/AtlasTech/src/App.tsx",
+    "Telas Professor/AtlasTech/src/assets/hero.png",
+    "Telas Professor/AtlasTech/src/index.css"
+  ],
+  "missingReferences": [],
+  "externalPackages": [
+    "@fortawesome/free-solid-svg-icons",
+    "@fortawesome/react-fontawesome",
+    "@radix-ui/react-dialog",
+    "clsx",
+    "html5-qrcode",
+    "lucide-react",
+    "qrcode.react",
+    "react",
+    "react-dom/client",
+    "react-router-dom",
+    "tailwind-merge"
+  ],
+  "mapping": [
+    {
+      "from": "src/App.jsx",
+      "to": "src/App.jsx"
+    },
+    {
+      "from": "src/assets/banner.png.jpeg",
+      "to": "src/assets/banner-png.jpeg"
+    },
+    {
+      "from": "src/assets/camera.png",
+      "to": "src/assets/camera.png"
+    },
+    {
+      "from": "src/assets/favicon.ico",
+      "to": "src/assets/favicon.ico"
+    },
+    {
+      "from": "src/assets/fundo.jpg",
+      "to": "src/assets/fundo.jpg"
+    },
+    {
+      "from": "src/assets/icone-aluno.png",
+      "to": "src/assets/icone-aluno.png"
+    },
+    {
+      "from": "src/assets/icone-gestor.png",
+      "to": "src/assets/icone-gestor.png"
+    },
+    {
+      "from": "src/assets/icone-professor.png",
+      "to": "src/assets/icone-professor.png"
+    },
+    {
+      "from": "src/assets/logosenai.jpg",
+      "to": "src/assets/logosenai.jpg"
+    },
+    {
+      "from": "src/assets/person2.png",
+      "to": "src/assets/person2.png"
+    },
+    {
+      "from": "src/assets/seta.png",
+      "to": "src/assets/seta.png"
+    },
+    {
+      "from": "src/css/App.css",
+      "to": "src/css/global/App.css"
+    },
+    {
+      "from": "src/css/ContatoUnidade.css",
+      "to": "src/css/aluno/ContatoUnidade.css"
+    },
+    {
+      "from": "src/css/DashboardProfessor.css",
+      "to": "src/css/professor/DashboardProfessor.css"
+    },
+    {
+      "from": "src/css/index.css",
+      "to": "src/css/global/index.css"
+    },
+    {
+      "from": "src/css/InicioAluno.css",
+      "to": "src/css/aluno/InicioAluno.css"
+    },
+    {
+      "from": "src/css/LoginAluno.css",
+      "to": "src/css/acesso/LoginAluno.css"
+    },
+    {
+      "from": "src/css/LoginGestor.css",
+      "to": "src/css/acesso/LoginGestor.css"
+    },
+    {
+      "from": "src/css/LoginProfessor.css",
+      "to": "src/css/acesso/LoginGestor.css"
+    },
+    {
+      "from": "src/css/MenuAluno.css",
+      "to": "src/css/aluno/MenuAluno.css"
+    },
+    {
+      "from": "src/css/MenuAqv.css",
+      "to": "src/css/gestor/MenuAqv.css"
+    },
+    {
+      "from": "src/css/MenuProfessor.css",
+      "to": "src/css/professor/MenuProfessor.css"
+    },
+    {
+      "from": "src/css/MinhasOcorrencias.css",
+      "to": "src/css/aluno/MinhasOcorrencias.css"
+    },
+    {
+      "from": "src/css/PerfilAluno.css",
+      "to": "src/css/aluno/PerfilAluno.css"
+    },
+    {
+      "from": "src/css/RankingAluno.css",
+      "to": "src/css/aluno/RankingAluno.css"
+    },
+    {
+      "from": "src/css/RegistroAtraso.css",
+      "to": "src/css/aluno/RegistroAtraso.css"
+    },
+    {
+      "from": "src/css/TelaInicial.css",
+      "to": "src/css/aluno/TelaInicial.css"
+    },
+    {
+      "from": "src/css/TelasAluno.css",
+      "to": "src/css/aluno/TelasAluno.css"
+    },
+    {
+      "from": "src/main.jsx",
+      "to": "src/main.jsx"
+    },
+    {
+      "from": "src/pages/ContatoUnidade.jsx",
+      "to": "src/pages/aluno/ContatoUnidade.jsx"
+    },
+    {
+      "from": "src/pages/DashboardProfessor.jsx",
+      "to": "src/pages/professor/DashboardProfessor.jsx"
+    },
+    {
+      "from": "src/pages/FormularioAtraso.jsx",
+      "to": "src/pages/aluno/FormularioAtraso.jsx"
+    },
+    {
+      "from": "src/pages/InicioAluno.jsx",
+      "to": "src/pages/aluno/InicioAluno.jsx"
+    },
+    {
+      "from": "src/pages/LoginAluno.jsx",
+      "to": "src/pages/acesso/LoginAluno.jsx"
+    },
+    {
+      "from": "src/pages/LoginGestor.jsx",
+      "to": "src/pages/acesso/LoginGestor.jsx"
+    },
+    {
+      "from": "src/pages/LoginProfessor.jsx",
+      "to": "src/pages/acesso/LoginProfessor.jsx"
+    },
+    {
+      "from": "src/pages/MenuAluno.jsx",
+      "to": "src/components/navigation/aluno/MenuAluno.jsx"
+    },
+    {
+      "from": "src/pages/MenuAqv.jsx",
+      "to": "src/components/navigation/gestor/MenuAqv.jsx"
+    },
+    {
+      "from": "src/pages/MenuProfessor.jsx",
+      "to": "src/components/navigation/professor/MenuProfessor.jsx"
+    },
+    {
+      "from": "src/pages/MinhasOcorrencias.jsx",
+      "to": "src/pages/aluno/MinhasOcorrencias.jsx"
+    },
+    {
+      "from": "src/pages/mockAluno.js",
+      "to": "src/data/mockAluno.js"
+    },
+    {
+      "from": "src/pages/PerfilAluno.jsx",
+      "to": "src/pages/aluno/PerfilAluno.jsx"
+    },
+    {
+      "from": "src/pages/RankingAluno.jsx",
+      "to": "src/pages/professor/RankingAluno.jsx"
+    },
+    {
+      "from": "src/pages/RegistroAtraso.jsx",
+      "to": "src/pages/aluno/RegistroAtraso.jsx"
+    },
+    {
+      "from": "src/pages/TelaInicial.jsx",
+      "to": "src/pages/acesso/SelecaoPerfil.jsx"
+    },
+    {
+      "from": "src/pages/TelasAluno.jsx",
+      "to": "src/pages/aluno/TelasAluno.jsx"
+    },
+    {
+      "from": "Front-End/GerarQrcodeAqv/src/components/GerarQrcode/GerarQrcode.css",
+      "to": "src/css/gestor/GerarQrcode.css"
+    },
+    {
+      "from": "Front-End/GerarQrcodeAqv/src/components/GerarQrcode/GerarQrcode.jsx",
+      "to": "src/pages/gestor/GerarQrcode.jsx"
+    },
+    {
+      "from": "Front-End/Qr-code/src/assets/fundo.senai.png",
+      "to": "src/assets/fundo-senai.png"
+    },
+    {
+      "from": "Front-End/Qr-code/src/components/GerarQrcode/GerarQrcode.css",
+      "to": "src/css/gestor/variantes/GerarQrcode-gerarqrcode.css"
+    },
+    {
+      "from": "Front-End/Qr-code/src/components/GerarQrcode/GerarQrcode.jsx",
+      "to": "src/pages/gestor/variantes/GerarQrcode-gerarqrcode.jsx"
+    },
+    {
+      "from": "Front-End/src/assets/banner.png",
+      "to": "src/assets/banner.png"
+    },
+    {
+      "from": "Front-End/src/assets/hero.png",
+      "to": "src/assets/hero.png"
+    },
+    {
+      "from": "Front-End/src/assets/senai-logo.png",
+      "to": "src/assets/senai.jpeg"
+    },
+    {
+      "from": "Front-End/src/assets/Vector (4).png",
+      "to": "src/assets/vector-4.png"
+    },
+    {
+      "from": "Front-End/src/components/layout/Sidebar/index.js",
+      "to": "src/components/layout/Sidebar/index.js"
+    },
+    {
+      "from": "Front-End/src/components/layout/Sidebar/sidebar.config.js",
+      "to": "src/components/layout/Sidebar/sidebar.config.js"
+    },
+    {
+      "from": "Front-End/src/components/layout/Sidebar/Sidebar.jsx",
+      "to": "src/components/layout/Sidebar/Sidebar.jsx"
+    },
+    {
+      "from": "Front-End/src/components/layout/Sidebar/Sidebar.module.css",
+      "to": "src/css/aluno/Sidebar.module.css"
+    },
+    {
+      "from": "Front-End/src/components/layout/Sidebar/SidebarItem.jsx",
+      "to": "src/components/layout/Sidebar/SidebarItem.jsx"
+    },
+    {
+      "from": "Front-End/src/components/layout/Sidebar/useSidebar.js",
+      "to": "src/components/layout/Sidebar/useSidebar.js"
+    },
+    {
+      "from": "Front-End/src/pages/Acolhimento/TelaAcolhimentos.css",
+      "to": "src/css/professor/TelaAcolhimentos.css"
+    },
+    {
+      "from": "Front-End/src/pages/Acolhimento/TelaAcolhimentos.jsx",
+      "to": "src/pages/professor/TelaAcolhimentos.jsx"
+    },
+    {
+      "from": "Front-End/src/pages/MinhasTurmas/TelaMinhasTurmas.css",
+      "to": "src/css/professor/TelaMinhasTurmas.css"
+    },
+    {
+      "from": "Front-End/src/pages/MinhasTurmas/TelaMinhasTurmas.jsx",
+      "to": "src/pages/professor/TelaMinhasTurmas.jsx"
+    },
+    {
+      "from": "Front-End/src/pages/TelaInicial/TelaInicial.css",
+      "to": "src/css/acesso/TelaInicial.css"
+    },
+    {
+      "from": "Front-End/src/pages/TelaInicial/TelaInicial.jsx",
+      "to": "src/pages/acesso/TelaInicial.jsx"
+    },
+    {
+      "from": "Front-End/src/pages/TelaInicialAluno/TelaInicialAluno.css",
+      "to": "src/css/aluno/InicioAluno.css"
+    },
+    {
+      "from": "Front-End/src/pages/TelaInicialAluno/TelaInicialAluno.jsx",
+      "to": "src/pages/aluno/TelaInicialAluno.jsx"
+    },
+    {
+      "from": "Front-End/Telas/alunos-aqv/public/Retrato Profissional no Escritório SENAI.png",
+      "to": "src/assets/retrato-profissional-no-escritorio-senai.png"
+    },
+    {
+      "from": "Front-End/Telas/alunos-aqv/public/SENAI.jpeg",
+      "to": "src/assets/senai.jpeg"
+    },
+    {
+      "from": "Front-End/Telas/alunos-aqv/src/App.css",
+      "to": "src/css/gestor/App.css"
+    },
+    {
+      "from": "Front-End/Telas/alunos-aqv/src/App.jsx",
+      "to": "src/pages/gestor/Pagina-alunos-aqv.jsx"
+    },
+    {
+      "from": "Front-End/Telas/alunos-aqv/src/components/Menu/Menu.css",
+      "to": "src/css/gestor/variantes/Menu-menu.css"
+    },
+    {
+      "from": "Front-End/Telas/alunos-aqv/src/components/Menu/Menu.jsx",
+      "to": "src/components/navigation/gestor/variantes/Menu-menu.jsx"
+    },
+    {
+      "from": "Front-End/Telas/AtlasTech/public/images/mariana.png",
+      "to": "src/assets/mariana.png"
+    },
+    {
+      "from": "Front-End/Telas/AtlasTech/public/images/SENAI.jpeg",
+      "to": "src/assets/senai.jpeg"
+    },
+    {
+      "from": "Front-End/Telas/AtlasTech/src/components/Dashboard.css",
+      "to": "src/css/professor/DashboardProfessor.css"
+    },
+    {
+      "from": "Front-End/Telas/AtlasTech/src/components/Dashboard.jsx",
+      "to": "src/pages/professor/Dashboard.jsx"
+    },
+    {
+      "from": "Front-End/Telas/AtlasTech/src/components/Menu/Icons.jsx",
+      "to": "src/components/navigation/professor/Icons.jsx"
+    },
+    {
+      "from": "Front-End/Telas/AtlasTech/src/components/Menu/Menu.css",
+      "to": "src/css/professor/Menu.css"
+    },
+    {
+      "from": "Front-End/Telas/AtlasTech/src/components/Menu/Menu.jsx",
+      "to": "src/components/navigation/professor/variantes/Menu-menu.jsx"
+    },
+    {
+      "from": "Front-End/Telas/InicioAQV/src/App.css",
+      "to": "src/css/gestor/variantes/App-src.css"
+    },
+    {
+      "from": "Front-End/Telas/InicioAQV/src/App.jsx",
+      "to": "src/pages/gestor/Pagina-inicioaqv.jsx"
+    },
+    {
+      "from": "Front-End/Telas/InicioAQV/src/assets/images/perfil.png",
+      "to": "src/assets/mariana.png"
+    },
+    {
+      "from": "Front-End/Telas/InicioAQV/src/assets/senai-logo.jpeg",
+      "to": "src/assets/senai.jpeg"
+    },
+    {
+      "from": "Front-End/Telas/InicioAQV/src/components/Menu/Menu.css",
+      "to": "src/css/gestor/MenuInicioAqv.css"
+    },
+    {
+      "from": "Front-End/Telas/InicioAQV/src/components/Menu/Menu.jsx",
+      "to": "src/components/navigation/gestor/MenuInicioAqv.jsx"
+    },
+    {
+      "from": "Front-End/Telas/InicioAQV/src/icon/Aguardando.svg",
+      "to": "src/assets/aguardando.svg"
+    },
+    {
+      "from": "Front-End/Telas/InicioAQV/src/icon/andamento.svg",
+      "to": "src/assets/andamento.svg"
+    },
+    {
+      "from": "Front-End/Telas/InicioAQV/src/icon/Concluidos.svg",
+      "to": "src/assets/concluidos.svg"
+    },
+    {
+      "from": "Front-End/Telas/InicioAQV/src/icon/eeee.svg",
+      "to": "src/assets/eeee.svg"
+    },
+    {
+      "from": "Front-End/Telas/Os/src/App.css",
+      "to": "src/css/gestor/variantes/App-src-telas-os-src.css"
+    },
+    {
+      "from": "Front-End/Telas/Os/src/App.jsx",
+      "to": "src/pages/gestor/Pagina-os.jsx"
+    },
+    {
+      "from": "Front-End/Telas/Os/src/assets/image 8.svg",
+      "to": "src/assets/image-8.svg"
+    },
+    {
+      "from": "Front-End/Telas/Os/src/components/Menu/Menu.css",
+      "to": "src/css/gestor/MenuOrdensServico.css"
+    },
+    {
+      "from": "Front-End/Telas/Os/src/components/Menu/Menu.jsx",
+      "to": "src/components/navigation/gestor/MenuOrdensServico.jsx"
+    },
+    {
+      "from": "Front-End/Telas Alunos/Acolhimento/TelaAcolhimentos.css",
+      "to": "src/css/professor/TelaAcolhimentos.css"
+    },
+    {
+      "from": "Front-End/Telas Alunos/Acolhimento/TelaAcolhimentos.jsx",
+      "to": "src/pages/professor/TelaAcolhimentos.jsx"
+    },
+    {
+      "from": "Front-End/Telas Alunos/Aluno-tela-inicial/components/Aluno-tela-inicial.jsx",
+      "to": "src/pages/acesso/Aluno-tela-inicial.jsx"
+    },
+    {
+      "from": "Front-End/Telas Alunos/atraso-registro/src/assets/seta.png",
+      "to": "src/assets/seta.png"
+    },
+    {
+      "from": "Front-End/Telas Alunos/atraso-registro/src/components/RegistroAtraso/RegistroAtraso.css",
+      "to": "src/css/aluno/variantes/RegistroAtraso-registroatraso.css"
+    },
+    {
+      "from": "Front-End/Telas Alunos/atraso-registro/src/components/RegistroAtraso/RegistroAtraso.jsx",
+      "to": "src/pages/aluno/variantes/RegistroAtraso-registroatraso.jsx"
+    },
+    {
+      "from": "Front-End/Telas Alunos/MinhasOcorrencias/assets/clipboard.png",
+      "to": "src/assets/clipboard.png"
+    },
+    {
+      "from": "Front-End/Telas Alunos/MinhasOcorrencias/assets/file.png",
+      "to": "src/assets/file.png"
+    },
+    {
+      "from": "Front-End/Telas Alunos/MinhasOcorrencias/assets/Frame.png",
+      "to": "src/assets/frame.png"
+    },
+    {
+      "from": "Front-End/Telas Alunos/MinhasOcorrencias/assets/home.jpg.png",
+      "to": "src/assets/home-jpg.png"
+    },
+    {
+      "from": "Front-End/Telas Alunos/MinhasOcorrencias/assets/logo.png",
+      "to": "src/assets/logo.png"
+    },
+    {
+      "from": "Front-End/Telas Alunos/MinhasOcorrencias/assets/person.png",
+      "to": "src/assets/person.png"
+    },
+    {
+      "from": "Front-End/Telas Alunos/MinhasOcorrencias/assets/qrcode.png",
+      "to": "src/assets/qrcode.png"
+    },
+    {
+      "from": "Front-End/Telas Alunos/MinhasOcorrencias/assets/sair.png",
+      "to": "src/assets/sair.png"
+    },
+    {
+      "from": "Front-End/Telas Alunos/MinhasOcorrencias/assets/seta.png",
+      "to": "src/assets/seta.png"
+    },
+    {
+      "from": "Front-End/Telas Alunos/MinhasOcorrencias/components/MinhasOcorrencias.css",
+      "to": "src/css/aluno/MinhasOcorrencias.css"
+    },
+    {
+      "from": "Front-End/Telas Alunos/MinhasOcorrencias/components/MinhasOcorrencias.jsx",
+      "to": "src/pages/aluno/variantes/MinhasOcorrencias-components.jsx"
+    },
+    {
+      "from": "Front-End/Telas Alunos/MinhasOcorrencias/Menu/Menu.css",
+      "to": "src/css/aluno/MenuAluno.css"
+    },
+    {
+      "from": "Front-End/Telas Alunos/MinhasOcorrencias/Menu/Menu.jsx",
+      "to": "src/components/navigation/aluno/Menu.jsx"
+    },
+    {
+      "from": "Front-End/Telas Alunos/PerfilAluno/assets/camera.png",
+      "to": "src/assets/camera.png"
+    },
+    {
+      "from": "Front-End/Telas Alunos/PerfilAluno/assets/logo.png",
+      "to": "src/assets/logo.png"
+    },
+    {
+      "from": "Front-End/Telas Alunos/PerfilAluno/assets/person2.png",
+      "to": "src/assets/person2.png"
+    },
+    {
+      "from": "Front-End/Telas Alunos/PerfilAluno/assets/seta.png",
+      "to": "src/assets/seta.png"
+    },
+    {
+      "from": "Front-End/Telas Alunos/PerfilAluno/components/PerfilAluno.css",
+      "to": "src/css/aluno/variantes/PerfilAluno-components.css"
+    },
+    {
+      "from": "Front-End/Telas Alunos/PerfilAluno/components/PerfilAluno.jsx",
+      "to": "src/pages/aluno/variantes/PerfilAluno-components.jsx"
+    },
+    {
+      "from": "Front-End/Telas Alunos/PerfilAluno/Menu/Menu.css",
+      "to": "src/css/aluno/MenuAluno.css"
+    },
+    {
+      "from": "Front-End/Telas Alunos/PerfilAluno/Menu/Menu.jsx",
+      "to": "src/components/navigation/aluno/variantes/Menu-menu.jsx"
+    },
+    {
+      "from": "Front-End/Telas Alunos/PerfilAluno/pages/Contato.css",
+      "to": "src/css/aluno/Contato.css"
+    },
+    {
+      "from": "Front-End/Telas Alunos/PerfilAluno/pages/Contato.jsx",
+      "to": "src/pages/aluno/Contato.jsx"
+    },
+    {
+      "from": "Front-End/Telas Alunos/registrar-chegada/src/assets/seta.png",
+      "to": "src/assets/seta.png"
+    },
+    {
+      "from": "Front-End/Telas Alunos/registrar-chegada/src/components/RegistrarChegada/RegistrarAtraso.css",
+      "to": "src/css/aluno/RegistrarAtraso.css"
+    },
+    {
+      "from": "Front-End/Telas Alunos/registrar-chegada/src/components/RegistrarChegada/RegistrarAtraso.jsx",
+      "to": "src/pages/aluno/RegistrarAtraso.jsx"
+    },
+    {
+      "from": "Front-End/Telas Alunos/senai-atestados/src/components/ui/dialog.tsx",
+      "to": "src/components/ui/dialog.tsx"
+    },
+    {
+      "from": "Front-End/Telas Alunos/senai-atestados/src/hooks/use-mobile.tsx",
+      "to": "src/hooks/use-mobile.tsx"
+    },
+    {
+      "from": "Front-End/Telas Alunos/senai-atestados/src/lib/utils.ts",
+      "to": "src/lib/utils.ts"
+    },
+    {
+      "from": "Front-End/Telas Alunos/senai-atestados/src/pages/AtestadosPage.jsx",
+      "to": "src/pages/aluno/AtestadosPage.jsx"
+    },
+    {
+      "from": "Front-End/Telas Alunos/senai-atestados/src/pages/MeusAtrasosPage.jsx",
+      "to": "src/pages/aluno/MeusAtrasosPage.jsx"
+    },
+    {
+      "from": "Front-End/Telas Alunos/senai-atestados/src/pages/RelatoriosGestorPage.jsx",
+      "to": "src/pages/gestor/RelatoriosGestorPage.jsx"
+    },
+    {
+      "from": "Front-End/Telas Alunos/senai-atestados/src/pages/RelatoriosPage.jsx",
+      "to": "src/pages/professor/Relatorios.jsx"
+    },
+    {
+      "from": "Front-End/Telas Alunos/senai-atestados/src/services/atestadosService.js",
+      "to": "src/services/atestadosService.js"
+    },
+    {
+      "from": "Front-End/Telas Alunos/senai-atestados/src/services/atrasosService.js",
+      "to": "src/services/atrasosService.js"
+    },
+    {
+      "from": "Front-End/Telas Alunos/senai-atestados/src/services/dashboardService.js",
+      "to": "src/services/dashboardService.js"
+    },
+    {
+      "from": "Front-End/Telas Alunos/senai-atestados/src/services/relatoriosService.js",
+      "to": "src/services/relatoriosService.js"
+    },
+    {
+      "from": "Front-End/Telas Alunos/TelaInicialAluno/TelaInicialAluno.css",
+      "to": "src/css/aluno/InicioAluno.css"
+    },
+    {
+      "from": "Front-End/Telas Alunos/TelaInicialAluno/TelaInicialAluno.jsx",
+      "to": "src/pages/aluno/TelaInicialAluno.jsx"
+    },
+    {
+      "from": "Front-End/Telas AQV/AcolhimentoGestor/src/assets/senai-logo.png",
+      "to": "src/assets/logo.png"
+    },
+    {
+      "from": "Front-End/Telas AQV/AcolhimentoGestor/src/assets/seta.png",
+      "to": "src/assets/seta.png"
+    },
+    {
+      "from": "Front-End/Telas AQV/AcolhimentoGestor/src/components/AcolhimentoGestor/AcolhimentoGestor.css",
+      "to": "src/css/gestor/AcolhimentoGestor.css"
+    },
+    {
+      "from": "Front-End/Telas AQV/AcolhimentoGestor/src/components/AcolhimentoGestor/AcolhimentoGestor.jsx",
+      "to": "src/pages/gestor/AcolhimentoGestor.jsx"
+    },
+    {
+      "from": "Front-End/Telas AQV/AcolhimentoGestor/src/components/Menu/Menu.css",
+      "to": "src/css/gestor/Menu.css"
+    },
+    {
+      "from": "Front-End/Telas AQV/AcolhimentoGestor/src/components/Menu/Menu.jsx",
+      "to": "src/components/navigation/gestor/Menu.jsx"
+    },
+    {
+      "from": "Front-End/Telas AQV/NovaTurmaAQV/src/App.css",
+      "to": "src/css/global/App.css"
+    },
+    {
+      "from": "Front-End/Telas AQV/NovaTurmaAQV/src/App.jsx",
+      "to": "src/pages/gestor/Pagina-novaturmaaqv.jsx"
+    },
+    {
+      "from": "Front-End/Telas AQV/TurmasAQV/assets/lupa.png",
+      "to": "src/assets/lupa.png"
+    },
+    {
+      "from": "Front-End/Telas AQV/TurmasAQV/assets/seta.png",
+      "to": "src/assets/seta.png"
+    },
+    {
+      "from": "Front-End/Telas AQV/TurmasAQV/components/TurmasAQV.css",
+      "to": "src/css/gestor/TurmasAQV.css"
+    },
+    {
+      "from": "Front-End/Telas AQV/TurmasAQV/components/TurmasAQV.jsx",
+      "to": "src/pages/gestor/TurmasAQV.jsx"
+    },
+    {
+      "from": "Front-End/Telas Iniciais/Gestor/assets/fundo.jpg",
+      "to": "src/assets/fundo.jpg"
+    },
+    {
+      "from": "Front-End/Telas Iniciais/Gestor/assets/icone-gestor.png",
+      "to": "src/assets/icone-gestor-e488924a.png"
+    },
+    {
+      "from": "Front-End/Telas Iniciais/Gestor/assets/senai-logo.jpg",
+      "to": "src/assets/logosenai.jpg"
+    },
+    {
+      "from": "Front-End/Telas Iniciais/Gestor/components/Gestor.css",
+      "to": "src/css/acesso/Gestor.css"
+    },
+    {
+      "from": "Front-End/Telas Iniciais/Gestor/components/Gestor.jsx",
+      "to": "src/pages/acesso/Gestor.jsx"
+    },
+    {
+      "from": "Front-End/Telas Iniciais/LoginProfessor/src/components/TelaInicialProfessor/TelaInicial.css",
+      "to": "src/css/acesso/variantes/TelaInicial-telainicialprofessor.css"
+    },
+    {
+      "from": "Front-End/Telas Iniciais/LoginProfessor/src/components/TelaInicialProfessor/TelaInicial.jsx",
+      "to": "src/pages/acesso/variantes/TelaInicial-telainicialprofessor.jsx"
+    },
+    {
+      "from": "Front-End/Telas Iniciais/Tela-Inicial/assets/edificio.jpg",
+      "to": "src/assets/edificio.jpg"
+    },
+    {
+      "from": "Front-End/Telas Iniciais/Tela-Inicial/assets/icone-alunopreto.png",
+      "to": "src/assets/icone-alunopreto.png"
+    },
+    {
+      "from": "Front-End/Telas Iniciais/Tela-Inicial/assets/image.jpeg",
+      "to": "src/assets/image.jpeg"
+    },
+    {
+      "from": "Front-End/Telas Iniciais/Tela-Inicial/components/Tela-Inicial.css",
+      "to": "src/css/acesso/Tela-Inicial.css"
+    },
+    {
+      "from": "Front-End/Telas Iniciais/Tela-Inicial/components/Tela-Inicial.jsx",
+      "to": "src/pages/acesso/Tela-Inicial.jsx"
+    },
+    {
+      "from": "Front-End/Telas Iniciais/Tela-Inicial/components/TelaInicial/TelaInicial.css",
+      "to": "src/css/acesso/TelaInicial.css"
+    },
+    {
+      "from": "Front-End/Telas Iniciais/Tela-Inicial/components/TelaInicial/TelaInicial.jsx",
+      "to": "src/pages/acesso/variantes/TelaInicial-telainicial.jsx"
+    },
+    {
+      "from": "Front-End/Telas Iniciais/Tela-Inicial/components/TelaInicial/TelaInicialAluno/TelaInicialAluno.css",
+      "to": "src/css/aluno/InicioAluno.css"
+    },
+    {
+      "from": "Front-End/Telas Iniciais/Tela-Inicial/components/TelaInicial/TelaInicialAluno/TelaInicialAluno.jsx",
+      "to": "src/pages/aluno/TelaInicialAluno.jsx"
+    },
+    {
+      "from": "Front-End/Telas Iniciais/tela-Inicial-Al/src/components/TelaInicialAluno/edificio.jpg",
+      "to": "src/assets/edificio.jpg"
+    },
+    {
+      "from": "Front-End/Telas Iniciais/tela-Inicial-Al/src/components/TelaInicialAluno/TelaInicial.css",
+      "to": "src/css/acesso/variantes/TelaInicial-telainicialaluno.css"
+    },
+    {
+      "from": "Front-End/Telas Iniciais/tela-Inicial-Al/src/components/TelaInicialAluno/TelaInicial.jsx",
+      "to": "src/pages/acesso/variantes/TelaInicial-telainicialaluno.jsx"
+    },
+    {
+      "from": "Front-End/Telas Iniciais/TelaInicialAluno/TelaInicialAluno.css",
+      "to": "src/css/aluno/InicioAluno.css"
+    },
+    {
+      "from": "Front-End/Telas Iniciais/TelaInicialAluno/TelaInicialAluno.jsx",
+      "to": "src/pages/aluno/TelaInicialAluno.jsx"
+    },
+    {
+      "from": "Front-End/Telas Professor/Acolhimentos/components/Acolhimento.jsx",
+      "to": "src/pages/acesso/Aluno-tela-inicial.jsx"
+    },
+    {
+      "from": "Front-End/Telas Professor/MinhasTurmas/TelaMinhasTurmas.css",
+      "to": "src/css/professor/TelaMinhasTurmas.css"
+    },
+    {
+      "from": "Front-End/Telas Professor/MinhasTurmas/TelaMinhasTurmas.jsx",
+      "to": "src/pages/professor/TelaMinhasTurmas.jsx"
+    },
+    {
+      "from": "Front-End/Telas Professor/PerfilProfessor/Minha-turma-professor/components/Minha-turma-professor.jsx",
+      "to": "src/pages/acesso/Aluno-tela-inicial.jsx"
+    },
+    {
+      "from": "Front-End/Telas Professor/PerfilProfessor/src/pages/Contato.css",
+      "to": "src/css/professor/Contato.css"
+    },
+    {
+      "from": "Front-End/Telas Professor/PerfilProfessor/src/pages/Contato.jsx",
+      "to": "src/pages/professor/Contato.jsx"
+    },
+    {
+      "from": "Front-End/Telas Professor/PerfilProfessor/src/pages/Perfil.css",
+      "to": "src/css/professor/Perfil.css"
+    },
+    {
+      "from": "Front-End/Telas Professor/PerfilProfessor/src/pages/Perfil.jsx",
+      "to": "src/pages/professor/Perfil.jsx"
+    },
+    {
+      "from": "Front-End/Telas Professor/Ranking/assets/logo.png",
+      "to": "src/assets/logo.png"
+    },
+    {
+      "from": "Front-End/Telas Professor/Ranking/assets/person2.png",
+      "to": "src/assets/person2.png"
+    },
+    {
+      "from": "Front-End/Telas Professor/Ranking/assets/seta.png",
+      "to": "src/assets/seta.png"
+    },
+    {
+      "from": "Front-End/Telas Professor/Ranking/components/Ranking.css",
+      "to": "src/css/aluno/RankingAluno.css"
+    },
+    {
+      "from": "Front-End/Telas Professor/Ranking/components/Ranking.jsx",
+      "to": "src/pages/professor/Ranking.jsx"
+    },
+    {
+      "from": "Front-End/Telas Professor/Ranking/Menu/Menu.css",
+      "to": "src/css/aluno/MenuAluno.css"
+    },
+    {
+      "from": "Front-End/Telas Professor/Ranking/Menu/Menu.jsx",
+      "to": "src/components/navigation/professor/Menu.jsx"
+    },
+    {
+      "from": "PerfilGestor/src/pages/Contato.css",
+      "to": "src/css/gestor/Contato.css"
+    },
+    {
+      "from": "PerfilGestor/src/pages/Contato.jsx",
+      "to": "src/pages/gestor/Contato.jsx"
+    },
+    {
+      "from": "PerfilGestor/src/pages/Perfil.css",
+      "to": "src/css/gestor/Perfil.css"
+    },
+    {
+      "from": "PerfilGestor/src/pages/Perfil.jsx",
+      "to": "src/pages/gestor/Perfil.jsx"
+    },
+    {
+      "from": "Telas Alunos/telas-alunos/src/assets/senai-logo.png",
+      "to": "src/assets/logo.png"
+    },
+    {
+      "from": "Telas Alunos/telas-alunos/src/components/atrasos-registro/RegistroAtraso.css",
+      "to": "src/css/aluno/variantes/RegistroAtraso-registroatraso.css"
+    },
+    {
+      "from": "Telas Alunos/telas-alunos/src/components/atrasos-registro/RegistroAtraso.jsx",
+      "to": "src/pages/aluno/variantes/RegistroAtraso-registroatraso.jsx"
+    },
+    {
+      "from": "Telas Alunos/telas-alunos/src/components/Menu/Menu.css",
+      "to": "src/css/aluno/Menu.css"
+    },
+    {
+      "from": "Telas Alunos/telas-alunos/src/components/Menu/Menu.jsx",
+      "to": "src/components/navigation/aluno/variantes/Menu-menu-src-components-menu.jsx"
+    },
+    {
+      "from": "Telas Alunos/telas-alunos/src/components/MinhasOcorrencias/MinhasOcorrencias.css",
+      "to": "src/css/aluno/variantes/MinhasOcorrencias-minhasocorrencias.css"
+    },
+    {
+      "from": "Telas Alunos/telas-alunos/src/components/MinhasOcorrencias/MinhasOcorrencias.jsx",
+      "to": "src/pages/aluno/variantes/MinhasOcorrencias-minhasocorrencias.jsx"
+    },
+    {
+      "from": "Telas Alunos/telas-alunos/src/components/PerfilAluno/PerfilAluno.css",
+      "to": "src/css/aluno/variantes/PerfilAluno-perfilaluno.css"
+    },
+    {
+      "from": "Telas Alunos/telas-alunos/src/components/PerfilAluno/PerfilAluno.jsx",
+      "to": "src/pages/aluno/variantes/PerfilAluno-perfilaluno.jsx"
+    },
+    {
+      "from": "Telas Alunos/telas-alunos/src/components/RegistrarChegada/RegistrarAtraso.css",
+      "to": "src/css/aluno/RegistrarAtraso.css"
+    },
+    {
+      "from": "Telas Alunos/telas-alunos/src/components/RegistrarChegada/RegistrarAtraso.jsx",
+      "to": "src/pages/aluno/RegistrarAtraso.jsx"
+    },
+    {
+      "from": "Telas AQV/alunos-aqv/public/Retrato Profissional no Escritório SENAI.png",
+      "to": "src/assets/retrato-profissional-no-escritorio-senai.png"
+    },
+    {
+      "from": "Telas AQV/alunos-aqv/public/SENAI.jpeg",
+      "to": "src/assets/senai.jpeg"
+    },
+    {
+      "from": "Telas AQV/alunos-aqv/src/App.css",
+      "to": "src/css/gestor/App.css"
+    },
+    {
+      "from": "Telas AQV/alunos-aqv/src/App.jsx",
+      "to": "src/pages/gestor/Pagina-alunos-aqv.jsx"
+    },
+    {
+      "from": "Telas AQV/alunos-aqv/src/components/Menu/Menu.css",
+      "to": "src/css/gestor/variantes/Menu-menu.css"
+    },
+    {
+      "from": "Telas AQV/alunos-aqv/src/components/Menu/Menu.jsx",
+      "to": "src/components/navigation/gestor/variantes/Menu-menu.jsx"
+    },
+    {
+      "from": "Telas AQV/Gestor/components/Gestor.css",
+      "to": "src/css/acesso/Gestor.css"
+    },
+    {
+      "from": "Telas AQV/Gestor/components/Gestor.jsx",
+      "to": "src/pages/gestor/Gestor.jsx"
+    },
+    {
+      "from": "Telas AQV/InicioAQV/src/App.css",
+      "to": "src/css/gestor/variantes/App-src.css"
+    },
+    {
+      "from": "Telas AQV/InicioAQV/src/App.jsx",
+      "to": "src/pages/gestor/Pagina-inicioaqv.jsx"
+    },
+    {
+      "from": "Telas AQV/InicioAQV/src/assets/images/perfil.png",
+      "to": "src/assets/mariana.png"
+    },
+    {
+      "from": "Telas AQV/InicioAQV/src/assets/senai-logo.jpeg",
+      "to": "src/assets/senai.jpeg"
+    },
+    {
+      "from": "Telas AQV/InicioAQV/src/components/Menu/Menu.css",
+      "to": "src/css/gestor/MenuInicioAqv.css"
+    },
+    {
+      "from": "Telas AQV/InicioAQV/src/components/Menu/Menu.jsx",
+      "to": "src/components/navigation/gestor/MenuInicioAqv.jsx"
+    },
+    {
+      "from": "Telas AQV/InicioAQV/src/icon/Aguardando.svg",
+      "to": "src/assets/aguardando.svg"
+    },
+    {
+      "from": "Telas AQV/InicioAQV/src/icon/andamento.svg",
+      "to": "src/assets/andamento.svg"
+    },
+    {
+      "from": "Telas AQV/InicioAQV/src/icon/Concluidos.svg",
+      "to": "src/assets/concluidos.svg"
+    },
+    {
+      "from": "Telas AQV/InicioAQV/src/icon/eeee.svg",
+      "to": "src/assets/eeee.svg"
+    },
+    {
+      "from": "Telas AQV/Os/src/App.css",
+      "to": "src/css/gestor/variantes/App-src-telas-os-src.css"
+    },
+    {
+      "from": "Telas AQV/Os/src/App.jsx",
+      "to": "src/pages/gestor/Pagina-os.jsx"
+    },
+    {
+      "from": "Telas AQV/Os/src/assets/image 8.svg",
+      "to": "src/assets/image-8.svg"
+    },
+    {
+      "from": "Telas AQV/Os/src/components/Menu/Menu.css",
+      "to": "src/css/gestor/MenuOrdensServico.css"
+    },
+    {
+      "from": "Telas AQV/Os/src/components/Menu/Menu.jsx",
+      "to": "src/components/navigation/gestor/MenuOrdensServico.jsx"
+    },
+    {
+      "from": "Telas Iniciais/Tela-Inicial/src/components/Gestor/Gestor.css",
+      "to": "src/css/acesso/variantes/Gestor-gestor.css"
+    },
+    {
+      "from": "Telas Iniciais/Tela-Inicial/src/components/Gestor/Gestor.jsx",
+      "to": "src/pages/acesso/variantes/Gestor-gestor.jsx"
+    },
+    {
+      "from": "Telas Iniciais/Tela-Inicial/src/components/Login professor/TelaInicial.css",
+      "to": "src/css/acesso/variantes/TelaInicial-telainicialprofessor.css"
+    },
+    {
+      "from": "Telas Iniciais/Tela-Inicial/src/components/Login professor/TelaInicial.jsx",
+      "to": "src/pages/acesso/variantes/TelaInicial-telainicialprofessor.jsx"
+    },
+    {
+      "from": "Telas Iniciais/Tela-Inicial/src/components/Tela aluno/TelaInicial.css",
+      "to": "src/css/acesso/variantes/TelaInicial-telainicialaluno.css"
+    },
+    {
+      "from": "Telas Iniciais/Tela-Inicial/src/components/Tela aluno/TelaInicial.jsx",
+      "to": "src/pages/acesso/variantes/TelaInicial-telainicialaluno.jsx"
+    },
+    {
+      "from": "Telas Iniciais/Tela-Inicial/src/components/Tela Inicial/Tela-Inicial.css",
+      "to": "src/css/acesso/variantes/Tela-Inicial-tela-inicial.css"
+    },
+    {
+      "from": "Telas Iniciais/Tela-Inicial/src/components/Tela Inicial/Tela-Inicial.jsx",
+      "to": "src/pages/acesso/variantes/Tela-Inicial-tela-inicial.jsx"
+    },
+    {
+      "from": "Telas Professor/AtlasTech/public/images/mariana.png",
+      "to": "src/assets/mariana.png"
+    },
+    {
+      "from": "Telas Professor/AtlasTech/public/images/SENAI.jpeg",
+      "to": "src/assets/senai.jpeg"
+    },
+    {
+      "from": "Telas Professor/AtlasTech/src/components/Dashboard.css",
+      "to": "src/css/professor/DashboardProfessor.css"
+    },
+    {
+      "from": "Telas Professor/AtlasTech/src/components/Dashboard.jsx",
+      "to": "src/pages/professor/Dashboard.jsx"
+    },
+    {
+      "from": "Telas Professor/AtlasTech/src/components/Menu/Icons.jsx",
+      "to": "src/components/navigation/professor/Icons.jsx"
+    },
+    {
+      "from": "Telas Professor/AtlasTech/src/components/Menu/Menu.css",
+      "to": "src/css/professor/Menu.css"
+    },
+    {
+      "from": "Telas Professor/AtlasTech/src/components/Menu/Menu.jsx",
+      "to": "src/components/navigation/professor/variantes/Menu-menu.jsx"
+    },
+    {
+      "from": "AlunosDoProfessor/src/App.jsx",
+      "to": "src/pages/professor/AlunosDoProfessor.jsx"
+    },
+    {
+      "from": "AlunosDoProfessor/src/App.css",
+      "to": "src/css/professor/AlunosDoProfessor.css"
+    },
+    {
+      "from": "AlunosDoProfessor/src/index.css",
+      "to": "src/css/professor/AlunosDoProfessorBase.css"
+    },
+    {
+      "from": "AlunosDoProfessor/src/pages/Alunos.jsx",
+      "to": "src/pages/professor/Alunos.jsx"
+    },
+    {
+      "from": "AlunosDoProfessor/src/pages/Alunos.css",
+      "to": "src/css/professor/Alunos.css"
+    },
+    {
+      "from": "AlunosDoProfessor/src/pages/Perfil.jsx",
+      "to": "src/pages/professor/variantes/PerfilSimplificado.jsx"
+    },
+    {
+      "from": "AlunosDoProfessor/src/pages/Perfil.css",
+      "to": "src/css/professor/variantes/PerfilSimplificado.css"
+    },
+    {
+      "from": "AlunosDoProfessor/src/pages/Contato.jsx",
+      "to": "src/pages/professor/variantes/ContatoSuporte.jsx"
+    },
+    {
+      "from": "AlunosDoProfessor/src/pages/Contato.css",
+      "to": "src/css/professor/variantes/ContatoSuporte.css"
+    },
+    {
+      "from": "AlunosDoProfessor/src/pages/PlaceholderPage.jsx",
+      "to": "src/components/layout/PaginaEmConstrucao.jsx"
+    },
+    {
+      "from": "AlunosDoProfessor/src/pages/PlaceholderPage.css",
+      "to": "src/css/professor/PaginaEmConstrucao.css"
+    },
+    {
+      "from": "AlunosDoProfessor/src/components/Menu.jsx",
+      "to": "src/components/navigation/professor/MenuAlunos.jsx"
+    },
+    {
+      "from": "AlunosDoProfessor/src/components/Menu.css",
+      "to": "src/css/professor/MenuProfessor.css"
+    },
+    {
+      "from": "AlunosDoProfessor/src/components/Icons.jsx",
+      "to": "src/components/navigation/professor/IconsAlunos.jsx"
+    },
+    {
+      "from": "AlunosDoProfessor/public/senai-logo.svg",
+      "to": "src/assets/senai-logo-alunos-professor.svg"
+    },
+    {
+      "from": "AlunosDoProfessor/public/favicon.ico",
+      "to": "src/assets/favicon.ico"
+    }
+  ],
+  "backup": "docs/fontes-originais-git.zip",
+  "resolvedOldConflicts": [
+    "Front-End/Telas Alunos/MinhasOcorrencias/Menu/Menu.jsx",
+    "Front-End/Telas Professor/Ranking/Menu/Menu.jsx"
+  ],
+  "backupDescription": "Fontes versionadas no commit 932af138, antes da consolidação; não inclui node_modules ou builds.",
+  "additionalBackups": [
+    "docs/alunos-professor-fontes-originais.json.gz"
+  ]
+}
