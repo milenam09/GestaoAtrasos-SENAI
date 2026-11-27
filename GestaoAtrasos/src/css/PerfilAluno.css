@@ -1,0 +1,200 @@
+
+/* CORREÇÃO DO MENU E CONTEÚDO */
+
+.pagina-perfil {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Menu lateral utilizado pelo componente Menu.jsx */
+.pagina-perfil > .menu {
+  flex: 0 0 280px;
+  width: 280px;
+  min-width: 280px;
+}
+
+/* Área principal */
+.pagina-perfil > .conteudo-principal {
+  flex: 1 1 0;
+  width: calc(100% - 280px);
+  min-width: 0;
+  padding: 20px 25px;
+}
+
+/* Cartão ocupa toda a largura disponível */
+.pagina-perfil .cartao-perfil {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Quadros de informações */
+.pagina-perfil .informacoes {
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.pagina-perfil .quadro-informacao {
+  min-width: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .pagina-perfil > .menu {
+    flex-basis: 65px;
+    width: 65px;
+    min-width: 65px;
+  }
+
+  .pagina-perfil > .conteudo-principal {
+    width: calc(100% - 65px);
+    padding: 15px;
+  }
+
+  .pagina-perfil .informacoes {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* AJUSTE FINAL DA TELA DE PERFIL */
+
+.pagina-perfil {
+  background: #ffffff !important;
+  color: #111111 !important;
+  text-align: left !important;
+}
+
+.pagina-perfil > .conteudo-principal {
+  flex: 1;
+  min-width: 0;
+  width: calc(100% - 280px);
+  padding: 20px 25px;
+  background: #ffffff !important;
+  color: #111111 !important;
+  text-align: left !important;
+}
+
+.pagina-perfil .cabecalho {
+  text-align: left !important;
+  color: #111111 !important;
+}
+
+.pagina-perfil .cabecalho h1 {
+  color: #111111 !important;
+  justify-content: flex-start;
+}
+
+.pagina-perfil .cabecalho p {
+  color: #111111 !important;
+  text-align: left !important;
+}
+
+.pagina-perfil .cartao-perfil {
+  width: 100%;
+  min-height: 570px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch !important;
+  background: #f5f5f5 !important;
+  color: #111111 !important;
+  text-align: left !important;
+  border: 1px solid #aab8c8;
+  border-radius: 6px;
+}
+
+.pagina-perfil .identificacao-aluno {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left !important;
+  background: #f7f7f7 !important;
+}
+
+.pagina-perfil .avatar-circle {
+  width: 65px;
+  height: 65px;
+  min-width: 65px;
+  border-radius: 50%;
+  background: #607589;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.pagina-perfil .avatar-circle img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.pagina-perfil .nome-aluno {
+  text-align: left !important;
+  color: #111111 !important;
+}
+
+.pagina-perfil .botao-editar {
+  margin-left: auto;
+  background: #f00018 !important;
+  color: #ffffff !important;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pagina-perfil .informacoes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  width: 100%;
+}
+
+.pagina-perfil .quadro-informacao {
+  background: #f9fbfd !important;
+  color: #111111 !important;
+  text-align: left !important;
+  border: 1px solid #aab8c8;
+}
+
+.pagina-perfil .quadro-informacao h3,
+.pagina-perfil .campo,
+.pagina-perfil .campo strong,
+.pagina-perfil .campo p {
+  color: #111111 !important;
+  text-align: left !important;
+}
+
+.pagina-perfil .aviso-dados {
+  background: #f5f5f5 !important;
+  color: #111111 !important;
+  text-align: left !important;
+}
+
+.pagina-perfil .texto-aviso,
+.pagina-perfil .texto-aviso strong,
+.pagina-perfil .texto-aviso p {
+  color: #111111 !important;
+  text-align: left !important;
+}
+
+.pagina-perfil .botao-contato {
+  background: #f00018 !important;
+  color: #ffffff !important;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .pagina-perfil > .conteudo-principal {
+    width: calc(100% - 65px);
+    padding: 15px;
+  }
+
+  .pagina-perfil .informacoes {
+    grid-template-columns: 1fr;
+  }
+}
