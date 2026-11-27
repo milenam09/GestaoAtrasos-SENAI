@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
@@ -162,7 +162,7 @@ public partial class GestaoAtrasoContext : DbContext
         {
             entity.HasKey(e => e.IdTurma).HasName("PK__Turma__C68D8BC4359F587F");
 
-            entity.ToTable("Turma");
+            entity.ToTable("Turma", table => table.UseSqlOutputClause(false));
 
             entity.Property(e => e.IdTurma).HasColumnName("id_turma");
             entity.Property(e => e.Curso)
@@ -185,7 +185,7 @@ public partial class GestaoAtrasoContext : DbContext
         {
             entity.HasKey(e => e.IdUsuario).HasName("PK__Usuario__4E3E04AD418373F3");
 
-            entity.ToTable("Usuario");
+            entity.ToTable("Usuario", table => table.UseSqlOutputClause(false));
 
             entity.Property(e => e.IdUsuario).HasColumnName("id_usuario");
             entity.Property(e => e.Cpf)
