@@ -1,0 +1,1 @@
+Scaffold-DbContext "Server=(localdb)\MSSQLLocalDB;Database=GestaoAtraso;Trusted_Connection=True;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -ContextDir Models -Context GestaoAtrasoContext -Namespace AtlasTech_api.Models -Force

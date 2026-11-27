@@ -1,0 +1,1 @@
+dotnet ef dbcontext scaffold "Server=(localdb)\MSSQLLocalDB;Database=GestaoAtraso;Trusted_Connection=True;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models --context-dir Models --context GestaoAtrasoContext --namespace WebApplication1.Models --force
