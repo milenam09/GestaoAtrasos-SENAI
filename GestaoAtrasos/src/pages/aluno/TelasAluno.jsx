@@ -1,23 +1,16 @@
 import { useRef, useState } from 'react';
-import { Link, NavLink, useNavigate, useParams } from 'react-router-dom';
-import { Home, QrCode, Clock, ClipboardList, FileText, UserRound, LogOut, ArrowLeft, Bell, BookOpen, CalendarDays, UploadCloud, Camera, Menu, X } from 'lucide-react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Home, QrCode, Clock, ClipboardList, FileText, UserRound, ArrowLeft, Bell, BookOpen, CalendarDays, UploadCloud, Camera } from 'lucide-react';
+import SidebarPadrao from '../../components/layout/SidebarPadrao.jsx';
 import { aluno, hoje, useMockAluno } from '../../data/mockAluno.js';
-import logo from '../../assets/logosenai.jpg';
 import banner from '../../assets/banner-png.jpeg';
 import '../../css/aluno/TelasAluno.css';
 
 const links = [['inicio', 'Início', Home], ['registrar-chegada', 'Registrar chegada', QrCode], ['atrasos', 'Meus atrasos', Clock], ['ocorrencias', 'Ocorrências', ClipboardList], ['atestados', 'Atestados', FileText], ['perfil', 'Perfil', UserRound]];
+const linksPadrao = links.map(([rota, rotulo, Icone]) => ({ para: `/aluno/${rota}`, rotulo, Icone }));
 export function EstruturaAluno({ titulo, subtitulo, children }) {
-  const [aberto, setAberto] = useState(false);
   return <div className="demo-aluno">
-    <button className="demo-menu-toggle" aria-label={aberto ? 'Fechar menu' : 'Abrir menu'} aria-expanded={aberto} onClick={() => setAberto(!aberto)}>{aberto ? <X /> : <Menu />}</button>
-    {aberto && <button className="demo-overlay" aria-label="Fechar menu" onClick={() => setAberto(false)} />}
-    <aside className={`demo-sidebar ${aberto ? 'aberto' : ''}`}>
-      <Link to="/aluno/inicio"><img src={logo} alt="SENAI" /></Link>
-      <div className="demo-usuario"><span><UserRound size={36} /></span><div>{aluno.nome}<small>Aluno</small></div></div>
-      <nav aria-label="Menu do aluno">{links.map(([rota, texto, Icone]) => <NavLink key={rota} to={`/aluno/${rota}`} onClick={() => setAberto(false)}><Icone size={30} /><span>{texto}</span></NavLink>)}</nav>
-      <Link className="demo-sair" to="/"><LogOut /> Sair</Link>
-    </aside>
+    <SidebarPadrao nome={aluno.nome} cargo="Aluno" rotaInicio="/aluno/inicio" links={linksPadrao} ariaLabel="Menu do aluno" />
     <main className="demo-main"><header className="demo-header">{titulo && <><Link to="/aluno/inicio" aria-label="Voltar ao início"><ArrowLeft size={38} /></Link><div><h1>{titulo}</h1><p>{subtitulo}</p></div></>}</header>
       <div className="demo-label">Ambiente de demonstração · dados fictícios</div>{children}
     </main>
@@ -64,6 +57,6 @@ export function AtestadosAluno() {
 export function PerfilAlunoMock() {
   const input = useRef(); const [foto, setFoto] = useState(null); const [erro, setErro] = useState('');
   function selecionar(e) { const f = e.target.files[0]; if (!f) return; if (!['image/png', 'image/jpeg'].includes(f.type) || f.size > 5 * 1024 * 1024) { setErro('Selecione uma imagem JPG ou PNG de até 5 MB.'); return; } setErro(''); const reader = new FileReader(); reader.onload = () => setFoto(reader.result); reader.readAsDataURL(f); }
-  return <EstruturaAluno titulo="Meu perfil" subtitulo="Confira seus dados pessoais e personalize suas informações no sistema."><section className="demo-card demo-profile"><div className="demo-profile-top"><div className="demo-avatar">{foto ? <img src={foto} alt="Foto do aluno" /> : <UserRound size={64} />}</div><div><h2>{aluno.nome}</h2><p>Aluno</p></div><button className="demo-button" onClick={() => input.current.click()}><Camera size={20} /> Editar foto</button><input ref={input} hidden type="file" accept="image/png,image/jpeg" onChange={selecionar} /></div>{erro && <p role="alert">{erro}</p>}<div className="demo-dupla"><section className="demo-card"><h2>Dados pessoais</h2>{[['Nome completo', aluno.nome], ['Data de nascimento', '01/09/2008'], ['E-mail', aluno.email], ['Telefone', aluno.telefone]].map(([k,v]) => <p key={k}><b>{k}</b><br />{v}</p>)}</section><section className="demo-card"><h2>Dados acadêmicos</h2>{[['Turma', aluno.turma], ['Turno', aluno.turno], ['Situação', 'Ativo'], ['Modelo de ensino', 'Técnico']].map(([k,v]) => <p key={k}><b>{k}</b><br />{v}</p>)}</section></div><div className="demo-contact-callout"><div><h3>Precisa atualizar seus dados?</h3><p>Entre em contato com a secretaria da unidade.</p></div><Link className="demo-button" to="/aluno/contato">Ver contato</Link></div></section></EstruturaAluno>;
+  return <EstruturaAluno titulo="Meu perfil" subtitulo="Confira seus dados pessoais e personalize suas informações no sistema."><section className="demo-card demo-profile"><div className="demo-profile-top"><div className="demo-avatar">{foto ? <img src={foto} alt="Foto do aluno" /> : <UserRound size={64} />}</div><div><h2>{aluno.nome}</h2><p>Aluno</p></div><button className="demo-button" onClick={() => input.current.click()}><Camera size={20} /> Editar foto</button><input ref={input} hidden type="file" accept="image/png,image/jpeg" onChange={selecionar} /></div>{erro && <p role="alert">{erro}</p>}<div className="demo-dupla"><section className="demo-card"><h2>Dados pessoais</h2>{[['Nome completo', aluno.nome], ['Data de nascimento', '01/09/2008'], ['E-mail', aluno.email], ['Telefone', aluno.telefone]].map(([k, v]) => <p key={k}><b>{k}</b><br />{v}</p>)}</section><section className="demo-card"><h2>Dados acadêmicos</h2>{[['Turma', aluno.turma], ['Turno', aluno.turno], ['Situação', 'Ativo'], ['Modelo de ensino', 'Técnico']].map(([k, v]) => <p key={k}><b>{k}</b><br />{v}</p>)}</section></div><div className="demo-contact-callout"><div><h3>Precisa atualizar seus dados?</h3><p>Entre em contato com a secretaria da unidade.</p></div><Link className="demo-button" to="/aluno/contato">Ver contato</Link></div></section></EstruturaAluno>;
 }
 export function ContatoAlunoMock() { return <EstruturaAluno titulo="Contato da unidade" subtitulo="Confira os canais de atendimento da secretaria."><section className="demo-card"><h2>Secretaria escolar · Unidade 1.34</h2><p>Telefone: (12) 0000-0000</p><p>E-mail: secretaria@example.com</p><p>Atendimento: segunda a sexta, das 8h às 17h.</p><p>Canais fictícios para demonstração. Consulte a unidade para obter os contatos reais.</p><Link className="demo-button" to="/aluno/perfil">Voltar ao perfil</Link></section></EstruturaAluno>; }

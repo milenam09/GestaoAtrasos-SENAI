@@ -165,7 +165,6 @@ export default function Dashboard() {
 
               <h1>
                 Olá, Mariana!
-                <span aria-hidden="true"> 👋</span>
               </h1>
 
               <p>

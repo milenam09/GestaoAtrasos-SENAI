@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { Eye, EyeOff } from "lucide-react";
 import "../../../css/acesso/variantes/TelaInicial-telainicialaluno.css";
 
 import edificio from "../../../assets/edificio.jpg";
@@ -47,24 +48,24 @@ function TelaInicialAluno() {
 
           <label>Senha</label>
 
-          
-        <div className="campo-senha">
-          <input
-            type={mostrarSenha ? "text" : "password"}
-            placeholder="Digite sua senha"
-            value={senha}
-            onChange={(e) => setSenha(e.target.value)}
-          />
 
-          <button
-            type="button"
-            className="mostrar-senha"
-            onClick={() => setMostrarSenha(!mostrarSenha)}
-            aria-label={mostrarSenha ? "Esconder senha" : "Mostrar senha"}
-          >
-            👁
-          </button>
-        </div>
+          <div className="campo-senha">
+            <input
+              type={mostrarSenha ? "text" : "password"}
+              placeholder="Digite sua senha"
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
+            />
+
+            <button
+              type="button"
+              className="mostrar-senha"
+              onClick={() => setMostrarSenha(!mostrarSenha)}
+              aria-label={mostrarSenha ? "Esconder senha" : "Mostrar senha"}
+            >
+              {mostrarSenha ? <EyeOff size={18} /> : <Eye size={18} />}
+            </button>
+          </div>
 
 
           <a href="#" className="esqueceu-senha">

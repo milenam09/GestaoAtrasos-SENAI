@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { Eye, EyeOff } from "lucide-react";
 import "../../../css/acesso/variantes/Gestor-gestor.css";
 
 import edificio from "../../../assets/edificio.jpg";
@@ -73,7 +74,7 @@ function Gestor() {
               onClick={() => setSenhaVisivel(!senhaVisivel)}
               aria-label={senhaVisivel ? "Esconder senha" : "Mostrar senha"}
             >
-              👁
+              {senhaVisivel ? <EyeOff size={18} /> : <Eye size={18} />}
             </button>
           </div>
 
@@ -82,7 +83,7 @@ function Gestor() {
           </a>
 
           <button className="botao-entrar" type="submit">
-            Entrar 
+            Entrar
           </button>
 
           <div className="separador">

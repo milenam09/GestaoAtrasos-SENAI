@@ -1,3 +1,5 @@
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
+
 export default function ContatoUnidade({ onVoltar }) {
     return (
         <div className="pagina-contato">
@@ -25,7 +27,7 @@ export default function ContatoUnidade({ onVoltar }) {
                 </p>
 
                 <div className="item-contato">
-                    <span>📞</span>
+                    <span><Phone size={18} /></span>
                     <div>
                         <strong>Telefone</strong>
                         <p>(12) 0000-0000</p>
@@ -33,7 +35,7 @@ export default function ContatoUnidade({ onVoltar }) {
                 </div>
 
                 <div className="item-contato">
-                    <span>✉️</span>
+                    <span><Mail size={18} /></span>
                     <div>
                         <strong>E-mail</strong>
                         <p>secretaria@unidade134.com.br</p>
@@ -41,7 +43,7 @@ export default function ContatoUnidade({ onVoltar }) {
                 </div>
 
                 <div className="item-contato">
-                    <span>📍</span>
+                    <span><MapPin size={18} /></span>
                     <div>
                         <strong>Endereço</strong>
                         <p>Unidade 1.34</p>
@@ -49,7 +51,7 @@ export default function ContatoUnidade({ onVoltar }) {
                 </div>
 
                 <div className="item-contato">
-                    <span>🕒</span>
+                    <span><Clock size={18} /></span>
                     <div>
                         <strong>Horário de atendimento</strong>
                         <p>Consulte a secretaria da unidade.</p>

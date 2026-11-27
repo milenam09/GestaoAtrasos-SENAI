@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Eye, EyeOff } from "lucide-react";
 import "../../../css/acesso/variantes/TelaInicial-telainicialprofessor.css";
 import edificio from "../../../assets/edificio.jpg";
 import senai from "../../../assets/logosenai.jpg";
@@ -59,7 +60,7 @@ function TelaInicialProfessor() {
               onClick={() => setMostrarSenha(!mostrarSenha)}
               aria-label={mostrarSenha ? "Esconder senha" : "Mostrar senha"}
             >
-              👁
+              {mostrarSenha ? <EyeOff size={18} /> : <Eye size={18} />}
             </button>
           </div>
 

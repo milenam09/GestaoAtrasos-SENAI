@@ -1,5 +1,6 @@
 import seta from "../../assets/seta.png";
 import { useState } from "react";
+import { UserRound } from "lucide-react";
 import Menu from "../../components/navigation/gestor/Menu.jsx";
 
 import "../../css/gestor/AcolhimentoGestor.css";
@@ -97,7 +98,7 @@ function Acolhimentos() {
         </div>
 
         <form className="formulario-acolhimentos" onSubmit={salvarOS}>
-          
+
           <div className="titulo-acolhimento">
             <span className="numero-acolhimento">1</span>
 
@@ -137,7 +138,7 @@ function Acolhimentos() {
 
           {alunoSelecionado && (
             <div className="aluno-selecionado">
-              <div className="foto-aluno">♟</div>
+              <div className="foto-aluno"><UserRound size={20} /></div>
 
               <div className="dados-aluno">
                 <strong>Aluno Selecionado</strong>
@@ -197,9 +198,9 @@ function Acolhimentos() {
                 value={prioridade}
                 onChange={(e) => setPrioridade(e.target.value)}
               >
-                <option value="Alta">🔴 Alta</option>
-                <option value="Média">🟡 Média</option>
-                <option value="Baixa">🟢 Baixa</option>
+                <option value="Alta">Alta</option>
+                <option value="Média">Média</option>
+                <option value="Baixa">Baixa</option>
               </select>
             </div>
 
